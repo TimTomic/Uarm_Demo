@@ -129,3 +129,28 @@ Da ROS 2 über DDS kommuniziert, kannst du den Roboter von deinem eigenen Laptop
    ros2 run rviz2 rviz2 -d ~/ros2_ws/src/uarm_apriltag_demo/rviz/demo.rviz
    ```
 Du siehst sofort, flüssig und ohne Verzögerung den TF-Tree und den live Kamera-Stream (inkl. eingezeichneter Tag-Koordinaten) deines Raspberry Pis!
+
+---
+
+## 7. Konfiguration und "Teachen" von Posen (NEU!)
+
+Das gesamte Verhalten, alle Posen und die Greif-Abstände sind nun zentral in einer einzigen Datei ausgelagert. Keine Zahlen mehr im Code selbst suchen!
+
+Hier findest du die Datei:
+`~/ros2_ws/src/uarm_apriltag_demo/config/demo_config.yaml`
+
+### Was du dort einstellen kannst:
+1. **Kamera-Offset (`camera_x_offset`, `camera_y_offset`, `camera_z_offset`)**: 
+   Liefert dem TF-Tree den exakten Abstand der Kamera-Linse zum `tcp_link`. Hier kannst du korrigieren, falls der Roboter systematisch immer z.B. 1cm neben das Tag greift.
+2. **Alle Posen (`pose_drive`, `pose_scan`, `pose_inv`, `pose_drop`)**: 
+   Definieren die fixen Stationen der Bewegung in Millimetern. Stelle den Arm per Hand (z.B. in der uArm Studio Software oder über dein RViz Tool) dorthin, wo er sein soll, lies die Koordinaten ab und trage sie hier ein!
+3. **`hover_z_offset`**:
+   Der Roboter rast nicht direkt auf das Ziel, sondern fährt genau diesen Betrag (in mm) *darüber*. Erst danach beginnt er sicher abzusteigen, bis der Schalter auslöst.
+4. **`target_z_base`**:
+   Gibt die Tischhöhe für Inventar und Ablage vor. Ist standardmäßig `0.0`, da der Schalter sowieso abfedert.
+
+**Nach einer Änderung der YAML-Datei:**
+Da das System aktuell als Symlink installiert ist, erkennt ROS Änderungen meist sofort beim nächsten Neustart der `.launch.py`. Falls nicht, baue das Setup kurz neu:
+```bash
+colcon build --symlink-install --packages-select uarm_apriltag_demo
+```

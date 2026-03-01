@@ -40,11 +40,49 @@ class ActionDemoNode(Node):
         self.limit_switch = 0
         self.current_z = 150.0
         
-        # Poses
-        self.pose_drive = Position(x=200.0, y=0.0, z=150.0)     # Lauerstellung / Drive
-        self.pose_scan = Position(x=200.0, y=0.0, z=150.0)      # Suchpose (kann selbe wie Drive sein)
-        self.pose_inv = Position(x=150.0, y=-150.0, z=50.0)     # Inventar (Pose 3)
-        self.pose_drop = Position(x=150.0, y=150.0, z=50.0)     # Ablage (Pose 4)
+        # Declare Parameters
+        self.declare_parameter('pose_drive_x', 200.0)
+        self.declare_parameter('pose_drive_y', 0.0)
+        self.declare_parameter('pose_drive_z', 150.0)
+        
+        self.declare_parameter('pose_scan_x', 200.0)
+        self.declare_parameter('pose_scan_y', 0.0)
+        self.declare_parameter('pose_scan_z', 150.0)
+        
+        self.declare_parameter('pose_inv_x', 150.0)
+        self.declare_parameter('pose_inv_y', -150.0)
+        self.declare_parameter('pose_inv_z', 50.0)
+        
+        self.declare_parameter('pose_drop_x', 150.0)
+        self.declare_parameter('pose_drop_y', 150.0)
+        self.declare_parameter('pose_drop_z', 50.0)
+        
+        self.declare_parameter('hover_z_offset', 30.0)
+        self.declare_parameter('target_z_base', 0.0)
+
+        # Read Parameters
+        self.pose_drive = Position(
+            x=self.get_parameter('pose_drive_x').value,
+            y=self.get_parameter('pose_drive_y').value,
+            z=self.get_parameter('pose_drive_z').value
+        )
+        self.pose_scan = Position(
+            x=self.get_parameter('pose_scan_x').value,
+            y=self.get_parameter('pose_scan_y').value,
+            z=self.get_parameter('pose_scan_z').value
+        )
+        self.pose_inv = Position(
+            x=self.get_parameter('pose_inv_x').value,
+            y=self.get_parameter('pose_inv_y').value,
+            z=self.get_parameter('pose_inv_z').value
+        )
+        self.pose_drop = Position(
+            x=self.get_parameter('pose_drop_x').value,
+            y=self.get_parameter('pose_drop_y').value,
+            z=self.get_parameter('pose_drop_z').value
+        )
+        self.hover_offset = self.get_parameter('hover_z_offset').value
+        self.target_z_base = self.get_parameter('target_z_base').value
 
         # Go to initial drive pose
         self.move_arm(self.pose_drive.x, self.pose_drive.y, self.pose_drive.z)
@@ -73,9 +111,9 @@ class ActionDemoNode(Node):
 
     def hover_and_descend(self, x, y, target_z_base, goal_handle, state_msg):
         """
-        Moves 3cm above target_z_base, then descends until limit switch == 1.
+        Moves offset above target_z_base, then descends until limit switch == 1.
         """
-        hover_z = target_z_base + 30.0
+        hover_z = target_z_base + self.hover_offset
         self.get_logger().info(f"Hovering at Z={hover_z:.1f}")
         
         # Update feedback
@@ -214,8 +252,8 @@ class ActionDemoNode(Node):
         time.sleep(1.5)
         
         # 4. Move to Inventory (Pose 3) and descend to place
-        # Using a fixed ground base Z for inventory: e.g. Z=0 or known height
-        contact = self.hover_and_descend(self.pose_inv.x, self.pose_inv.y, 0.0, goal_handle, "Dropping at Inventory")
+        # Using configured ground base Z
+        contact = self.hover_and_descend(self.pose_inv.x, self.pose_inv.y, self.target_z_base, goal_handle, "Dropping at Inventory")
         self.set_pump(False)
         time.sleep(1.0)
         
@@ -227,8 +265,7 @@ class ActionDemoNode(Node):
 
     def do_place(self, goal_handle, feedback):
         # 1. Drive to Inventory and pick object
-        # Using Z=0 base assuming object is at ground level
-        contact = self.hover_and_descend(self.pose_inv.x, self.pose_inv.y, 0.0, goal_handle, "Fetching from Inventory")
+        contact = self.hover_and_descend(self.pose_inv.x, self.pose_inv.y, self.target_z_base, goal_handle, "Fetching from Inventory")
         if not contact:
             return False, "Did not hit switch at inventory"
             
@@ -240,7 +277,7 @@ class ActionDemoNode(Node):
         time.sleep(1.5)
         
         # 2. Move to Place/Drop location (Pose 4) and place it
-        contact = self.hover_and_descend(self.pose_drop.x, self.pose_drop.y, 0.0, goal_handle, "Dropping at Target")
+        contact = self.hover_and_descend(self.pose_drop.x, self.pose_drop.y, self.target_z_base, goal_handle, "Dropping at Target")
         self.set_pump(False)
         time.sleep(1.0)
         

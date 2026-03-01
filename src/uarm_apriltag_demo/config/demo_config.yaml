@@ -1,0 +1,31 @@
+/**:
+  ros__parameters:
+    # Camera to TCP Offsets (Meters)
+    # Used by the static_transform_publisher
+    camera_x_offset: 0.010
+    camera_y_offset: 0.0
+    camera_z_offset: 0.050
+
+    # Poses (X, Y, Z in mm)
+    pose_drive_x: 200.0
+    pose_drive_y: 0.0
+    pose_drive_z: 150.0
+
+    pose_scan_x: 200.0
+    pose_scan_y: 0.0
+    pose_scan_z: 150.0
+
+    pose_inv_x: 150.0
+    pose_inv_y: -150.0
+    pose_inv_z: 50.0
+
+    pose_drop_x: 150.0
+    pose_drop_y: 150.0
+    pose_drop_z: 50.0
+
+    # Pick and Place behavior settings
+    # Hover height above the target before descending (mm)
+    hover_z_offset: 30.0
+    
+    # Optional static ground height for inventory/drop if not relying purely on switch (mm)
+    target_z_base: 0.0

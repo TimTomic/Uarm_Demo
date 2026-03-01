@@ -1,0 +1,21 @@
+[2.793s] Invoking command in '/home/ros2/ros2_ws/build/uarm_apriltag_demo': AMENT_PREFIX_PATH=/home/ros2/ros2_ws/install/uarm_interfaces:/home/ros2/ros2_ws/install/swiftpro:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ros2/ros2_ws/install/uarm_interfaces:/home/ros2/ros2_ws/install/swiftpro LD_LIBRARY_PATH=/home/ros2/ros2_ws/install/uarm_interfaces/lib:/home/ros2/ros2_ws/install/swiftpro/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ros2/ros2_ws/build/uarm_apriltag_demo/prefix_override:/home/ros2/.local/lib/python3.12/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/ros2/ros2_ws/install/uarm_apriltag_demo/lib/python3.12/site-packages:/home/ros2/ros2_ws/install/uarm_interfaces/lib/python3.12/site-packages:/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ros2/ros2_ws/build/uarm_apriltag_demo/build --no-deps symlink_data
+[3.445s] running develop
+[3.732s] running egg_info
+[3.763s] writing uarm_apriltag_demo.egg-info/PKG-INFO
+[3.764s] writing dependency_links to uarm_apriltag_demo.egg-info/dependency_links.txt
+[3.764s] writing entry points to uarm_apriltag_demo.egg-info/entry_points.txt
+[3.765s] writing requirements to uarm_apriltag_demo.egg-info/requires.txt
+[3.765s] writing top-level names to uarm_apriltag_demo.egg-info/top_level.txt
+[3.836s] reading manifest file 'uarm_apriltag_demo.egg-info/SOURCES.txt'
+[3.838s] writing manifest file 'uarm_apriltag_demo.egg-info/SOURCES.txt'
+[3.878s] running build_ext
+[3.878s] Creating /home/ros2/ros2_ws/install/uarm_apriltag_demo/lib/python3.12/site-packages/uarm-apriltag-demo.egg-link (link to .)
+[3.880s] Installing action_demo_node script to /home/ros2/ros2_ws/install/uarm_apriltag_demo/lib/uarm_apriltag_demo
+[3.880s] Installing demo_node script to /home/ros2/ros2_ws/install/uarm_apriltag_demo/lib/uarm_apriltag_demo
+[3.883s] Installing tag_overlay_node script to /home/ros2/ros2_ws/install/uarm_apriltag_demo/lib/uarm_apriltag_demo
+[3.884s] 
+[3.884s] Installed /home/ros2/ros2_ws/build/uarm_apriltag_demo
+[3.884s] running symlink_data
+[3.886s] creating /home/ros2/ros2_ws/install/uarm_apriltag_demo/share/uarm_apriltag_demo/config
+[3.887s] symbolically linking /home/ros2/ros2_ws/build/uarm_apriltag_demo/config/demo_config.yaml -> /home/ros2/ros2_ws/install/uarm_apriltag_demo/share/uarm_apriltag_demo/config
+[3.945s] Invoked command in '/home/ros2/ros2_ws/build/uarm_apriltag_demo' returned '0': AMENT_PREFIX_PATH=/home/ros2/ros2_ws/install/uarm_interfaces:/home/ros2/ros2_ws/install/swiftpro:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ros2/ros2_ws/install/uarm_interfaces:/home/ros2/ros2_ws/install/swiftpro LD_LIBRARY_PATH=/home/ros2/ros2_ws/install/uarm_interfaces/lib:/home/ros2/ros2_ws/install/swiftpro/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ros2/ros2_ws/build/uarm_apriltag_demo/prefix_override:/home/ros2/.local/lib/python3.12/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/ros2/ros2_ws/install/uarm_apriltag_demo/lib/python3.12/site-packages:/home/ros2/ros2_ws/install/uarm_interfaces/lib/python3.12/site-packages:/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ros2/ros2_ws/build/uarm_apriltag_demo/build --no-deps symlink_data

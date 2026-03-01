@@ -23,22 +23,40 @@ class DemoNode(Node):
         self.state_sub = self.create_subscription(SwiftproState, '/SwiftproState_topic', self.state_callback, 10)
         self.limit_switch = 0
         self.current_z = 150.0
-        self.target_z = 0.0
+        # Declare Parameters
+        self.declare_parameter('pose_drive_x', 200.0)
+        self.declare_parameter('pose_drive_y', 0.0)
+        self.declare_parameter('pose_drive_z', 150.0)
         
-        # Define Poses
-        self.pose_scan = Position()
-        self.pose_scan.x = 200.0
-        self.pose_scan.y = 0.0
-        self.pose_scan.z = 150.0  # high enough to see a good area
+        self.declare_parameter('pose_scan_x', 200.0)
+        self.declare_parameter('pose_scan_y', 0.0)
+        self.declare_parameter('pose_scan_z', 150.0)
         
-        self.pose_drop = Position()
-        self.pose_drop.x = 150.0
-        self.pose_drop.y = 150.0
-        self.pose_drop.z = 50.0   # drop area
+        self.declare_parameter('pose_drop_x', 150.0)
+        self.declare_parameter('pose_drop_y', 150.0)
+        self.declare_parameter('pose_drop_z', 50.0)
         
-        # Z-height for picking an object
-        self.pick_z_hover = 80.0
-        self.pick_z_down = 35.0   # Adjust based on object and suction cup height
+        self.declare_parameter('hover_z_offset', 30.0)
+        self.declare_parameter('target_z_base', 0.0)
+
+        # Read Parameters
+        self.pose_drive = Position(
+            x=self.get_parameter('pose_drive_x').value,
+            y=self.get_parameter('pose_drive_y').value,
+            z=self.get_parameter('pose_drive_z').value
+        )
+        self.pose_scan = Position(
+            x=self.get_parameter('pose_scan_x').value,
+            y=self.get_parameter('pose_scan_y').value,
+            z=self.get_parameter('pose_scan_z').value
+        )
+        self.pose_drop = Position(
+            x=self.get_parameter('pose_drop_x').value,
+            y=self.get_parameter('pose_drop_y').value,
+            z=self.get_parameter('pose_drop_z').value
+        )
+        self.hover_offset = self.get_parameter('hover_z_offset').value
+        self.target_z_base = self.get_parameter('target_z_base').value
         
         # State machine timer
         self.timer = self.create_timer(0.1, self.state_machine)
@@ -104,8 +122,8 @@ class DemoNode(Node):
                 target_y = tag_tf.transform.translation.y * 1000.0
                 target_z = tag_tf.transform.translation.z * 1000.0
                 
-                # We want a 3cm (30mm) offset above the tag as hover height
-                hover_z = target_z + 30.0
+                # Check for configured limit 
+                hover_z = target_z + self.hover_offset
                 
                 # Basic safety limits for uArm workspace (approx)
                 radius = math.sqrt(target_x**2 + target_y**2)
@@ -117,6 +135,7 @@ class DemoNode(Node):
                 self.pick_x = target_x
                 self.pick_y = target_y
                 self.pick_z_hover = hover_z # Set the hover dynamically
+                self.target_z = hover_z
                 
                 self.state = "PICKING_HOVER"
                 self.move_arm(self.pick_x, self.pick_y, self.pick_z_hover)
@@ -140,8 +159,8 @@ class DemoNode(Node):
                 # move down by 3mm every 0.1s (schnell genug, aber sicher)
                 if time.time() - self.wait_time > 0.1:
                     self.target_z -= 2.0
-                    if self.target_z < 0.0: # safety check
-                        self.get_logger().warn("Z < 0 reached, limit switch not triggered. Aborting.")
+                    if self.target_z < self.target_z_base: # safety check against config limit
+                        self.get_logger().warn(f"Z < {self.target_z_base} reached, limit switch not triggered. Aborting.")
                         self.state = "RETURNING"
                         self.wait_time = time.time()
                     else:

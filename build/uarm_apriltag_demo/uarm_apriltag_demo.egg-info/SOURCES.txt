@@ -1,6 +1,7 @@
 package.xml
 setup.cfg
 setup.py
+config/demo_config.yaml
 launch/action_demo.launch.py
 launch/demo.launch.py
 resource/uarm_apriltag_demo
