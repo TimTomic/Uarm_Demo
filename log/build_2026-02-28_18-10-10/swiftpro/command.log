@@ -1,0 +1,6 @@
+Invoking command in '/home/ros2/ros2_ws/build/swiftpro': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ros2/ros2_ws/src/uarm_driver/swiftpro -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ros2/ros2_ws/install/swiftpro
+Invoked command in '/home/ros2/ros2_ws/build/swiftpro' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ros2/ros2_ws/src/uarm_driver/swiftpro -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ros2/ros2_ws/install/swiftpro
+Invoking command in '/home/ros2/ros2_ws/build/swiftpro': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ros2/ros2_ws/build/swiftpro -- -j12 -l12
+Invoked command in '/home/ros2/ros2_ws/build/swiftpro' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ros2/ros2_ws/build/swiftpro -- -j12 -l12
+Invoking command in '/home/ros2/ros2_ws/build/swiftpro': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ros2/ros2_ws/build/swiftpro
+Invoked command in '/home/ros2/ros2_ws/build/swiftpro' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ros2/ros2_ws/build/swiftpro

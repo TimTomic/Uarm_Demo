@@ -1,0 +1,360 @@
+[0.021s] Invoking command in '/home/ros2/ros2_ws/build/swiftpro': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake /home/ros2/ros2_ws/uarm_driver/swiftpro -DCMAKE_INSTALL_PREFIX=/home/ros2/ros2_ws/install/swiftpro
+[0.088s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.378s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.412s] -- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.663s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.681s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.704s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.731s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.850s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.854s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.188s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.530s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[1.556s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[1.619s] -- Found tf2: 0.36.19 (/opt/ros/jazzy/share/tf2/cmake)
+[1.626s] -- Found tf2_ros: 0.36.19 (/opt/ros/jazzy/share/tf2_ros/cmake)
+[1.816s] -- Found tf2_geometry_msgs: 0.36.19 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)
+[1.827s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[1.829s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.832s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[1.851s] -- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[2.705s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[3.898s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.356s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.361s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[4.527s] -- Found PythonExtra: /usr/bin/python3  
+[5.174s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[5.311s] -- Configuring done (5.2s)
+[5.475s] -- Generating done (0.1s)
+[5.502s] -- Build files have been written to: /home/ros2/ros2_ws/build/swiftpro
+[5.523s] Invoked command in '/home/ros2/ros2_ws/build/swiftpro' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake /home/ros2/ros2_ws/uarm_driver/swiftpro -DCMAKE_INSTALL_PREFIX=/home/ros2/ros2_ws/install/swiftpro
+[5.525s] Invoking command in '/home/ros2/ros2_ws/build/swiftpro': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/ros2/ros2_ws/build/swiftpro -- -j12 -l12
+[5.600s] [  1%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[5.613s] [  1%] Built target ament_cmake_python_symlink_swiftpro
+[5.860s] running egg_info
+[5.861s] creating swiftpro.egg-info
+[5.884s] writing swiftpro.egg-info/PKG-INFO
+[5.885s] writing dependency_links to swiftpro.egg-info/dependency_links.txt
+[5.885s] writing top-level names to swiftpro.egg-info/top_level.txt
+[5.885s] writing manifest file 'swiftpro.egg-info/SOURCES.txt'
+[5.907s] [  1%] Built target swiftpro__rosidl_generator_type_description
+[5.923s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[5.941s] [  3%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[5.950s] reading manifest file 'swiftpro.egg-info/SOURCES.txt'
+[5.951s] writing manifest file 'swiftpro.egg-info/SOURCES.txt'
+[5.994s] [  3%] Built target ament_cmake_python_build_swiftpro_egg
+[6.540s] [  3%] Built target swiftpro__cpp
+[6.614s] [  6%] [32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/msg/detail/swiftpro_state__type_support.c.o[0m
+[6.615s] [  6%] [32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/msg/detail/swiftpro_state__description.c.o[0m
+[6.617s] [  8%] [32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/msg/detail/swiftpro_state__functions.c.o[0m
+[6.617s] [ 10%] [32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/msg/detail/position__functions.c.o[0m
+[6.617s] [ 10%] [32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/msg/detail/position__type_support.c.o[0m
+[6.618s] [ 11%] [32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/msg/detail/angle4th__description.c.o[0m
+[6.619s] [ 12%] [32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/msg/detail/angle4th__functions.c.o[0m
+[6.621s] [ 13%] [32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/msg/detail/status__description.c.o[0m
+[6.621s] [ 16%] [32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/msg/detail/status__type_support.c.o[0m
+[6.621s] [ 16%] [32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/msg/detail/angle4th__type_support.c.o[0m
+[6.622s] [ 17%] [32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/msg/detail/status__functions.c.o[0m
+[6.624s] [ 18%] [32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/msg/detail/position__description.c.o[0m
+[6.722s] [ 20%] [32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/srv/detail/send_gcode__description.c.o[0m
+[6.733s] [ 21%] [32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/srv/detail/send_gcode__type_support.c.o[0m
+[6.736s] [ 22%] [32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/srv/detail/send_gcode__functions.c.o[0m
+[6.844s] [ 23%] [32m[1mLinking C shared library libswiftpro__rosidl_generator_c.so[0m
+[7.057s] [ 23%] Built target swiftpro__rosidl_generator_c
+[7.074s] [ 25%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[7.075s] [ 26%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[7.075s] [ 28%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[7.075s] [ 30%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[7.076s] [ 30%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[7.076s] [ 31%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[7.556s] [ 35%] [32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_c.dir/rosidl_typesupport_c/swiftpro/msg/position__type_support.cpp.o[0m
+[7.556s] [ 35%] [32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_c.dir/rosidl_typesupport_c/swiftpro/msg/angle4th__type_support.cpp.o[0m
+[7.556s] [ 35%] [32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_c.dir/rosidl_typesupport_c/swiftpro/msg/swiftpro_state__type_support.cpp.o[0m
+[7.557s] [ 36%] [32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_c.dir/rosidl_typesupport_c/swiftpro/msg/status__type_support.cpp.o[0m
+[7.559s] [ 37%] [32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_c.dir/rosidl_typesupport_c/swiftpro/srv/send_gcode__type_support.cpp.o[0m
+[7.583s] [ 40%] [32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/swiftpro/msg/swiftpro_state__type_support.cpp.o[0m
+[7.585s] [ 40%] [32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/swiftpro/msg/position__type_support.cpp.o[0m
+[7.585s] [ 41%] [32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/swiftpro/msg/angle4th__type_support.cpp.o[0m
+[7.677s] [ 42%] [32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/swiftpro/msg/status__type_support.cpp.o[0m
+[7.679s] [ 43%] [32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/swiftpro/srv/send_gcode__type_support.cpp.o[0m
+[7.699s] [ 45%] [32m[1mLinking CXX shared library libswiftpro__rosidl_typesupport_c.so[0m
+[7.768s] [ 46%] [32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/swiftpro/msg/detail/swiftpro_state__type_support.cpp.o[0m
+[7.769s] [ 47%] [32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/swiftpro/msg/detail/position__type_support.cpp.o[0m
+[7.775s] [ 48%] [32mBuilding C object CMakeFiles/swiftpro__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/swiftpro/msg/detail/swiftpro_state__type_support.c.o[0m
+[7.776s] [ 50%] [32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/swiftpro/msg/detail/angle4th__type_support.cpp.o[0m
+[7.885s] [ 51%] [32mBuilding C object CMakeFiles/swiftpro__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/swiftpro/msg/detail/position__type_support.c.o[0m
+[7.999s] [ 52%] [32mBuilding C object CMakeFiles/swiftpro__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/swiftpro/msg/detail/angle4th__type_support.c.o[0m
+[8.035s] [ 53%] [32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/swiftpro/msg/detail/dds_fastrtps/swiftpro_state__type_support.cpp.o[0m
+[8.036s] [ 53%] Built target swiftpro__rosidl_typesupport_c
+[8.050s] [ 55%] [32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/swiftpro/msg/detail/swiftpro_state__type_support_c.cpp.o[0m
+[8.057s] [ 56%] [32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/swiftpro/msg/detail/position__type_support_c.cpp.o[0m
+[8.110s] [ 57%] [32mBuilding C object CMakeFiles/swiftpro__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/swiftpro/msg/detail/status__type_support.c.o[0m
+[8.224s] [ 58%] [32mBuilding C object CMakeFiles/swiftpro__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/swiftpro/srv/detail/send_gcode__type_support.c.o[0m
+[8.319s] [ 60%] [32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/swiftpro/msg/detail/angle4th__type_support_c.cpp.o[0m
+[8.326s] [ 61%] [32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/swiftpro/msg/detail/dds_fastrtps/position__type_support.cpp.o[0m
+[8.351s] [ 62%] [32m[1mLinking C shared library libswiftpro__rosidl_typesupport_introspection_c.so[0m
+[8.367s] [ 63%] [32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/swiftpro/msg/detail/status__type_support_c.cpp.o[0m
+[8.393s] [ 65%] [32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/swiftpro/srv/detail/send_gcode__type_support_c.cpp.o[0m
+[8.510s] [ 66%] [32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/swiftpro/msg/detail/dds_fastrtps/angle4th__type_support.cpp.o[0m
+[8.513s] [ 67%] [32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/swiftpro/msg/detail/dds_fastrtps/status__type_support.cpp.o[0m
+[8.534s] [ 68%] [32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/swiftpro/msg/detail/status__type_support.cpp.o[0m
+[8.617s] [ 70%] [32m[1mLinking CXX shared library libswiftpro__rosidl_typesupport_cpp.so[0m
+[8.715s] [ 70%] Built target swiftpro__rosidl_typesupport_introspection_c
+[8.745s] [ 71%] [32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/swiftpro/srv/detail/send_gcode__type_support.cpp.o[0m
+[9.152s] [ 71%] Built target swiftpro__rosidl_typesupport_cpp
+[9.172s] [ 72%] [32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/swiftpro/srv/detail/dds_fastrtps/send_gcode__type_support.cpp.o[0m
+[9.223s] [ 73%] [32mBuilding CXX object CMakeFiles/swiftpro_write_node.dir/src/swiftpro_write_node.cpp.o[0m
+[9.317s] [ 75%] [32mBuilding CXX object CMakeFiles/swiftpro_rviz_node.dir/src/swiftpro_rviz_node.cpp.o[0m
+[9.344s] [ 76%] [32mBuilding CXX object CMakeFiles/swiftpro_read_node.dir/src/swiftpro_read_node.cpp.o[0m
+[9.720s] [ 77%] [32m[1mLinking CXX shared library libswiftpro__rosidl_typesupport_fastrtps_c.so[0m
+[9.812s] [ 78%] [32m[1mLinking CXX shared library libswiftpro__rosidl_typesupport_introspection_cpp.so[0m
+[10.052s] [ 78%] Built target swiftpro__rosidl_typesupport_fastrtps_c
+[10.122s] [ 78%] Built target swiftpro__rosidl_typesupport_introspection_cpp
+[10.328s] [ 80%] [32m[1mLinking CXX shared library libswiftpro__rosidl_typesupport_fastrtps_cpp.so[0m
+[10.643s] [ 80%] Built target swiftpro__rosidl_typesupport_fastrtps_cpp
+[10.683s] [ 80%] Built target swiftpro
+[10.716s] [ 81%] [34m[1mGenerating Python code for ROS interfaces[0m
+[11.687s] [ 81%] Built target swiftpro__py
+[11.722s] [ 82%] [32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_py.dir/rosidl_generator_py/swiftpro/msg/_position_s.c.o[0m
+[11.723s] [ 83%] [32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_py.dir/rosidl_generator_py/swiftpro/msg/_swiftpro_state_s.c.o[0m
+[11.725s] [ 85%] [32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_py.dir/rosidl_generator_py/swiftpro/srv/_send_gcode_s.c.o[0m
+[11.727s] [ 86%] [32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_py.dir/rosidl_generator_py/swiftpro/msg/_status_s.c.o[0m
+[11.728s] [ 87%] [32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_py.dir/rosidl_generator_py/swiftpro/msg/_angle4th_s.c.o[0m
+[12.081s] [ 88%] [32m[1mLinking C shared library libswiftpro__rosidl_generator_py.so[0m
+[12.323s] [ 88%] Built target swiftpro__rosidl_generator_py
+[12.355s] [ 90%] [32mBuilding C object CMakeFiles/swiftpro_s__rosidl_typesupport_c.dir/rosidl_generator_py/swiftpro/_swiftpro_s.ep.rosidl_typesupport_c.c.o[0m
+[12.357s] [ 91%] [32mBuilding C object CMakeFiles/swiftpro_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/swiftpro/_swiftpro_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[12.358s] [ 92%] [32mBuilding C object CMakeFiles/swiftpro_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/swiftpro/_swiftpro_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[12.646s] [ 93%] [32m[1mLinking C shared module rosidl_generator_py/swiftpro/swiftpro_s__rosidl_typesupport_c.so[0m
+[12.649s] [ 95%] [32m[1mLinking C shared module rosidl_generator_py/swiftpro/swiftpro_s__rosidl_typesupport_introspection_c.so[0m
+[12.671s] [ 96%] [32m[1mLinking C shared module rosidl_generator_py/swiftpro/swiftpro_s__rosidl_typesupport_fastrtps_c.so[0m
+[12.861s] [ 96%] Built target swiftpro_s__rosidl_typesupport_c
+[12.867s] [ 96%] Built target swiftpro_s__rosidl_typesupport_introspection_c
+[12.963s] [ 96%] Built target swiftpro_s__rosidl_typesupport_fastrtps_c
+[13.717s] [01m[K/home/ros2/ros2_ws/uarm_driver/swiftpro/src/swiftpro_read_node.cpp:[m[K In member function ‘[01m[Kvoid SwiftproReadNode::[01;32m[Khandlechar[m[K(char)[m[K’:
+[13.717s] [01m[K/home/ros2/ros2_ws/uarm_driver/swiftpro/src/swiftpro_read_node.cpp:97:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[13.717s]    97 |         if ([01;35m[Kstr_index_ < sizeof(strdata_) - 1[m[K)
+[13.717s]       |             [01;35m[K~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[17.138s] [ 97%] [32m[1mLinking CXX executable swiftpro_read_node[0m
+[17.676s] [ 97%] Built target swiftpro_read_node
+[23.224s] [ 98%] [32m[1mLinking CXX executable swiftpro_rviz_node[0m
+[23.910s] [ 98%] Built target swiftpro_rviz_node
+[29.131s] [100%] [32m[1mLinking CXX executable swiftpro_write_node[0m
+[30.089s] [100%] Built target swiftpro_write_node
+[30.109s] Invoked command in '/home/ros2/ros2_ws/build/swiftpro' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/ros2/ros2_ws/build/swiftpro -- -j12 -l12
+[30.124s] Invoking command in '/home/ros2/ros2_ws/build/swiftpro': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --install /home/ros2/ros2_ws/build/swiftpro
+[30.135s] -- Install configuration: ""
+[30.136s] -- Execute custom install script
+[30.138s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/ament_index/resource_index/rosidl_interfaces/swiftpro
+[30.152s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/msg/SwiftproState.json
+[30.166s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/msg/Position.json
+[30.179s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/msg/Angle4th.json
+[30.192s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/msg/Status.json
+[30.205s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/srv/SendGcode.json
+[30.221s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/angle4th.h
+[30.237s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/angle4th__functions.h
+[30.251s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/angle4th__struct.h
+[30.266s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/angle4th__type_support.h
+[30.281s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/position__functions.h
+[30.295s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/position__struct.h
+[30.309s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/position__type_support.h
+[30.322s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/status__functions.h
+[30.338s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/status__struct.h
+[30.352s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/status__type_support.h
+[30.366s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/swiftpro_state__functions.h
+[30.379s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/swiftpro_state__struct.h
+[30.394s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/swiftpro_state__type_support.h
+[30.406s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/position.h
+[30.419s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/rosidl_generator_c__visibility_control.h
+[30.434s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/status.h
+[30.448s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/swiftpro_state.h
+[30.463s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/srv/detail/send_gcode__functions.h
+[30.477s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/srv/detail/send_gcode__struct.h
+[30.490s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/srv/detail/send_gcode__type_support.h
+[30.502s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/srv/send_gcode.h
+[30.516s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/environment/library_path.sh
+[30.529s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/environment/library_path.dsv
+[30.543s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/angle4th__rosidl_typesupport_fastrtps_c.h
+[30.558s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/position__rosidl_typesupport_fastrtps_c.h
+[30.571s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/status__rosidl_typesupport_fastrtps_c.h
+[30.585s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/swiftpro_state__rosidl_typesupport_fastrtps_c.h
+[30.602s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[30.618s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/srv/detail/send_gcode__rosidl_typesupport_fastrtps_c.h
+[30.632s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/angle4th.hpp
+[30.646s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/angle4th__builder.hpp
+[30.660s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/angle4th__struct.hpp
+[30.673s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/angle4th__traits.hpp
+[30.686s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/angle4th__type_support.hpp
+[30.699s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/position__builder.hpp
+[30.712s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/position__struct.hpp
+[30.725s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/position__traits.hpp
+[30.737s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/position__type_support.hpp
+[30.751s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/status__builder.hpp
+[30.763s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/status__struct.hpp
+[30.776s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/status__traits.hpp
+[30.790s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/status__type_support.hpp
+[30.803s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/swiftpro_state__builder.hpp
+[30.816s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/swiftpro_state__struct.hpp
+[30.830s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/swiftpro_state__traits.hpp
+[30.844s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/swiftpro_state__type_support.hpp
+[30.858s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/position.hpp
+[30.871s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/rosidl_generator_cpp__visibility_control.hpp
+[30.884s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/status.hpp
+[30.897s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/swiftpro_state.hpp
+[30.910s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/srv/detail/send_gcode__builder.hpp
+[30.925s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/srv/detail/send_gcode__struct.hpp
+[30.938s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/srv/detail/send_gcode__traits.hpp
+[30.952s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/srv/detail/send_gcode__type_support.hpp
+[30.965s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/srv/send_gcode.hpp
+[30.979s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/angle4th__rosidl_typesupport_fastrtps_cpp.hpp
+[30.994s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/position__rosidl_typesupport_fastrtps_cpp.hpp
+[31.008s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/status__rosidl_typesupport_fastrtps_cpp.hpp
+[31.034s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/swiftpro_state__rosidl_typesupport_fastrtps_cpp.hpp
+[31.057s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[31.077s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/srv/detail/send_gcode__rosidl_typesupport_fastrtps_cpp.hpp
+[31.093s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/angle4th__rosidl_typesupport_introspection_c.h
+[31.107s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/position__rosidl_typesupport_introspection_c.h
+[31.125s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/status__rosidl_typesupport_introspection_c.h
+[31.140s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/swiftpro_state__rosidl_typesupport_introspection_c.h
+[31.154s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[31.168s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/srv/detail/send_gcode__rosidl_typesupport_introspection_c.h
+[31.182s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/angle4th__rosidl_typesupport_introspection_cpp.hpp
+[31.197s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/position__rosidl_typesupport_introspection_cpp.hpp
+[31.212s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/status__rosidl_typesupport_introspection_cpp.hpp
+[31.226s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/swiftpro_state__rosidl_typesupport_introspection_cpp.hpp
+[31.239s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/srv/detail/send_gcode__rosidl_typesupport_introspection_cpp.hpp
+[31.253s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/environment/pythonpath.sh
+[31.269s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/environment/pythonpath.dsv
+[31.286s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro-2.0.0-py3.12.egg-info/PKG-INFO
+[31.301s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro-2.0.0-py3.12.egg-info/SOURCES.txt
+[31.315s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro-2.0.0-py3.12.egg-info/dependency_links.txt
+[31.332s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro-2.0.0-py3.12.egg-info/top_level.txt
+[31.348s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/__init__.py
+[31.365s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/_swiftpro_s.ep.rosidl_typesupport_c.c
+[31.379s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/_swiftpro_s.ep.rosidl_typesupport_fastrtps_c.c
+[31.396s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/_swiftpro_s.ep.rosidl_typesupport_introspection_c.c
+[31.414s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/__init__.py
+[31.428s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/_angle4th.py
+[31.444s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/_angle4th_s.c
+[31.460s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/_position.py
+[31.475s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/_position_s.c
+[31.490s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/_status.py
+[31.504s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/_status_s.c
+[31.518s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/_swiftpro_state.py
+[31.531s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/_swiftpro_state_s.c
+[31.547s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/srv/__init__.py
+[31.560s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/srv/_send_gcode.py
+[31.574s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/srv/_send_gcode_s.c
+[31.587s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/swiftpro_s__rosidl_typesupport_c.so
+[31.601s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/swiftpro_s__rosidl_typesupport_fastrtps_c.so
+[31.615s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/swiftpro_s__rosidl_typesupport_introspection_c.so
+[31.628s] -- Up-to-date symlink: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/swiftpro_s__rosidl_typesupport_fastrtps_c.so
+[31.628s] -- Up-to-date symlink: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/swiftpro_s__rosidl_typesupport_introspection_c.so
+[31.629s] -- Up-to-date symlink: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/swiftpro_s__rosidl_typesupport_c.so
+[31.629s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/msg/SwiftproState.idl
+[31.643s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/msg/Position.idl
+[31.658s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/msg/Angle4th.idl
+[31.672s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/msg/Status.idl
+[31.685s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/srv/SendGcode.idl
+[31.698s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/msg/SwiftproState.msg
+[31.711s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/msg/Position.msg
+[31.724s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/msg/Angle4th.msg
+[31.738s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/msg/Status.msg
+[31.751s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/srv/SendGcode.srv
+[31.765s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/swiftpro/swiftpro_write_node
+[31.779s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/swiftpro/swiftpro_read_node
+[31.792s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/swiftpro/swiftpro_rviz_node
+[31.806s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/pro_links/Base.STL
+[31.819s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/pro_links/Gripper.STL
+[31.832s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/pro_links/Link1.STL
+[31.846s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/pro_links/Link2.STL
+[31.859s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/pro_links/Link3.STL
+[31.873s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/pro_links/Link4.STL
+[31.887s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/pro_links/Link5.STL
+[31.899s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/pro_links/Link6.STL
+[31.913s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/pro_links/Link7.STL
+[31.926s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/pro_links/Link9.STL
+[31.940s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/pro_links/Suction.STL
+[31.953s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/pro_model.xacro
+[31.967s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/swift_links/Base.STL
+[31.981s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/swift_links/Gripper.STL
+[31.994s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/swift_links/Link1.STL
+[32.006s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/swift_links/Link2.STL
+[32.019s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/swift_links/Link3.STL
+[32.032s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/swift_links/Link4.STL
+[32.046s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/swift_links/Link5.STL
+[32.060s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/swift_links/Link6.STL
+[32.074s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/swift_links/Link7.STL
+[32.088s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/swift_links/Link9.STL
+[32.102s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/swift_links/Suction.STL
+[32.116s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/swift_model.urdf
+[32.129s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/swift_model.xacro
+[32.144s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/ament_index/resource_index/package_run_dependencies/swiftpro
+[32.159s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/ament_index/resource_index/parent_prefix_path/swiftpro
+[32.172s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/environment/ament_prefix_path.sh
+[32.186s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/environment/ament_prefix_path.dsv
+[32.199s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/environment/path.sh
+[32.211s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/environment/path.dsv
+[32.224s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/local_setup.bash
+[32.238s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/local_setup.sh
+[32.251s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/local_setup.zsh
+[32.265s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/local_setup.dsv
+[32.278s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/package.dsv
+[32.292s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/ament_index/resource_index/packages/swiftpro
+[32.307s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/rosidl_cmake-extras.cmake
+[32.320s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/ament_cmake_export_dependencies-extras.cmake
+[32.334s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/ament_cmake_export_include_directories-extras.cmake
+[32.350s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/ament_cmake_export_libraries-extras.cmake
+[32.370s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/ament_cmake_export_targets-extras.cmake
+[32.388s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[32.405s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[32.419s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/swiftproConfig.cmake
+[32.434s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/swiftproConfig-version.cmake
+[32.448s] -- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/package.xml
+[32.461s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_generator_c.so
+[32.462s] -- Set non-toolchain portion of runtime path of "/home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_generator_c.so" to ""
+[32.462s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_typesupport_fastrtps_c.so
+[32.463s] -- Set non-toolchain portion of runtime path of "/home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_typesupport_fastrtps_c.so" to ""
+[32.463s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_typesupport_fastrtps_cpp.so
+[32.464s] -- Set non-toolchain portion of runtime path of "/home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_typesupport_fastrtps_cpp.so" to ""
+[32.464s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_typesupport_introspection_c.so
+[32.465s] -- Set non-toolchain portion of runtime path of "/home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_typesupport_introspection_c.so" to ""
+[32.465s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_typesupport_c.so
+[32.465s] -- Set non-toolchain portion of runtime path of "/home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_typesupport_c.so" to ""
+[32.465s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_typesupport_introspection_cpp.so
+[32.466s] -- Set non-toolchain portion of runtime path of "/home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_typesupport_introspection_cpp.so" to ""
+[32.466s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_typesupport_cpp.so
+[32.467s] -- Set non-toolchain portion of runtime path of "/home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_typesupport_cpp.so" to ""
+[32.535s] Listing '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro'...
+[32.535s] Compiling '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/__init__.py'...
+[32.535s] Listing '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg'...
+[32.536s] Compiling '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/__init__.py'...
+[32.536s] Compiling '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/_angle4th.py'...
+[32.536s] Compiling '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/_position.py'...
+[32.536s] Compiling '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/_status.py'...
+[32.536s] Compiling '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/_swiftpro_state.py'...
+[32.536s] Listing '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/srv'...
+[32.536s] Compiling '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/srv/__init__.py'...
+[32.536s] Compiling '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/srv/_send_gcode.py'...
+[32.543s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_generator_py.so
+[32.543s] -- Set non-toolchain portion of runtime path of "/home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_generator_py.so" to ""
+[32.544s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/launch
+[32.544s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/launch/pro_control.launch.py
+[32.545s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/export_swiftpro__rosidl_generator_cExport.cmake
+[32.545s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/export_swiftpro__rosidl_generator_cExport-noconfig.cmake
+[32.545s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/export_swiftpro__rosidl_typesupport_fastrtps_cExport.cmake
+[32.545s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/export_swiftpro__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[32.546s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/export_swiftpro__rosidl_generator_cppExport.cmake
+[32.546s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/export_swiftpro__rosidl_typesupport_fastrtps_cppExport.cmake
+[32.546s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/export_swiftpro__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[32.547s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/swiftpro__rosidl_typesupport_introspection_cExport.cmake
+[32.547s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/swiftpro__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[32.547s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/swiftpro__rosidl_typesupport_cExport.cmake
+[32.548s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/swiftpro__rosidl_typesupport_cExport-noconfig.cmake
+[32.548s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/swiftpro__rosidl_typesupport_introspection_cppExport.cmake
+[32.548s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/swiftpro__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[32.549s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/swiftpro__rosidl_typesupport_cppExport.cmake
+[32.549s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/swiftpro__rosidl_typesupport_cppExport-noconfig.cmake
+[32.549s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/export_swiftpro__rosidl_generator_pyExport.cmake
+[32.550s] -- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/export_swiftpro__rosidl_generator_pyExport-noconfig.cmake
+[32.554s] Invoked command in '/home/ros2/ros2_ws/build/swiftpro' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --install /home/ros2/ros2_ws/build/swiftpro

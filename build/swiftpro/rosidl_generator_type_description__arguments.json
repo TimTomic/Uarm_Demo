@@ -1,0 +1,18 @@
+{
+  "package_name": "swiftpro",
+  "output_dir": "/home/ros2/ros2_ws/build/swiftpro/rosidl_generator_type_description/swiftpro",
+  "idl_tuples": [
+    "/home/ros2/ros2_ws/build/swiftpro/rosidl_adapter/swiftpro:msg/SwiftproState.idl",
+    "/home/ros2/ros2_ws/build/swiftpro/rosidl_adapter/swiftpro:msg/Position.idl",
+    "/home/ros2/ros2_ws/build/swiftpro/rosidl_adapter/swiftpro:msg/Angle4th.idl",
+    "/home/ros2/ros2_ws/build/swiftpro/rosidl_adapter/swiftpro:msg/Status.idl",
+    "/home/ros2/ros2_ws/build/swiftpro/rosidl_adapter/swiftpro:srv/SendGcode.idl"
+  ],
+  "include_paths": [
+    "std_msgs:/opt/ros/jazzy/share/std_msgs",
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces",
+    "sensor_msgs:/opt/ros/jazzy/share/sensor_msgs",
+    "geometry_msgs:/opt/ros/jazzy/share/geometry_msgs",
+    "service_msgs:/opt/ros/jazzy/share/service_msgs"
+  ]
+}

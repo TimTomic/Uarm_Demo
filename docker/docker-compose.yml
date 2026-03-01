@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  ros2_jazzy_pi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        # PUID/PGID can be overwritten in .env if host user is not 1000
+        USER_UID: 1000
+        USER_GID: 1000
+    container_name: uarm_demo_container
+    network_mode: host
+    privileged: true
+    # Mapping devices directly
+    volumes:
+      - /dev:/dev
+      # Map the workspace to the container's user home
+      - ../:/home/ros2/ros2_ws
+    environment:
+      - DISPLAY=$DISPLAY
+      - QT_X11_NO_MITSHM=1
+    stdin_open: true # Equivalent to -i
+    tty: true        # Equivalent to -t
+    command: bash

@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "swiftpro/msg/Status",
+      "fields": [
+        {
+          "name": "status",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "swiftpro/msg/Status",
+      "hash_string": "RIHS01_ec9db4b40bf8e16e05d983c701455f16fbc386e6cab48df6f806d48c818c3d33"
+    }
+  ]
+}

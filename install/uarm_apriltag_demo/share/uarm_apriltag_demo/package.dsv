@@ -1,0 +1,9 @@
+source;share/uarm_apriltag_demo/hook/pythonpath.ps1
+source;share/uarm_apriltag_demo/hook/pythonpath.dsv
+source;share/uarm_apriltag_demo/hook/pythonpath.sh
+source;share/uarm_apriltag_demo/hook/ament_prefix_path.ps1
+source;share/uarm_apriltag_demo/hook/ament_prefix_path.dsv
+source;share/uarm_apriltag_demo/hook/ament_prefix_path.sh
+source;../../build/uarm_apriltag_demo/share/uarm_apriltag_demo/hook/pythonpath_develop.ps1
+source;../../build/uarm_apriltag_demo/share/uarm_apriltag_demo/hook/pythonpath_develop.dsv
+source;../../build/uarm_apriltag_demo/share/uarm_apriltag_demo/hook/pythonpath_develop.sh

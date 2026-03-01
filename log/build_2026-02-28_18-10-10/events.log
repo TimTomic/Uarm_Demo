@@ -1,0 +1,880 @@
+[0.000000] (-) TimerEvent: {}
+[0.000381] (apriltag_ros) JobQueued: {'identifier': 'apriltag_ros', 'dependencies': OrderedDict()}
+[0.000474] (swiftpro) JobQueued: {'identifier': 'swiftpro', 'dependencies': OrderedDict()}
+[0.000541] (apriltag_launcher) JobQueued: {'identifier': 'apriltag_launcher', 'dependencies': OrderedDict({'apriltag_ros': '/home/ros2/ros2_ws/install/apriltag_ros'})}
+[0.000605] (apriltag_ros) JobStarted: {'identifier': 'apriltag_ros'}
+[0.009233] (swiftpro) JobStarted: {'identifier': 'swiftpro'}
+[0.015196] (apriltag_ros) JobProgress: {'identifier': 'apriltag_ros', 'progress': 'cmake'}
+[0.016168] (apriltag_ros) JobProgress: {'identifier': 'apriltag_ros', 'progress': 'build'}
+[0.017514] (apriltag_ros) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ros2/ros2_ws/build/apriltag_ros', '--', '-j12', '-l12'], 'cwd': '/home/ros2/ros2_ws/build/apriltag_ros', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ros2', 'GIT_ASKPASS': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ros2/ros2_ws/install/swiftpro/lib:/home/ros2/ros2_ws/install/apriltag_ros/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/lib', 'ANTIGRAVITY_CLI_ALIAS': 'agy', 'HOME': '/home/ros2', 'OLDPWD': '/home/ros2', 'TERM_PROGRAM_VERSION': '1.107.0', 'NVM_BIN': '/home/ros2/.nvm/versions/node/v20.20.0/bin', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-4e3037d4-0ecb-4ee1-a64d-a0cabe9725ad.sock', 'NVM_INC': '/home/ros2/.nvm/versions/node/v20.20.0/include/node', 'ROS_PYTHON_VERSION': '3', 'PAGER': 'cat', 'VSCODE_GIT_ASKPASS_MAIN': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/node', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'ANTIGRAVITY_AGENT': '1', 'NVM_DIR': '/home/ros2/.nvm', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ros2/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ros2', 'NAME': 'DESKTOP-LV6HOVS', 'WSL_INTEROP': '/run/WSL/1526_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/home/ros2/.local/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/bin/remote-cli:/home/ros2/.local/bin:/home/ros2/.nvm/versions/node/v20.20.0/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/timla/Documents/apache-maven-3.9.9/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/OpenSSL-Win64/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/cursor/resources/app/bin:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/timla/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/timla/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/timla/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/timla/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/timla/AppData/Roaming/npm:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python312/Scripts:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python312:/mnt/c/Users/timla/AppData/Local/Programs/Antigravity/bin:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-756edae79e.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/ros2/ros2_ws/install/swiftpro:/home/ros2/ros2_ws/install/apriltag_launcher:/home/ros2/ros2_ws/install/apriltag_ros:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/ros2/ros2_ws/build/apriltag_ros', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/ros2/ros2_ws/install/swiftpro:/home/ros2/ros2_ws/install/apriltag_launcher:/home/ros2/ros2_ws/install/apriltag_ros:/opt/ros/jazzy', 'WSLENV': ''}), 'shell': False}
+[0.022666] (swiftpro) JobProgress: {'identifier': 'swiftpro', 'progress': 'cmake'}
+[0.026638] (swiftpro) Command: {'cmd': ['/usr/bin/cmake', '/home/ros2/ros2_ws/src/uarm_driver/swiftpro', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/ros2/ros2_ws/install/swiftpro'], 'cwd': '/home/ros2/ros2_ws/build/swiftpro', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ros2', 'GIT_ASKPASS': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ros2/ros2_ws/install/swiftpro/lib:/home/ros2/ros2_ws/install/apriltag_ros/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/lib', 'ANTIGRAVITY_CLI_ALIAS': 'agy', 'HOME': '/home/ros2', 'OLDPWD': '/home/ros2', 'TERM_PROGRAM_VERSION': '1.107.0', 'NVM_BIN': '/home/ros2/.nvm/versions/node/v20.20.0/bin', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-4e3037d4-0ecb-4ee1-a64d-a0cabe9725ad.sock', 'NVM_INC': '/home/ros2/.nvm/versions/node/v20.20.0/include/node', 'ROS_PYTHON_VERSION': '3', 'PAGER': 'cat', 'VSCODE_GIT_ASKPASS_MAIN': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/node', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'ANTIGRAVITY_AGENT': '1', 'NVM_DIR': '/home/ros2/.nvm', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ros2/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ros2', 'NAME': 'DESKTOP-LV6HOVS', 'WSL_INTEROP': '/run/WSL/1526_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/home/ros2/.local/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/bin/remote-cli:/home/ros2/.local/bin:/home/ros2/.nvm/versions/node/v20.20.0/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/timla/Documents/apache-maven-3.9.9/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/OpenSSL-Win64/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/cursor/resources/app/bin:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/timla/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/timla/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/timla/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/timla/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/timla/AppData/Roaming/npm:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python312/Scripts:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python312:/mnt/c/Users/timla/AppData/Local/Programs/Antigravity/bin:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-756edae79e.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/ros2/ros2_ws/install/swiftpro:/home/ros2/ros2_ws/install/apriltag_launcher:/home/ros2/ros2_ws/install/apriltag_ros:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/ros2/ros2_ws/build/swiftpro', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/ros2/ros2_ws/install/swiftpro:/home/ros2/ros2_ws/install/apriltag_launcher:/home/ros2/ros2_ws/install/apriltag_ros:/opt/ros/jazzy', 'WSLENV': ''}), 'shell': False}
+[0.098780] (-) TimerEvent: {}
+[0.116950] (apriltag_ros) StdoutLine: {'line': b'[ 20%] Built target tags\n'}
+[0.124936] (apriltag_ros) StdoutLine: {'line': b'[ 40%] Built target conversion\n'}
+[0.129481] (apriltag_ros) StdoutLine: {'line': b'[ 60%] Built target apriltag_node\n'}
+[0.173708] (apriltag_ros) StdoutLine: {'line': b'[ 80%] Built target pose_estimation\n'}
+[0.198978] (-) TimerEvent: {}
+[0.234483] (apriltag_ros) StdoutLine: {'line': b'[100%] Built target AprilTagNode\n'}
+[0.254633] (apriltag_ros) CommandEnded: {'returncode': 0}
+[0.255522] (apriltag_ros) JobProgress: {'identifier': 'apriltag_ros', 'progress': 'install'}
+[0.272376] (apriltag_ros) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ros2/ros2_ws/build/apriltag_ros'], 'cwd': '/home/ros2/ros2_ws/build/apriltag_ros', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ros2', 'GIT_ASKPASS': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ros2/ros2_ws/install/swiftpro/lib:/home/ros2/ros2_ws/install/apriltag_ros/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/lib', 'ANTIGRAVITY_CLI_ALIAS': 'agy', 'HOME': '/home/ros2', 'OLDPWD': '/home/ros2', 'TERM_PROGRAM_VERSION': '1.107.0', 'NVM_BIN': '/home/ros2/.nvm/versions/node/v20.20.0/bin', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-4e3037d4-0ecb-4ee1-a64d-a0cabe9725ad.sock', 'NVM_INC': '/home/ros2/.nvm/versions/node/v20.20.0/include/node', 'ROS_PYTHON_VERSION': '3', 'PAGER': 'cat', 'VSCODE_GIT_ASKPASS_MAIN': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/node', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'ANTIGRAVITY_AGENT': '1', 'NVM_DIR': '/home/ros2/.nvm', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ros2/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ros2', 'NAME': 'DESKTOP-LV6HOVS', 'WSL_INTEROP': '/run/WSL/1526_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/home/ros2/.local/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/bin/remote-cli:/home/ros2/.local/bin:/home/ros2/.nvm/versions/node/v20.20.0/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/timla/Documents/apache-maven-3.9.9/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/OpenSSL-Win64/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/cursor/resources/app/bin:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/timla/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/timla/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/timla/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/timla/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/timla/AppData/Roaming/npm:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python312/Scripts:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python312:/mnt/c/Users/timla/AppData/Local/Programs/Antigravity/bin:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-756edae79e.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/ros2/ros2_ws/install/swiftpro:/home/ros2/ros2_ws/install/apriltag_launcher:/home/ros2/ros2_ws/install/apriltag_ros:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/ros2/ros2_ws/build/apriltag_ros', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/ros2/ros2_ws/install/swiftpro:/home/ros2/ros2_ws/install/apriltag_launcher:/home/ros2/ros2_ws/install/apriltag_ros:/opt/ros/jazzy', 'WSLENV': ''}), 'shell': False}
+[0.280208] (swiftpro) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.284057] (apriltag_ros) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.284577] (apriltag_ros) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.284987] (apriltag_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_ros/lib/apriltag_ros/apriltag_node\n'}
+[0.285282] (apriltag_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_ros/share/apriltag_ros/environment/library_path.sh\n'}
+[0.285691] (apriltag_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_ros/share/apriltag_ros/environment/library_path.dsv\n'}
+[0.286222] (apriltag_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_ros/lib/libAprilTagNode.so\n'}
+[0.286732] (apriltag_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_ros/share/apriltag_ros/cfg/tags_36h11.yaml\n'}
+[0.287128] (apriltag_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_ros/share/apriltag_ros/launch/camera_36h11.launch.yml\n'}
+[0.287418] (apriltag_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_ros/share/ament_index/resource_index/package_run_dependencies/apriltag_ros\n'}
+[0.287708] (apriltag_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_ros/share/ament_index/resource_index/parent_prefix_path/apriltag_ros\n'}
+[0.287979] (apriltag_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_ros/share/apriltag_ros/environment/ament_prefix_path.sh\n'}
+[0.288228] (apriltag_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_ros/share/apriltag_ros/environment/ament_prefix_path.dsv\n'}
+[0.288590] (apriltag_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_ros/share/apriltag_ros/environment/path.sh\n'}
+[0.288840] (apriltag_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_ros/share/apriltag_ros/environment/path.dsv\n'}
+[0.289096] (apriltag_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_ros/share/apriltag_ros/local_setup.bash\n'}
+[0.289357] (apriltag_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_ros/share/apriltag_ros/local_setup.sh\n'}
+[0.289818] (apriltag_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_ros/share/apriltag_ros/local_setup.zsh\n'}
+[0.290256] (apriltag_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_ros/share/apriltag_ros/local_setup.dsv\n'}
+[0.290384] (apriltag_ros) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/apriltag_ros/share/apriltag_ros/package.dsv\n'}
+[0.299174] (-) TimerEvent: {}
+[0.306040] (apriltag_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_ros/share/ament_index/resource_index/packages/apriltag_ros\n'}
+[0.306491] (apriltag_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_ros/share/ament_index/resource_index/rclcpp_components/apriltag_ros\n'}
+[0.306706] (apriltag_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_ros/share/apriltag_ros/cmake/apriltag_rosConfig.cmake\n'}
+[0.307088] (apriltag_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_ros/share/apriltag_ros/cmake/apriltag_rosConfig-version.cmake\n'}
+[0.307538] (apriltag_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_ros/share/apriltag_ros/package.xml\n'}
+[0.312053] (apriltag_ros) CommandEnded: {'returncode': 0}
+[0.344599] (apriltag_ros) JobEnded: {'identifier': 'apriltag_ros', 'rc': 0}
+[0.347282] (apriltag_launcher) JobStarted: {'identifier': 'apriltag_launcher'}
+[0.399386] (-) TimerEvent: {}
+[0.499938] (-) TimerEvent: {}
+[0.500616] (apriltag_launcher) JobProgress: {'identifier': 'apriltag_launcher', 'progress': 'cmake'}
+[0.502676] (apriltag_launcher) JobProgress: {'identifier': 'apriltag_launcher', 'progress': 'build'}
+[0.502743] (apriltag_launcher) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ros2/ros2_ws/build/apriltag_launcher', '--', '-j12', '-l12'], 'cwd': '/home/ros2/ros2_ws/build/apriltag_launcher', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ros2', 'GIT_ASKPASS': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ros2/ros2_ws/install/apriltag_ros/lib:/home/ros2/ros2_ws/install/swiftpro/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/lib', 'ANTIGRAVITY_CLI_ALIAS': 'agy', 'HOME': '/home/ros2', 'OLDPWD': '/home/ros2', 'TERM_PROGRAM_VERSION': '1.107.0', 'NVM_BIN': '/home/ros2/.nvm/versions/node/v20.20.0/bin', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-4e3037d4-0ecb-4ee1-a64d-a0cabe9725ad.sock', 'NVM_INC': '/home/ros2/.nvm/versions/node/v20.20.0/include/node', 'ROS_PYTHON_VERSION': '3', 'PAGER': 'cat', 'VSCODE_GIT_ASKPASS_MAIN': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/node', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'ANTIGRAVITY_AGENT': '1', 'NVM_DIR': '/home/ros2/.nvm', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ros2/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ros2', 'NAME': 'DESKTOP-LV6HOVS', 'WSL_INTEROP': '/run/WSL/1526_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/home/ros2/.local/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/bin/remote-cli:/home/ros2/.local/bin:/home/ros2/.nvm/versions/node/v20.20.0/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/timla/Documents/apache-maven-3.9.9/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/OpenSSL-Win64/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/cursor/resources/app/bin:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/timla/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/timla/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/timla/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/timla/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/timla/AppData/Roaming/npm:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python312/Scripts:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python312:/mnt/c/Users/timla/AppData/Local/Programs/Antigravity/bin:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-756edae79e.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/ros2/ros2_ws/install/swiftpro:/home/ros2/ros2_ws/install/apriltag_launcher:/home/ros2/ros2_ws/install/apriltag_ros:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/ros2/ros2_ws/build/apriltag_launcher', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/ros2/ros2_ws/install/apriltag_ros:/home/ros2/ros2_ws/install/swiftpro:/home/ros2/ros2_ws/install/apriltag_launcher:/opt/ros/jazzy', 'WSLENV': ''}), 'shell': False}
+[0.572088] (apriltag_launcher) CommandEnded: {'returncode': 0}
+[0.573241] (apriltag_launcher) JobProgress: {'identifier': 'apriltag_launcher', 'progress': 'install'}
+[0.574115] (apriltag_launcher) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ros2/ros2_ws/build/apriltag_launcher'], 'cwd': '/home/ros2/ros2_ws/build/apriltag_launcher', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ros2', 'GIT_ASKPASS': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ros2/ros2_ws/install/apriltag_ros/lib:/home/ros2/ros2_ws/install/swiftpro/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/lib', 'ANTIGRAVITY_CLI_ALIAS': 'agy', 'HOME': '/home/ros2', 'OLDPWD': '/home/ros2', 'TERM_PROGRAM_VERSION': '1.107.0', 'NVM_BIN': '/home/ros2/.nvm/versions/node/v20.20.0/bin', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-4e3037d4-0ecb-4ee1-a64d-a0cabe9725ad.sock', 'NVM_INC': '/home/ros2/.nvm/versions/node/v20.20.0/include/node', 'ROS_PYTHON_VERSION': '3', 'PAGER': 'cat', 'VSCODE_GIT_ASKPASS_MAIN': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/node', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'ANTIGRAVITY_AGENT': '1', 'NVM_DIR': '/home/ros2/.nvm', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ros2/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ros2', 'NAME': 'DESKTOP-LV6HOVS', 'WSL_INTEROP': '/run/WSL/1526_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/home/ros2/.local/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/bin/remote-cli:/home/ros2/.local/bin:/home/ros2/.nvm/versions/node/v20.20.0/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/timla/Documents/apache-maven-3.9.9/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/OpenSSL-Win64/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/cursor/resources/app/bin:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/timla/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/timla/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/timla/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/timla/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/timla/AppData/Roaming/npm:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python312/Scripts:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python312:/mnt/c/Users/timla/AppData/Local/Programs/Antigravity/bin:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-756edae79e.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/ros2/ros2_ws/install/swiftpro:/home/ros2/ros2_ws/install/apriltag_launcher:/home/ros2/ros2_ws/install/apriltag_ros:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/ros2/ros2_ws/build/apriltag_launcher', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/ros2/ros2_ws/install/apriltag_ros:/home/ros2/ros2_ws/install/swiftpro:/home/ros2/ros2_ws/install/apriltag_launcher:/opt/ros/jazzy', 'WSLENV': ''}), 'shell': False}
+[0.585087] (apriltag_launcher) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.585594] (apriltag_launcher) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.586634] (apriltag_launcher) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/launch/apriltag_usb_cam.launch.py\n'}
+[0.587118] (apriltag_launcher) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/config/tags_36h11.yaml\n'}
+[0.587389] (apriltag_launcher) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_launcher/share/ament_index/resource_index/package_run_dependencies/apriltag_launcher\n'}
+[0.587690] (apriltag_launcher) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_launcher/share/ament_index/resource_index/parent_prefix_path/apriltag_launcher\n'}
+[0.587945] (apriltag_launcher) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/environment/ament_prefix_path.sh\n'}
+[0.588183] (apriltag_launcher) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/environment/ament_prefix_path.dsv\n'}
+[0.588442] (apriltag_launcher) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/environment/path.sh\n'}
+[0.588696] (apriltag_launcher) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/environment/path.dsv\n'}
+[0.588969] (apriltag_launcher) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/local_setup.bash\n'}
+[0.589185] (apriltag_launcher) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/local_setup.sh\n'}
+[0.589424] (apriltag_launcher) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/local_setup.zsh\n'}
+[0.589713] (apriltag_launcher) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/local_setup.dsv\n'}
+[0.590049] (apriltag_launcher) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/package.dsv\n'}
+[0.600116] (-) TimerEvent: {}
+[0.606235] (apriltag_launcher) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_launcher/share/ament_index/resource_index/packages/apriltag_launcher\n'}
+[0.606580] (apriltag_launcher) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/cmake/apriltag_launcherConfig.cmake\n'}
+[0.606972] (apriltag_launcher) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/cmake/apriltag_launcherConfig-version.cmake\n'}
+[0.607446] (apriltag_launcher) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/package.xml\n'}
+[0.611334] (apriltag_launcher) CommandEnded: {'returncode': 0}
+[0.627295] (apriltag_launcher) JobEnded: {'identifier': 'apriltag_launcher', 'rc': 0}
+[0.700272] (-) TimerEvent: {}
+[0.800630] (-) TimerEvent: {}
+[0.900997] (-) TimerEvent: {}
+[1.001366] (-) TimerEvent: {}
+[1.101776] (-) TimerEvent: {}
+[1.202164] (-) TimerEvent: {}
+[1.302589] (-) TimerEvent: {}
+[1.320139] (swiftpro) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[1.402738] (-) TimerEvent: {}
+[1.503113] (-) TimerEvent: {}
+[1.603480] (-) TimerEvent: {}
+[1.703929] (-) TimerEvent: {}
+[1.804321] (-) TimerEvent: {}
+[1.904697] (-) TimerEvent: {}
+[2.005143] (-) TimerEvent: {}
+[2.105602] (-) TimerEvent: {}
+[2.206015] (-) TimerEvent: {}
+[2.232832] (swiftpro) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[2.306205] (-) TimerEvent: {}
+[2.406689] (-) TimerEvent: {}
+[2.507085] (-) TimerEvent: {}
+[2.607523] (-) TimerEvent: {}
+[2.623124] (swiftpro) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.634773] (swiftpro) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[2.635183] (swiftpro) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.635662] (swiftpro) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.707685] (-) TimerEvent: {}
+[2.777577] (swiftpro) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.807831] (-) TimerEvent: {}
+[2.908266] (-) TimerEvent: {}
+[3.008692] (-) TimerEvent: {}
+[3.109097] (-) TimerEvent: {}
+[3.180478] (swiftpro) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[3.194575] (swiftpro) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[3.195094] (swiftpro) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[3.195696] (swiftpro) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[3.199082] (swiftpro) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[3.209243] (-) TimerEvent: {}
+[3.309660] (-) TimerEvent: {}
+[3.393328] (swiftpro) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[3.409840] (-) TimerEvent: {}
+[3.510256] (-) TimerEvent: {}
+[3.517475] (swiftpro) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[3.557319] (swiftpro) StdoutLine: {'line': b'-- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[3.610421] (-) TimerEvent: {}
+[3.710811] (-) TimerEvent: {}
+[3.811236] (-) TimerEvent: {}
+[3.845003] (swiftpro) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[3.871359] (swiftpro) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[3.897198] (swiftpro) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.911469] (-) TimerEvent: {}
+[3.929764] (swiftpro) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[4.011639] (-) TimerEvent: {}
+[4.040379] (swiftpro) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[4.044204] (swiftpro) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[4.111789] (-) TimerEvent: {}
+[4.182389] (swiftpro) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[4.211936] (-) TimerEvent: {}
+[4.312324] (-) TimerEvent: {}
+[4.412798] (-) TimerEvent: {}
+[4.480047] (swiftpro) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[4.512929] (-) TimerEvent: {}
+[4.613319] (-) TimerEvent: {}
+[4.638838] (swiftpro) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[4.713458] (-) TimerEvent: {}
+[4.813952] (-) TimerEvent: {}
+[4.914380] (-) TimerEvent: {}
+[4.935066] (swiftpro) StdoutLine: {'line': b'-- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)\n'}
+[4.954816] (swiftpro) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[5.007630] (swiftpro) StdoutLine: {'line': b'-- Found tf2: 0.36.19 (/opt/ros/jazzy/share/tf2/cmake)\n'}
+[5.013835] (swiftpro) StdoutLine: {'line': b'-- Found tf2_ros: 0.36.19 (/opt/ros/jazzy/share/tf2_ros/cmake)\n'}
+[5.014486] (-) TimerEvent: {}
+[5.114797] (-) TimerEvent: {}
+[5.193077] (swiftpro) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.36.19 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)\n'}
+[5.214953] (-) TimerEvent: {}
+[5.293778] (swiftpro) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)\n'}
+[5.296322] (swiftpro) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[5.296660] (swiftpro) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[5.301998] (swiftpro) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[5.315091] (-) TimerEvent: {}
+[5.333006] (swiftpro) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[5.415272] (-) TimerEvent: {}
+[5.515801] (-) TimerEvent: {}
+[5.616300] (-) TimerEvent: {}
+[5.716746] (-) TimerEvent: {}
+[5.817211] (-) TimerEvent: {}
+[5.917632] (-) TimerEvent: {}
+[6.018114] (-) TimerEvent: {}
+[6.118481] (-) TimerEvent: {}
+[6.218896] (-) TimerEvent: {}
+[6.286267] (swiftpro) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[6.319024] (-) TimerEvent: {}
+[6.419397] (-) TimerEvent: {}
+[6.519787] (-) TimerEvent: {}
+[6.620147] (-) TimerEvent: {}
+[6.720542] (-) TimerEvent: {}
+[6.820918] (-) TimerEvent: {}
+[6.921314] (-) TimerEvent: {}
+[7.021862] (-) TimerEvent: {}
+[7.122261] (-) TimerEvent: {}
+[7.222643] (-) TimerEvent: {}
+[7.323067] (-) TimerEvent: {}
+[7.423482] (-) TimerEvent: {}
+[7.523913] (-) TimerEvent: {}
+[7.585460] (swiftpro) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[7.624029] (-) TimerEvent: {}
+[7.724384] (-) TimerEvent: {}
+[7.824786] (-) TimerEvent: {}
+[7.925227] (-) TimerEvent: {}
+[8.025882] (-) TimerEvent: {}
+[8.126264] (-) TimerEvent: {}
+[8.134736] (swiftpro) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[8.139903] (swiftpro) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[8.226407] (-) TimerEvent: {}
+[8.323108] (swiftpro) StdoutLine: {'line': b'-- Found PythonExtra: /usr/bin/python3  \n'}
+[8.326641] (-) TimerEvent: {}
+[8.427047] (-) TimerEvent: {}
+[8.527427] (-) TimerEvent: {}
+[8.627802] (-) TimerEvent: {}
+[8.728228] (-) TimerEvent: {}
+[8.828619] (-) TimerEvent: {}
+[8.911761] (swiftpro) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[8.928752] (-) TimerEvent: {}
+[9.029109] (-) TimerEvent: {}
+[9.070275] (swiftpro) StdoutLine: {'line': b'-- Configuring done (9.0s)\n'}
+[9.129230] (-) TimerEvent: {}
+[9.229681] (-) TimerEvent: {}
+[9.236647] (swiftpro) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[9.267462] (swiftpro) StdoutLine: {'line': b'-- Build files have been written to: /home/ros2/ros2_ws/build/swiftpro\n'}
+[9.288104] (swiftpro) CommandEnded: {'returncode': 0}
+[9.289061] (swiftpro) JobProgress: {'identifier': 'swiftpro', 'progress': 'build'}
+[9.289998] (swiftpro) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ros2/ros2_ws/build/swiftpro', '--', '-j12', '-l12'], 'cwd': '/home/ros2/ros2_ws/build/swiftpro', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ros2', 'GIT_ASKPASS': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ros2/ros2_ws/install/swiftpro/lib:/home/ros2/ros2_ws/install/apriltag_ros/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/lib', 'ANTIGRAVITY_CLI_ALIAS': 'agy', 'HOME': '/home/ros2', 'OLDPWD': '/home/ros2', 'TERM_PROGRAM_VERSION': '1.107.0', 'NVM_BIN': '/home/ros2/.nvm/versions/node/v20.20.0/bin', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-4e3037d4-0ecb-4ee1-a64d-a0cabe9725ad.sock', 'NVM_INC': '/home/ros2/.nvm/versions/node/v20.20.0/include/node', 'ROS_PYTHON_VERSION': '3', 'PAGER': 'cat', 'VSCODE_GIT_ASKPASS_MAIN': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/node', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'ANTIGRAVITY_AGENT': '1', 'NVM_DIR': '/home/ros2/.nvm', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ros2/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ros2', 'NAME': 'DESKTOP-LV6HOVS', 'WSL_INTEROP': '/run/WSL/1526_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/home/ros2/.local/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/bin/remote-cli:/home/ros2/.local/bin:/home/ros2/.nvm/versions/node/v20.20.0/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/timla/Documents/apache-maven-3.9.9/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/OpenSSL-Win64/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/cursor/resources/app/bin:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/timla/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/timla/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/timla/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/timla/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/timla/AppData/Roaming/npm:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python312/Scripts:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python312:/mnt/c/Users/timla/AppData/Local/Programs/Antigravity/bin:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-756edae79e.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/ros2/ros2_ws/install/swiftpro:/home/ros2/ros2_ws/install/apriltag_launcher:/home/ros2/ros2_ws/install/apriltag_ros:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/ros2/ros2_ws/build/swiftpro', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/ros2/ros2_ws/install/swiftpro:/home/ros2/ros2_ws/install/apriltag_launcher:/home/ros2/ros2_ws/install/apriltag_ros:/opt/ros/jazzy', 'WSLENV': ''}), 'shell': False}
+[9.329863] (-) TimerEvent: {}
+[9.374719] (swiftpro) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating type hashes for ROS interfaces\x1b[0m\n'}
+[9.387414] (swiftpro) StdoutLine: {'line': b'[  1%] Built target ament_cmake_python_symlink_swiftpro\n'}
+[9.430000] (-) TimerEvent: {}
+[9.530446] (-) TimerEvent: {}
+[9.630814] (-) TimerEvent: {}
+[9.691410] (swiftpro) StdoutLine: {'line': b'running egg_info\n'}
+[9.692710] (swiftpro) StdoutLine: {'line': b'creating swiftpro.egg-info\n'}
+[9.716790] (swiftpro) StdoutLine: {'line': b'writing swiftpro.egg-info/PKG-INFO\n'}
+[9.717289] (swiftpro) StdoutLine: {'line': b'writing dependency_links to swiftpro.egg-info/dependency_links.txt\n'}
+[9.717602] (swiftpro) StdoutLine: {'line': b'writing top-level names to swiftpro.egg-info/top_level.txt\n'}
+[9.718091] (swiftpro) StdoutLine: {'line': b"writing manifest file 'swiftpro.egg-info/SOURCES.txt'\n"}
+[9.720231] (swiftpro) StdoutLine: {'line': b'[  1%] Built target swiftpro__rosidl_generator_type_description\n'}
+[9.731029] (-) TimerEvent: {}
+[9.740205] (swiftpro) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[9.757041] (swiftpro) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[9.795793] (swiftpro) StdoutLine: {'line': b"reading manifest file 'swiftpro.egg-info/SOURCES.txt'\n"}
+[9.796454] (swiftpro) StdoutLine: {'line': b"writing manifest file 'swiftpro.egg-info/SOURCES.txt'\n"}
+[9.831191] (-) TimerEvent: {}
+[9.847691] (swiftpro) StdoutLine: {'line': b'[  3%] Built target ament_cmake_python_build_swiftpro_egg\n'}
+[9.931381] (-) TimerEvent: {}
+[10.031935] (-) TimerEvent: {}
+[10.132427] (-) TimerEvent: {}
+[10.232872] (-) TimerEvent: {}
+[10.333215] (-) TimerEvent: {}
+[10.434100] (-) TimerEvent: {}
+[10.460311] (swiftpro) StdoutLine: {'line': b'[  3%] Built target swiftpro__cpp\n'}
+[10.537646] (-) TimerEvent: {}
+[10.650663] (swiftpro) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/msg/detail/angle4th__functions.c.o\x1b[0m\n'}
+[10.651051] (-) TimerEvent: {}
+[10.651210] (swiftpro) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/msg/detail/status__description.c.o\x1b[0m\n'}
+[10.652462] (swiftpro) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/msg/detail/status__type_support.c.o\x1b[0m\n'}
+[10.653148] (swiftpro) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/msg/detail/swiftpro_state__functions.c.o\x1b[0m\n'}
+[10.653379] (swiftpro) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/msg/detail/position__type_support.c.o\x1b[0m\n'}
+[10.655588] (swiftpro) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/msg/detail/status__functions.c.o\x1b[0m\n'}
+[10.657997] (swiftpro) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/msg/detail/angle4th__description.c.o\x1b[0m\n'}
+[10.661880] (swiftpro) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/msg/detail/position__functions.c.o\x1b[0m\n'}
+[10.662305] (swiftpro) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/msg/detail/angle4th__type_support.c.o\x1b[0m\n'}
+[10.672855] (swiftpro) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/msg/detail/swiftpro_state__description.c.o\x1b[0m\n'}
+[10.697641] (swiftpro) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/msg/detail/swiftpro_state__type_support.c.o\x1b[0m\n'}
+[10.697981] (swiftpro) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/msg/detail/position__description.c.o\x1b[0m\n'}
+[10.751215] (-) TimerEvent: {}
+[10.753907] (swiftpro) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/srv/detail/send_gcode__description.c.o\x1b[0m\n'}
+[10.754386] (swiftpro) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/srv/detail/send_gcode__functions.c.o\x1b[0m\n'}
+[10.781325] (swiftpro) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_c.dir/rosidl_generator_c/swiftpro/srv/detail/send_gcode__type_support.c.o\x1b[0m\n'}
+[10.851374] (-) TimerEvent: {}
+[10.903120] (swiftpro) StdoutLine: {'line': b'[ 23%] \x1b[32m\x1b[1mLinking C shared library libswiftpro__rosidl_generator_c.so\x1b[0m\n'}
+[10.951534] (-) TimerEvent: {}
+[11.051929] (-) TimerEvent: {}
+[11.093775] (swiftpro) StdoutLine: {'line': b'[ 23%] Built target swiftpro__rosidl_generator_c\n'}
+[11.120337] (swiftpro) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[11.121922] (swiftpro) StdoutLine: {'line': b'[ 26%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[11.123031] (swiftpro) StdoutLine: {'line': b'[ 27%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[11.123667] (swiftpro) StdoutLine: {'line': b'[ 28%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[11.126131] (swiftpro) StdoutLine: {'line': b'[ 30%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[11.126674] (swiftpro) StdoutLine: {'line': b'[ 31%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[11.152119] (-) TimerEvent: {}
+[11.252508] (-) TimerEvent: {}
+[11.353035] (-) TimerEvent: {}
+[11.453599] (-) TimerEvent: {}
+[11.554086] (-) TimerEvent: {}
+[11.654553] (-) TimerEvent: {}
+[11.755072] (-) TimerEvent: {}
+[11.855543] (-) TimerEvent: {}
+[11.956055] (-) TimerEvent: {}
+[12.041739] (swiftpro) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/swiftpro/msg/status__type_support.cpp.o\x1b[0m\n'}
+[12.042033] (swiftpro) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/swiftpro/srv/send_gcode__type_support.cpp.o\x1b[0m\n'}
+[12.042179] (swiftpro) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/swiftpro/msg/angle4th__type_support.cpp.o\x1b[0m\n'}
+[12.043345] (swiftpro) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/swiftpro/msg/swiftpro_state__type_support.cpp.o\x1b[0m\n'}
+[12.048217] (swiftpro) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_c.dir/rosidl_typesupport_c/swiftpro/msg/swiftpro_state__type_support.cpp.o\x1b[0m\n'}
+[12.058129] (-) TimerEvent: {}
+[12.061795] (swiftpro) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/swiftpro/msg/position__type_support.cpp.o\x1b[0m\n'}
+[12.091965] (swiftpro) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_c.dir/rosidl_typesupport_c/swiftpro/msg/position__type_support.cpp.o\x1b[0m\n'}
+[12.117427] (swiftpro) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_c.dir/rosidl_typesupport_c/swiftpro/msg/angle4th__type_support.cpp.o\x1b[0m\n'}
+[12.158263] (-) TimerEvent: {}
+[12.259758] (-) TimerEvent: {}
+[12.271602] (swiftpro) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_c.dir/rosidl_typesupport_c/swiftpro/msg/status__type_support.cpp.o\x1b[0m\n'}
+[12.306245] (swiftpro) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_c.dir/rosidl_typesupport_c/swiftpro/srv/send_gcode__type_support.cpp.o\x1b[0m\n'}
+[12.361655] (-) TimerEvent: {}
+[12.413729] (swiftpro) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/swiftpro/msg/detail/position__type_support.cpp.o\x1b[0m\n'}
+[12.434678] (swiftpro) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/swiftpro/msg/detail/swiftpro_state__type_support.cpp.o\x1b[0m\n'}
+[12.461807] (-) TimerEvent: {}
+[12.500649] (swiftpro) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/swiftpro/msg/detail/angle4th__type_support.cpp.o\x1b[0m\n'}
+[12.523497] (swiftpro) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding C object CMakeFiles/swiftpro__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/swiftpro/msg/detail/swiftpro_state__type_support.c.o\x1b[0m\n'}
+[12.561993] (-) TimerEvent: {}
+[12.591937] (swiftpro) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX shared library libswiftpro__rosidl_typesupport_c.so\x1b[0m\n'}
+[12.662143] (-) TimerEvent: {}
+[12.731498] (swiftpro) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding C object CMakeFiles/swiftpro__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/swiftpro/msg/detail/position__type_support.c.o\x1b[0m\n'}
+[12.762313] (-) TimerEvent: {}
+[12.836462] (swiftpro) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/swiftpro/msg/detail/swiftpro_state__type_support_c.cpp.o\x1b[0m\n'}
+[12.854711] (swiftpro) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding C object CMakeFiles/swiftpro__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/swiftpro/msg/detail/angle4th__type_support.c.o\x1b[0m\n'}
+[12.865642] (-) TimerEvent: {}
+[12.907644] (swiftpro) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/swiftpro/msg/detail/dds_fastrtps/swiftpro_state__type_support.cpp.o\x1b[0m\n'}
+[12.965788] (-) TimerEvent: {}
+[13.005202] (swiftpro) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding C object CMakeFiles/swiftpro__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/swiftpro/msg/detail/status__type_support.c.o\x1b[0m\n'}
+[13.013793] (swiftpro) StdoutLine: {'line': b'[ 56%] Built target swiftpro__rosidl_typesupport_c\n'}
+[13.065790] (swiftpro) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/swiftpro/msg/detail/dds_fastrtps/position__type_support.cpp.o\x1b[0m\n'}
+[13.066168] (-) TimerEvent: {}
+[13.163132] (swiftpro) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding C object CMakeFiles/swiftpro__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/swiftpro/srv/detail/send_gcode__type_support.c.o\x1b[0m\n'}
+[13.166321] (-) TimerEvent: {}
+[13.191556] (swiftpro) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/swiftpro/msg/detail/dds_fastrtps/angle4th__type_support.cpp.o\x1b[0m\n'}
+[13.202460] (swiftpro) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/swiftpro/msg/detail/dds_fastrtps/status__type_support.cpp.o\x1b[0m\n'}
+[13.269686] (-) TimerEvent: {}
+[13.304047] (swiftpro) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/swiftpro/srv/detail/dds_fastrtps/send_gcode__type_support.cpp.o\x1b[0m\n'}
+[13.314346] (swiftpro) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/swiftpro/msg/detail/status__type_support.cpp.o\x1b[0m\n'}
+[13.367540] (swiftpro) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking C shared library libswiftpro__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[13.370494] (-) TimerEvent: {}
+[13.477641] (-) TimerEvent: {}
+[13.490084] (swiftpro) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX shared library libswiftpro__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[13.511833] (swiftpro) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/swiftpro/srv/detail/send_gcode__type_support.cpp.o\x1b[0m\n'}
+[13.577793] (-) TimerEvent: {}
+[13.627929] (swiftpro) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/swiftpro/msg/detail/position__type_support_c.cpp.o\x1b[0m\n'}
+[13.631748] (swiftpro) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/swiftpro/msg/detail/angle4th__type_support_c.cpp.o\x1b[0m\n'}
+[13.679514] (-) TimerEvent: {}
+[13.775580] (swiftpro) StdoutLine: {'line': b'[ 70%] Built target swiftpro__rosidl_typesupport_introspection_c\n'}
+[13.780255] (-) TimerEvent: {}
+[13.801899] (swiftpro) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/swiftpro/msg/detail/status__type_support_c.cpp.o\x1b[0m\n'}
+[13.880797] (-) TimerEvent: {}
+[13.981257] (-) TimerEvent: {}
+[14.089455] (-) TimerEvent: {}
+[14.190156] (-) TimerEvent: {}
+[14.294139] (-) TimerEvent: {}
+[14.395040] (-) TimerEvent: {}
+[14.433807] (swiftpro) StdoutLine: {'line': b'[ 71%] Built target swiftpro__rosidl_typesupport_cpp\n'}
+[14.452688] (swiftpro) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/swiftpro/srv/detail/send_gcode__type_support_c.cpp.o\x1b[0m\n'}
+[14.495553] (-) TimerEvent: {}
+[14.552391] (swiftpro) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro_write_node.dir/src/swiftpro_write_node.cpp.o\x1b[0m\n'}
+[14.595930] (-) TimerEvent: {}
+[14.638852] (swiftpro) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro_read_node.dir/src/swiftpro_read_node.cpp.o\x1b[0m\n'}
+[14.697932] (-) TimerEvent: {}
+[14.766647] (swiftpro) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/swiftpro_rviz_node.dir/src/swiftpro_rviz_node.cpp.o\x1b[0m\n'}
+[14.814236] (-) TimerEvent: {}
+[14.920320] (-) TimerEvent: {}
+[15.021735] (-) TimerEvent: {}
+[15.053990] (swiftpro) StdoutLine: {'line': b'[ 77%] \x1b[32m\x1b[1mLinking CXX shared library libswiftpro__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[15.121932] (-) TimerEvent: {}
+[15.222433] (-) TimerEvent: {}
+[15.323952] (-) TimerEvent: {}
+[15.425013] (-) TimerEvent: {}
+[15.513703] (swiftpro) StdoutLine: {'line': b'[ 78%] \x1b[32m\x1b[1mLinking CXX shared library libswiftpro__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[15.527491] (-) TimerEvent: {}
+[15.627990] (-) TimerEvent: {}
+[15.726718] (swiftpro) StdoutLine: {'line': b'[ 78%] Built target swiftpro__rosidl_typesupport_introspection_cpp\n'}
+[15.728147] (-) TimerEvent: {}
+[15.828649] (-) TimerEvent: {}
+[15.929383] (-) TimerEvent: {}
+[16.030234] (-) TimerEvent: {}
+[16.051013] (swiftpro) StdoutLine: {'line': b'[ 78%] Built target swiftpro__rosidl_typesupport_fastrtps_cpp\n'}
+[16.130368] (-) TimerEvent: {}
+[16.170371] (swiftpro) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking CXX shared library libswiftpro__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[16.230567] (-) TimerEvent: {}
+[16.331098] (-) TimerEvent: {}
+[16.431680] (-) TimerEvent: {}
+[16.532375] (-) TimerEvent: {}
+[16.630223] (swiftpro) StdoutLine: {'line': b'[ 80%] Built target swiftpro__rosidl_typesupport_fastrtps_c\n'}
+[16.632578] (-) TimerEvent: {}
+[16.674671] (swiftpro) StdoutLine: {'line': b'[ 80%] Built target swiftpro\n'}
+[16.719337] (swiftpro) StdoutLine: {'line': b'[ 81%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[16.732715] (-) TimerEvent: {}
+[16.833198] (-) TimerEvent: {}
+[16.933674] (-) TimerEvent: {}
+[17.034132] (-) TimerEvent: {}
+[17.134780] (-) TimerEvent: {}
+[17.235538] (-) TimerEvent: {}
+[17.336081] (-) TimerEvent: {}
+[17.436824] (-) TimerEvent: {}
+[17.537650] (-) TimerEvent: {}
+[17.638625] (-) TimerEvent: {}
+[17.739388] (-) TimerEvent: {}
+[17.840016] (-) TimerEvent: {}
+[17.849203] (swiftpro) StdoutLine: {'line': b'[ 81%] Built target swiftpro__py\n'}
+[17.891827] (swiftpro) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_py.dir/rosidl_generator_py/swiftpro/msg/_position_s.c.o\x1b[0m\n'}
+[17.892146] (swiftpro) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_py.dir/rosidl_generator_py/swiftpro/msg/_angle4th_s.c.o\x1b[0m\n'}
+[17.894011] (swiftpro) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_py.dir/rosidl_generator_py/swiftpro/msg/_status_s.c.o\x1b[0m\n'}
+[17.894919] (swiftpro) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_py.dir/rosidl_generator_py/swiftpro/msg/_swiftpro_state_s.c.o\x1b[0m\n'}
+[17.895392] (swiftpro) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/swiftpro__rosidl_generator_py.dir/rosidl_generator_py/swiftpro/srv/_send_gcode_s.c.o\x1b[0m\n'}
+[17.940249] (-) TimerEvent: {}
+[18.040790] (-) TimerEvent: {}
+[18.141295] (-) TimerEvent: {}
+[18.241947] (-) TimerEvent: {}
+[18.303071] (swiftpro) StdoutLine: {'line': b'[ 88%] \x1b[32m\x1b[1mLinking C shared library libswiftpro__rosidl_generator_py.so\x1b[0m\n'}
+[18.342092] (-) TimerEvent: {}
+[18.442561] (-) TimerEvent: {}
+[18.542992] (-) TimerEvent: {}
+[18.593111] (swiftpro) StdoutLine: {'line': b'[ 88%] Built target swiftpro__rosidl_generator_py\n'}
+[18.631469] (swiftpro) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/swiftpro_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/swiftpro/_swiftpro_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[18.633938] (swiftpro) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/swiftpro_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/swiftpro/_swiftpro_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[18.640107] (swiftpro) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/swiftpro_s__rosidl_typesupport_c.dir/rosidl_generator_py/swiftpro/_swiftpro_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[18.643181] (-) TimerEvent: {}
+[18.743668] (-) TimerEvent: {}
+[18.844115] (-) TimerEvent: {}
+[18.912732] (swiftpro) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/swiftpro/swiftpro_s__rosidl_typesupport_c.so\x1b[0m\n'}
+[18.916981] (swiftpro) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/swiftpro/swiftpro_s__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[18.924438] (swiftpro) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/swiftpro/swiftpro_s__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[18.944355] (-) TimerEvent: {}
+[19.044957] (-) TimerEvent: {}
+[19.110440] (swiftpro) StdoutLine: {'line': b'[ 96%] Built target swiftpro_s__rosidl_typesupport_c\n'}
+[19.116728] (swiftpro) StdoutLine: {'line': b'[ 96%] Built target swiftpro_s__rosidl_typesupport_fastrtps_c\n'}
+[19.145156] (-) TimerEvent: {}
+[19.179228] (swiftpro) StdoutLine: {'line': b'[ 96%] Built target swiftpro_s__rosidl_typesupport_introspection_c\n'}
+[19.245422] (-) TimerEvent: {}
+[19.345928] (-) TimerEvent: {}
+[19.446639] (-) TimerEvent: {}
+[19.547266] (-) TimerEvent: {}
+[19.648092] (-) TimerEvent: {}
+[19.748655] (-) TimerEvent: {}
+[19.849212] (-) TimerEvent: {}
+[19.949793] (-) TimerEvent: {}
+[19.989092] (swiftpro) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros2/ros2_ws/src/uarm_driver/swiftpro/src/swiftpro_read_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SwiftproReadNode::\x1b[01;32m\x1b[Khandlechar\x1b[m\x1b[K(char)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[19.989453] (swiftpro) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros2/ros2_ws/src/uarm_driver/swiftpro/src/swiftpro_read_node.cpp:97:24:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare\x07-Wsign-compare\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[19.989678] (swiftpro) StderrLine: {'line': b'   97 |         if (\x1b[01;35m\x1b[Kstr_index_ < sizeof(strdata_) - 1\x1b[m\x1b[K)\n'}
+[19.989805] (swiftpro) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[20.050039] (-) TimerEvent: {}
+[20.150617] (-) TimerEvent: {}
+[20.251150] (-) TimerEvent: {}
+[20.351743] (-) TimerEvent: {}
+[20.452200] (-) TimerEvent: {}
+[20.552738] (-) TimerEvent: {}
+[20.653615] (-) TimerEvent: {}
+[20.754467] (-) TimerEvent: {}
+[20.855392] (-) TimerEvent: {}
+[20.956358] (-) TimerEvent: {}
+[21.057102] (-) TimerEvent: {}
+[21.157824] (-) TimerEvent: {}
+[21.258528] (-) TimerEvent: {}
+[21.359198] (-) TimerEvent: {}
+[21.460215] (-) TimerEvent: {}
+[21.560826] (-) TimerEvent: {}
+[21.661491] (-) TimerEvent: {}
+[21.762280] (-) TimerEvent: {}
+[21.863101] (-) TimerEvent: {}
+[21.963937] (-) TimerEvent: {}
+[22.064668] (-) TimerEvent: {}
+[22.165355] (-) TimerEvent: {}
+[22.266049] (-) TimerEvent: {}
+[22.366858] (-) TimerEvent: {}
+[22.467599] (-) TimerEvent: {}
+[22.568680] (-) TimerEvent: {}
+[22.669334] (-) TimerEvent: {}
+[22.770006] (-) TimerEvent: {}
+[22.870560] (-) TimerEvent: {}
+[22.971020] (-) TimerEvent: {}
+[23.071571] (-) TimerEvent: {}
+[23.172236] (-) TimerEvent: {}
+[23.272847] (-) TimerEvent: {}
+[23.373525] (-) TimerEvent: {}
+[23.474176] (-) TimerEvent: {}
+[23.574783] (-) TimerEvent: {}
+[23.675345] (-) TimerEvent: {}
+[23.775907] (-) TimerEvent: {}
+[23.876860] (-) TimerEvent: {}
+[23.977477] (-) TimerEvent: {}
+[24.078143] (-) TimerEvent: {}
+[24.178679] (-) TimerEvent: {}
+[24.279189] (-) TimerEvent: {}
+[24.379779] (-) TimerEvent: {}
+[24.480344] (-) TimerEvent: {}
+[24.580780] (-) TimerEvent: {}
+[24.681271] (-) TimerEvent: {}
+[24.725712] (swiftpro) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking CXX executable swiftpro_read_node\x1b[0m\n'}
+[24.781458] (-) TimerEvent: {}
+[24.882004] (-) TimerEvent: {}
+[24.982481] (-) TimerEvent: {}
+[25.082930] (-) TimerEvent: {}
+[25.183428] (-) TimerEvent: {}
+[25.245259] (swiftpro) StdoutLine: {'line': b'[ 97%] Built target swiftpro_read_node\n'}
+[25.283685] (-) TimerEvent: {}
+[25.384131] (-) TimerEvent: {}
+[25.484600] (-) TimerEvent: {}
+[25.585073] (-) TimerEvent: {}
+[25.685608] (-) TimerEvent: {}
+[25.786044] (-) TimerEvent: {}
+[25.886508] (-) TimerEvent: {}
+[25.986996] (-) TimerEvent: {}
+[26.087438] (-) TimerEvent: {}
+[26.187852] (-) TimerEvent: {}
+[26.288333] (-) TimerEvent: {}
+[26.388846] (-) TimerEvent: {}
+[26.489331] (-) TimerEvent: {}
+[26.589867] (-) TimerEvent: {}
+[26.690272] (-) TimerEvent: {}
+[26.790692] (-) TimerEvent: {}
+[26.891137] (-) TimerEvent: {}
+[26.991589] (-) TimerEvent: {}
+[27.092022] (-) TimerEvent: {}
+[27.192497] (-) TimerEvent: {}
+[27.292958] (-) TimerEvent: {}
+[27.393426] (-) TimerEvent: {}
+[27.493874] (-) TimerEvent: {}
+[27.594287] (-) TimerEvent: {}
+[27.694697] (-) TimerEvent: {}
+[27.795096] (-) TimerEvent: {}
+[27.895553] (-) TimerEvent: {}
+[27.995958] (-) TimerEvent: {}
+[28.096398] (-) TimerEvent: {}
+[28.196851] (-) TimerEvent: {}
+[28.297285] (-) TimerEvent: {}
+[28.397793] (-) TimerEvent: {}
+[28.498316] (-) TimerEvent: {}
+[28.598987] (-) TimerEvent: {}
+[28.699452] (-) TimerEvent: {}
+[28.799862] (-) TimerEvent: {}
+[28.900287] (-) TimerEvent: {}
+[29.000787] (-) TimerEvent: {}
+[29.101207] (-) TimerEvent: {}
+[29.201740] (-) TimerEvent: {}
+[29.302325] (-) TimerEvent: {}
+[29.402829] (-) TimerEvent: {}
+[29.503348] (-) TimerEvent: {}
+[29.603993] (-) TimerEvent: {}
+[29.704581] (-) TimerEvent: {}
+[29.805106] (-) TimerEvent: {}
+[29.905640] (-) TimerEvent: {}
+[30.006246] (-) TimerEvent: {}
+[30.106752] (-) TimerEvent: {}
+[30.207163] (-) TimerEvent: {}
+[30.307614] (-) TimerEvent: {}
+[30.408029] (-) TimerEvent: {}
+[30.508441] (-) TimerEvent: {}
+[30.608899] (-) TimerEvent: {}
+[30.649848] (<colcon_parallel_executor.executor.parallel.ParallelExecutorExtension object at 0x768cdad05af0>) ParallelStatus: {'processing': ('swiftpro',)}
+[30.709050] (-) TimerEvent: {}
+[30.809426] (-) TimerEvent: {}
+[30.909826] (-) TimerEvent: {}
+[31.010229] (-) TimerEvent: {}
+[31.110666] (-) TimerEvent: {}
+[31.211109] (-) TimerEvent: {}
+[31.311591] (-) TimerEvent: {}
+[31.365966] (swiftpro) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking CXX executable swiftpro_rviz_node\x1b[0m\n'}
+[31.411712] (-) TimerEvent: {}
+[31.512126] (-) TimerEvent: {}
+[31.612506] (-) TimerEvent: {}
+[31.712865] (-) TimerEvent: {}
+[31.813269] (-) TimerEvent: {}
+[31.913799] (-) TimerEvent: {}
+[32.014154] (-) TimerEvent: {}
+[32.114535] (-) TimerEvent: {}
+[32.158188] (swiftpro) StdoutLine: {'line': b'[ 98%] Built target swiftpro_rviz_node\n'}
+[32.214697] (-) TimerEvent: {}
+[32.315133] (-) TimerEvent: {}
+[32.415742] (-) TimerEvent: {}
+[32.516225] (-) TimerEvent: {}
+[32.616890] (-) TimerEvent: {}
+[32.717469] (-) TimerEvent: {}
+[32.817909] (-) TimerEvent: {}
+[32.918318] (-) TimerEvent: {}
+[33.018718] (-) TimerEvent: {}
+[33.119122] (-) TimerEvent: {}
+[33.219545] (-) TimerEvent: {}
+[33.320000] (-) TimerEvent: {}
+[33.420523] (-) TimerEvent: {}
+[33.520993] (-) TimerEvent: {}
+[33.621395] (-) TimerEvent: {}
+[33.721938] (-) TimerEvent: {}
+[33.822489] (-) TimerEvent: {}
+[33.922911] (-) TimerEvent: {}
+[34.023390] (-) TimerEvent: {}
+[34.123826] (-) TimerEvent: {}
+[34.224325] (-) TimerEvent: {}
+[34.324906] (-) TimerEvent: {}
+[34.425393] (-) TimerEvent: {}
+[34.525849] (-) TimerEvent: {}
+[34.626261] (-) TimerEvent: {}
+[34.726614] (-) TimerEvent: {}
+[34.826955] (-) TimerEvent: {}
+[34.927338] (-) TimerEvent: {}
+[35.027665] (-) TimerEvent: {}
+[35.128083] (-) TimerEvent: {}
+[35.228538] (-) TimerEvent: {}
+[35.328997] (-) TimerEvent: {}
+[35.429488] (-) TimerEvent: {}
+[35.530054] (-) TimerEvent: {}
+[35.630564] (-) TimerEvent: {}
+[35.731059] (-) TimerEvent: {}
+[35.831569] (-) TimerEvent: {}
+[35.932052] (-) TimerEvent: {}
+[36.032487] (-) TimerEvent: {}
+[36.132906] (-) TimerEvent: {}
+[36.233318] (-) TimerEvent: {}
+[36.333788] (-) TimerEvent: {}
+[36.434203] (-) TimerEvent: {}
+[36.534754] (-) TimerEvent: {}
+[36.635159] (-) TimerEvent: {}
+[36.735632] (-) TimerEvent: {}
+[36.836058] (-) TimerEvent: {}
+[36.936436] (-) TimerEvent: {}
+[37.036839] (-) TimerEvent: {}
+[37.137262] (-) TimerEvent: {}
+[37.237720] (-) TimerEvent: {}
+[37.338106] (-) TimerEvent: {}
+[37.438516] (-) TimerEvent: {}
+[37.538885] (-) TimerEvent: {}
+[37.639264] (-) TimerEvent: {}
+[37.739590] (-) TimerEvent: {}
+[37.839992] (-) TimerEvent: {}
+[37.940597] (-) TimerEvent: {}
+[38.041018] (-) TimerEvent: {}
+[38.141453] (-) TimerEvent: {}
+[38.241887] (-) TimerEvent: {}
+[38.342315] (-) TimerEvent: {}
+[38.442734] (-) TimerEvent: {}
+[38.543182] (-) TimerEvent: {}
+[38.643613] (-) TimerEvent: {}
+[38.744010] (-) TimerEvent: {}
+[38.844227] (swiftpro) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable swiftpro_write_node\x1b[0m\n'}
+[38.844552] (-) TimerEvent: {}
+[38.944822] (-) TimerEvent: {}
+[39.045156] (-) TimerEvent: {}
+[39.145499] (-) TimerEvent: {}
+[39.245930] (-) TimerEvent: {}
+[39.346334] (-) TimerEvent: {}
+[39.446743] (-) TimerEvent: {}
+[39.547131] (-) TimerEvent: {}
+[39.647506] (-) TimerEvent: {}
+[39.747902] (-) TimerEvent: {}
+[39.848296] (-) TimerEvent: {}
+[39.942945] (swiftpro) StdoutLine: {'line': b'[100%] Built target swiftpro_write_node\n'}
+[39.948450] (-) TimerEvent: {}
+[39.968111] (swiftpro) CommandEnded: {'returncode': 0}
+[39.969272] (swiftpro) JobProgress: {'identifier': 'swiftpro', 'progress': 'install'}
+[39.970232] (swiftpro) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ros2/ros2_ws/build/swiftpro'], 'cwd': '/home/ros2/ros2_ws/build/swiftpro', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ros2', 'GIT_ASKPASS': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ros2/ros2_ws/install/swiftpro/lib:/home/ros2/ros2_ws/install/apriltag_ros/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/lib', 'ANTIGRAVITY_CLI_ALIAS': 'agy', 'HOME': '/home/ros2', 'OLDPWD': '/home/ros2', 'TERM_PROGRAM_VERSION': '1.107.0', 'NVM_BIN': '/home/ros2/.nvm/versions/node/v20.20.0/bin', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-4e3037d4-0ecb-4ee1-a64d-a0cabe9725ad.sock', 'NVM_INC': '/home/ros2/.nvm/versions/node/v20.20.0/include/node', 'ROS_PYTHON_VERSION': '3', 'PAGER': 'cat', 'VSCODE_GIT_ASKPASS_MAIN': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/node', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'ANTIGRAVITY_AGENT': '1', 'NVM_DIR': '/home/ros2/.nvm', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ros2/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ros2', 'NAME': 'DESKTOP-LV6HOVS', 'WSL_INTEROP': '/run/WSL/1526_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/home/ros2/.local/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/ros2/.antigravity-server/bin/1.19.6-d2597a5c475647ed306b22de1e39853c7812d07d/bin/remote-cli:/home/ros2/.local/bin:/home/ros2/.nvm/versions/node/v20.20.0/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/timla/Documents/apache-maven-3.9.9/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/OpenSSL-Win64/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/cursor/resources/app/bin:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/timla/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/timla/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/timla/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/timla/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/timla/AppData/Roaming/npm:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python312/Scripts:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python312:/mnt/c/Users/timla/AppData/Local/Programs/Antigravity/bin:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-756edae79e.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/ros2/ros2_ws/install/swiftpro:/home/ros2/ros2_ws/install/apriltag_launcher:/home/ros2/ros2_ws/install/apriltag_ros:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/ros2/ros2_ws/build/swiftpro', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/ros2/ros2_ws/install/swiftpro:/home/ros2/ros2_ws/install/apriltag_launcher:/home/ros2/ros2_ws/install/apriltag_ros:/opt/ros/jazzy', 'WSLENV': ''}), 'shell': False}
+[39.983238] (swiftpro) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[39.984186] (swiftpro) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[39.988353] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/ament_index/resource_index/rosidl_interfaces/swiftpro\n'}
+[40.004704] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/msg/SwiftproState.json\n'}
+[40.020390] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/msg/Position.json\n'}
+[40.036184] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/msg/Angle4th.json\n'}
+[40.048550] (-) TimerEvent: {}
+[40.052131] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/msg/Status.json\n'}
+[40.071193] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/srv/SendGcode.json\n'}
+[40.091722] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/angle4th.h\n'}
+[40.107670] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/angle4th__functions.h\n'}
+[40.123900] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/angle4th__struct.h\n'}
+[40.139359] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/angle4th__type_support.h\n'}
+[40.148746] (-) TimerEvent: {}
+[40.155517] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/position__functions.h\n'}
+[40.171740] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/position__struct.h\n'}
+[40.192894] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/position__type_support.h\n'}
+[40.209053] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/status__functions.h\n'}
+[40.224864] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/status__struct.h\n'}
+[40.240748] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/status__type_support.h\n'}
+[40.248899] (-) TimerEvent: {}
+[40.257382] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/swiftpro_state__functions.h\n'}
+[40.272953] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/swiftpro_state__struct.h\n'}
+[40.289874] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/swiftpro_state__type_support.h\n'}
+[40.304221] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/position.h\n'}
+[40.319592] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/rosidl_generator_c__visibility_control.h\n'}
+[40.333899] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/status.h\n'}
+[40.347677] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/swiftpro_state.h\n'}
+[40.348989] (-) TimerEvent: {}
+[40.364888] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/srv/detail/send_gcode__functions.h\n'}
+[40.379891] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/srv/detail/send_gcode__struct.h\n'}
+[40.395605] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/srv/detail/send_gcode__type_support.h\n'}
+[40.411126] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/srv/send_gcode.h\n'}
+[40.430553] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/environment/library_path.sh\n'}
+[40.449589] (-) TimerEvent: {}
+[40.454859] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/environment/library_path.dsv\n'}
+[40.480237] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/angle4th__rosidl_typesupport_fastrtps_c.h\n'}
+[40.503590] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/position__rosidl_typesupport_fastrtps_c.h\n'}
+[40.522454] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/status__rosidl_typesupport_fastrtps_c.h\n'}
+[40.540799] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/swiftpro_state__rosidl_typesupport_fastrtps_c.h\n'}
+[40.549663] (-) TimerEvent: {}
+[40.558353] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[40.575267] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/srv/detail/send_gcode__rosidl_typesupport_fastrtps_c.h\n'}
+[40.593958] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/angle4th.hpp\n'}
+[40.609316] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/angle4th__builder.hpp\n'}
+[40.625695] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/angle4th__struct.hpp\n'}
+[40.641397] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/angle4th__traits.hpp\n'}
+[40.649798] (-) TimerEvent: {}
+[40.658863] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/angle4th__type_support.hpp\n'}
+[40.678720] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/position__builder.hpp\n'}
+[40.694389] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/position__struct.hpp\n'}
+[40.708453] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/position__traits.hpp\n'}
+[40.724435] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/position__type_support.hpp\n'}
+[40.738980] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/status__builder.hpp\n'}
+[40.749861] (-) TimerEvent: {}
+[40.753216] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/status__struct.hpp\n'}
+[40.770224] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/status__traits.hpp\n'}
+[40.785915] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/status__type_support.hpp\n'}
+[40.800632] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/swiftpro_state__builder.hpp\n'}
+[40.817942] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/swiftpro_state__struct.hpp\n'}
+[40.833727] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/swiftpro_state__traits.hpp\n'}
+[40.850017] (-) TimerEvent: {}
+[40.850625] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/swiftpro_state__type_support.hpp\n'}
+[40.865837] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/position.hpp\n'}
+[40.881311] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[40.898877] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/status.hpp\n'}
+[40.913987] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/swiftpro_state.hpp\n'}
+[40.931094] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/srv/detail/send_gcode__builder.hpp\n'}
+[40.947442] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/srv/detail/send_gcode__struct.hpp\n'}
+[40.950118] (-) TimerEvent: {}
+[40.966546] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/srv/detail/send_gcode__traits.hpp\n'}
+[40.984200] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/srv/detail/send_gcode__type_support.hpp\n'}
+[40.999903] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/srv/send_gcode.hpp\n'}
+[41.015474] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/angle4th__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[41.033333] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/position__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[41.047672] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[41.050310] (-) TimerEvent: {}
+[41.063679] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/swiftpro_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[41.088293] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[41.104366] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/srv/detail/send_gcode__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[41.121245] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/angle4th__rosidl_typesupport_introspection_c.h\n'}
+[41.136977] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/position__rosidl_typesupport_introspection_c.h\n'}
+[41.150417] (-) TimerEvent: {}
+[41.151637] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/status__rosidl_typesupport_introspection_c.h\n'}
+[41.170323] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/swiftpro_state__rosidl_typesupport_introspection_c.h\n'}
+[41.188277] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[41.207267] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/srv/detail/send_gcode__rosidl_typesupport_introspection_c.h\n'}
+[41.225823] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/angle4th__rosidl_typesupport_introspection_cpp.hpp\n'}
+[41.241789] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[41.250532] (-) TimerEvent: {}
+[41.258769] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[41.274422] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/msg/detail/swiftpro_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[41.295452] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/include/swiftpro/swiftpro/srv/detail/send_gcode__rosidl_typesupport_introspection_cpp.hpp\n'}
+[41.310060] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/environment/pythonpath.sh\n'}
+[41.326064] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/environment/pythonpath.dsv\n'}
+[41.343729] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro-2.0.0-py3.12.egg-info/PKG-INFO\n'}
+[41.350671] (-) TimerEvent: {}
+[41.362028] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro-2.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[41.378536] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro-2.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[41.398848] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro-2.0.0-py3.12.egg-info/top_level.txt\n'}
+[41.417389] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/__init__.py\n'}
+[41.436409] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/_swiftpro_s.ep.rosidl_typesupport_c.c\n'}
+[41.450828] (-) TimerEvent: {}
+[41.452252] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/_swiftpro_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[41.471453] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/_swiftpro_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[41.491680] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/__init__.py\n'}
+[41.510671] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/_angle4th.py\n'}
+[41.530201] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/_angle4th_s.c\n'}
+[41.548977] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/_position.py\n'}
+[41.550969] (-) TimerEvent: {}
+[41.563974] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/_position_s.c\n'}
+[41.584668] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/_status.py\n'}
+[41.603171] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/_status_s.c\n'}
+[41.619933] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/_swiftpro_state.py\n'}
+[41.639006] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/_swiftpro_state_s.c\n'}
+[41.651107] (-) TimerEvent: {}
+[41.661295] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/srv/__init__.py\n'}
+[41.683417] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/srv/_send_gcode.py\n'}
+[41.704182] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/srv/_send_gcode_s.c\n'}
+[41.724745] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/swiftpro_s__rosidl_typesupport_c.so\n'}
+[41.742339] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/swiftpro_s__rosidl_typesupport_fastrtps_c.so\n'}
+[41.751245] (-) TimerEvent: {}
+[41.757724] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/swiftpro_s__rosidl_typesupport_introspection_c.so\n'}
+[41.773974] (swiftpro) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/swiftpro_s__rosidl_typesupport_fastrtps_c.so\n'}
+[41.774301] (swiftpro) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/swiftpro_s__rosidl_typesupport_introspection_c.so\n'}
+[41.774698] (swiftpro) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/swiftpro_s__rosidl_typesupport_c.so\n'}
+[41.774984] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/msg/SwiftproState.idl\n'}
+[41.793131] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/msg/Position.idl\n'}
+[41.808739] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/msg/Angle4th.idl\n'}
+[41.825775] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/msg/Status.idl\n'}
+[41.840489] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/srv/SendGcode.idl\n'}
+[41.851382] (-) TimerEvent: {}
+[41.856902] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/msg/SwiftproState.msg\n'}
+[41.874596] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/msg/Position.msg\n'}
+[41.889851] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/msg/Angle4th.msg\n'}
+[41.903958] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/msg/Status.msg\n'}
+[41.919020] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/srv/SendGcode.srv\n'}
+[41.935851] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/swiftpro/swiftpro_write_node\n'}
+[41.950405] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/swiftpro/swiftpro_read_node\n'}
+[41.951471] (-) TimerEvent: {}
+[41.964960] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/lib/swiftpro/swiftpro_rviz_node\n'}
+[41.983037] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/pro_links/Base.STL\n'}
+[41.998230] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/pro_links/Gripper.STL\n'}
+[42.013569] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/pro_links/Link1.STL\n'}
+[42.028649] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/pro_links/Link2.STL\n'}
+[42.044604] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/pro_links/Link3.STL\n'}
+[42.051575] (-) TimerEvent: {}
+[42.060391] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/pro_links/Link4.STL\n'}
+[42.079133] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/pro_links/Link5.STL\n'}
+[42.097276] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/pro_links/Link6.STL\n'}
+[42.111541] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/pro_links/Link7.STL\n'}
+[42.127926] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/pro_links/Link9.STL\n'}
+[42.142561] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/pro_links/Suction.STL\n'}
+[42.151743] (-) TimerEvent: {}
+[42.158982] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/pro_model.xacro\n'}
+[42.176004] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/swift_links/Base.STL\n'}
+[42.192102] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/swift_links/Gripper.STL\n'}
+[42.206920] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/swift_links/Link1.STL\n'}
+[42.222913] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/swift_links/Link2.STL\n'}
+[42.237196] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/swift_links/Link3.STL\n'}
+[42.251868] (-) TimerEvent: {}
+[42.252904] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/swift_links/Link4.STL\n'}
+[42.268583] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/swift_links/Link5.STL\n'}
+[42.283990] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/swift_links/Link6.STL\n'}
+[42.304843] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/swift_links/Link7.STL\n'}
+[42.320645] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/swift_links/Link9.STL\n'}
+[42.337124] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/swift_links/Suction.STL\n'}
+[42.351997] (-) TimerEvent: {}
+[42.352350] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/swift_model.urdf\n'}
+[42.367647] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/urdf/swift_model.xacro\n'}
+[42.385371] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/ament_index/resource_index/package_run_dependencies/swiftpro\n'}
+[42.401149] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/ament_index/resource_index/parent_prefix_path/swiftpro\n'}
+[42.417855] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/environment/ament_prefix_path.sh\n'}
+[42.433950] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/environment/ament_prefix_path.dsv\n'}
+[42.449343] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/environment/path.sh\n'}
+[42.452102] (-) TimerEvent: {}
+[42.463987] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/environment/path.dsv\n'}
+[42.479335] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/local_setup.bash\n'}
+[42.495597] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/local_setup.sh\n'}
+[42.511137] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/local_setup.zsh\n'}
+[42.531640] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/local_setup.dsv\n'}
+[42.549867] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/package.dsv\n'}
+[42.552219] (-) TimerEvent: {}
+[42.568220] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/ament_index/resource_index/packages/swiftpro\n'}
+[42.589365] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/rosidl_cmake-extras.cmake\n'}
+[42.606193] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[42.622569] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[42.638179] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[42.652383] (-) TimerEvent: {}
+[42.654400] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[42.671540] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[42.692163] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[42.710413] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/swiftproConfig.cmake\n'}
+[42.727145] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/swiftproConfig-version.cmake\n'}
+[42.745920] (swiftpro) StdoutLine: {'line': b'-- Symlinking: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/package.xml\n'}
+[42.752560] (-) TimerEvent: {}
+[42.763733] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_generator_c.so\n'}
+[42.765207] (swiftpro) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_generator_c.so" to ""\n'}
+[42.765617] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_typesupport_fastrtps_c.so\n'}
+[42.766611] (swiftpro) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[42.766868] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_typesupport_fastrtps_cpp.so\n'}
+[42.768259] (swiftpro) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[42.768445] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_typesupport_introspection_c.so\n'}
+[42.769202] (swiftpro) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_typesupport_introspection_c.so" to ""\n'}
+[42.769714] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_typesupport_c.so\n'}
+[42.770160] (swiftpro) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_typesupport_c.so" to ""\n'}
+[42.770488] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_typesupport_introspection_cpp.so\n'}
+[42.771105] (swiftpro) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[42.771412] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_typesupport_cpp.so\n'}
+[42.772047] (swiftpro) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_typesupport_cpp.so" to ""\n'}
+[42.842570] (swiftpro) StdoutLine: {'line': b"Listing '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro'...\n"}
+[42.842842] (swiftpro) StdoutLine: {'line': b"Compiling '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/__init__.py'...\n"}
+[42.842978] (swiftpro) StdoutLine: {'line': b"Listing '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg'...\n"}
+[42.843071] (swiftpro) StdoutLine: {'line': b"Compiling '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/__init__.py'...\n"}
+[42.843213] (swiftpro) StdoutLine: {'line': b"Compiling '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/_angle4th.py'...\n"}
+[42.843302] (swiftpro) StdoutLine: {'line': b"Compiling '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/_position.py'...\n"}
+[42.843429] (swiftpro) StdoutLine: {'line': b"Compiling '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/_status.py'...\n"}
+[42.843554] (swiftpro) StdoutLine: {'line': b"Compiling '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/msg/_swiftpro_state.py'...\n"}
+[42.843643] (swiftpro) StdoutLine: {'line': b"Listing '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/srv'...\n"}
+[42.843768] (swiftpro) StdoutLine: {'line': b"Compiling '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/srv/__init__.py'...\n"}
+[42.843893] (swiftpro) StdoutLine: {'line': b"Compiling '/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages/swiftpro/srv/_send_gcode.py'...\n"}
+[42.850257] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_generator_py.so\n'}
+[42.851001] (swiftpro) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ros2/ros2_ws/install/swiftpro/lib/libswiftpro__rosidl_generator_py.so" to ""\n'}
+[42.851257] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/launch\n'}
+[42.851915] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/launch/pro_control.launch.py\n'}
+[42.852206] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/launch/__pycache__\n'}
+[42.852647] (-) TimerEvent: {}
+[42.853016] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/export_swiftpro__rosidl_generator_cExport.cmake\n'}
+[42.853369] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/export_swiftpro__rosidl_generator_cExport-noconfig.cmake\n'}
+[42.853706] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/export_swiftpro__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[42.854083] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/export_swiftpro__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[42.854379] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/export_swiftpro__rosidl_generator_cppExport.cmake\n'}
+[42.854687] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/export_swiftpro__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[42.854972] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/export_swiftpro__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[42.855273] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/swiftpro__rosidl_typesupport_introspection_cExport.cmake\n'}
+[42.855573] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/swiftpro__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[42.855887] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/swiftpro__rosidl_typesupport_cExport.cmake\n'}
+[42.856183] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/swiftpro__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[42.856484] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/swiftpro__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[42.856780] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/swiftpro__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[42.857089] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/swiftpro__rosidl_typesupport_cppExport.cmake\n'}
+[42.857380] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/swiftpro__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[42.857736] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/export_swiftpro__rosidl_generator_pyExport.cmake\n'}
+[42.858116] (swiftpro) StdoutLine: {'line': b'-- Installing: /home/ros2/ros2_ws/install/swiftpro/share/swiftpro/cmake/export_swiftpro__rosidl_generator_pyExport-noconfig.cmake\n'}
+[42.862939] (swiftpro) CommandEnded: {'returncode': 0}
+[42.892873] (swiftpro) JobEnded: {'identifier': 'swiftpro', 'rc': 0}
+[42.894959] (-) EventReactorShutdown: {}

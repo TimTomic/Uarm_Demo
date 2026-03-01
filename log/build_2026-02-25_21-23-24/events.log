@@ -1,0 +1,71 @@
+[0.000000] (-) TimerEvent: {}
+[0.000635] (swiftpro) JobQueued: {'identifier': 'swiftpro', 'dependencies': OrderedDict()}
+[0.000704] (swiftpro) JobStarted: {'identifier': 'swiftpro'}
+[0.012282] (swiftpro) JobProgress: {'identifier': 'swiftpro', 'progress': 'cmake'}
+[0.016219] (swiftpro) Command: {'cmd': ['/usr/bin/cmake', '/home/ros2/ros2_ws/uarm_driver/swiftpro', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/ros2/ros2_ws/install/swiftpro'], 'cwd': '/home/ros2/ros2_ws/build/swiftpro', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ros2', 'GIT_ASKPASS': '/home/ros2/.antigravity-server/bin/1.18.3-c9b91c281ca4919466bd32a6ea2fcdab11102259/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/lib', 'ANTIGRAVITY_CLI_ALIAS': 'agy', 'HOME': '/home/ros2', 'OLDPWD': '/home/ros2/ros2_ws', 'TERM_PROGRAM_VERSION': '1.107.0', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-50f97131-a312-47b3-a524-b659a8a10e6f.sock', 'ROS_PYTHON_VERSION': '3', 'PAGER': 'cat', 'VSCODE_GIT_ASKPASS_MAIN': '/home/ros2/.antigravity-server/bin/1.18.3-c9b91c281ca4919466bd32a6ea2fcdab11102259/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/ros2/.antigravity-server/bin/1.18.3-c9b91c281ca4919466bd32a6ea2fcdab11102259/node', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'ANTIGRAVITY_AGENT': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ros2', 'NAME': 'DESKTOP-LV6HOVS', 'WSL_INTEROP': '/run/WSL/1722_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/home/ros2/.local/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/ros2/.local/bin:/home/ros2/.local/bin:/home/ros2/.antigravity-server/bin/1.18.3-c9b91c281ca4919466bd32a6ea2fcdab11102259/bin/remote-cli:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/timla/Documents/apache-maven-3.9.9/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/OpenSSL-Win64/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/cursor/resources/app/bin:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/timla/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/timla/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/timla/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/timla/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/timla/AppData/Roaming/npm:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python312/Scripts:/mnt/c/Users/timla/AppData/Local/Programs/Python/Python312:/mnt/c/Users/timla/AppData/Local/Programs/Antigravity/bin:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-3050aedb86.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/ros2/ros2_ws/build/swiftpro', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'WSLENV': '', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy'}), 'shell': False}
+[0.099380] (-) TimerEvent: {}
+[0.199724] (-) TimerEvent: {}
+[0.300072] (-) TimerEvent: {}
+[0.362216] (swiftpro) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.400175] (-) TimerEvent: {}
+[0.500501] (-) TimerEvent: {}
+[0.600845] (-) TimerEvent: {}
+[0.701242] (-) TimerEvent: {}
+[0.801601] (-) TimerEvent: {}
+[0.901884] (-) TimerEvent: {}
+[1.002282] (-) TimerEvent: {}
+[1.102633] (-) TimerEvent: {}
+[1.202996] (-) TimerEvent: {}
+[1.303378] (-) TimerEvent: {}
+[1.403712] (-) TimerEvent: {}
+[1.504047] (-) TimerEvent: {}
+[1.604376] (-) TimerEvent: {}
+[1.704816] (-) TimerEvent: {}
+[1.805245] (-) TimerEvent: {}
+[1.905678] (-) TimerEvent: {}
+[2.006073] (-) TimerEvent: {}
+[2.106429] (-) TimerEvent: {}
+[2.206791] (-) TimerEvent: {}
+[2.307149] (-) TimerEvent: {}
+[2.407509] (-) TimerEvent: {}
+[2.507880] (-) TimerEvent: {}
+[2.608245] (-) TimerEvent: {}
+[2.708612] (-) TimerEvent: {}
+[2.808956] (-) TimerEvent: {}
+[2.909369] (-) TimerEvent: {}
+[3.009743] (-) TimerEvent: {}
+[3.110111] (-) TimerEvent: {}
+[3.210446] (-) TimerEvent: {}
+[3.310803] (-) TimerEvent: {}
+[3.411182] (-) TimerEvent: {}
+[3.511534] (-) TimerEvent: {}
+[3.611843] (-) TimerEvent: {}
+[3.712191] (-) TimerEvent: {}
+[3.740192] (swiftpro) StdoutLine: {'line': b'-- The CXX compiler identification is unknown\n'}
+[3.812312] (-) TimerEvent: {}
+[3.912671] (-) TimerEvent: {}
+[4.013074] (-) TimerEvent: {}
+[4.113422] (-) TimerEvent: {}
+[4.213779] (-) TimerEvent: {}
+[4.261274] (swiftpro) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[4.313947] (-) TimerEvent: {}
+[4.414336] (-) TimerEvent: {}
+[4.514698] (-) TimerEvent: {}
+[4.615021] (-) TimerEvent: {}
+[4.633253] (swiftpro) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[4.644147] (swiftpro) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[4.644786] (swiftpro) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[4.645491] (swiftpro) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[4.646278] (swiftpro) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:2 (project):\n'}
+[4.646436] (swiftpro) StderrLine: {'line': b'  No CMAKE_CXX_COMPILER could be found.\n'}
+[4.646525] (swiftpro) StderrLine: {'line': b'\n'}
+[4.646606] (swiftpro) StderrLine: {'line': b'  Tell CMake where to find the compiler by setting either the environment\n'}
+[4.646688] (swiftpro) StderrLine: {'line': b'  variable "CXX" or the CMake cache entry CMAKE_CXX_COMPILER to the full path\n'}
+[4.646777] (swiftpro) StderrLine: {'line': b'  to the compiler, or to the compiler name if it is in the PATH.\n'}
+[4.646857] (swiftpro) StderrLine: {'line': b'\n'}
+[4.646937] (swiftpro) StderrLine: {'line': b'\x1b[0m\n'}
+[4.715152] (-) TimerEvent: {}
+[4.762512] (swiftpro) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[4.773504] (swiftpro) CommandEnded: {'returncode': 1}
+[4.803881] (swiftpro) JobEnded: {'identifier': 'swiftpro', 'rc': 1}
+[4.814853] (-) EventReactorShutdown: {}

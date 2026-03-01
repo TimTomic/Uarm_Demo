@@ -1,0 +1,6 @@
+{
+  "package_name": "uarm_interfaces",
+  "non_idl_tuples": [
+    "/home/ros2/ros2_ws/src/uarm_interfaces:action/PickPlace.action"
+  ]
+}

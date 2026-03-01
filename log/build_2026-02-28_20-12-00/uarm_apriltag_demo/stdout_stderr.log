@@ -1,0 +1,24 @@
+running develop
+running egg_info
+creating uarm_apriltag_demo.egg-info
+writing uarm_apriltag_demo.egg-info/PKG-INFO
+writing dependency_links to uarm_apriltag_demo.egg-info/dependency_links.txt
+writing entry points to uarm_apriltag_demo.egg-info/entry_points.txt
+writing requirements to uarm_apriltag_demo.egg-info/requires.txt
+writing top-level names to uarm_apriltag_demo.egg-info/top_level.txt
+writing manifest file 'uarm_apriltag_demo.egg-info/SOURCES.txt'
+reading manifest file 'uarm_apriltag_demo.egg-info/SOURCES.txt'
+writing manifest file 'uarm_apriltag_demo.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ros2/ros2_ws/install/uarm_apriltag_demo/lib/python3.12/site-packages/uarm-apriltag-demo.egg-link (link to .)
+Installing demo_node script to /home/ros2/ros2_ws/install/uarm_apriltag_demo/lib/uarm_apriltag_demo
+
+Installed /home/ros2/ros2_ws/build/uarm_apriltag_demo
+running symlink_data
+creating /home/ros2/ros2_ws/install/uarm_apriltag_demo/share/ament_index
+creating /home/ros2/ros2_ws/install/uarm_apriltag_demo/share/ament_index/resource_index
+creating /home/ros2/ros2_ws/install/uarm_apriltag_demo/share/ament_index/resource_index/packages
+symbolically linking /home/ros2/ros2_ws/build/uarm_apriltag_demo/resource/uarm_apriltag_demo -> /home/ros2/ros2_ws/install/uarm_apriltag_demo/share/ament_index/resource_index/packages
+symbolically linking /home/ros2/ros2_ws/build/uarm_apriltag_demo/package.xml -> /home/ros2/ros2_ws/install/uarm_apriltag_demo/share/uarm_apriltag_demo
+creating /home/ros2/ros2_ws/install/uarm_apriltag_demo/share/uarm_apriltag_demo/launch
+symbolically linking /home/ros2/ros2_ws/build/uarm_apriltag_demo/launch/demo.launch.py -> /home/ros2/ros2_ws/install/uarm_apriltag_demo/share/uarm_apriltag_demo/launch

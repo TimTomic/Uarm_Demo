@@ -1,0 +1,12 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from swiftpro/msg/Angle4th.msg
+// generated code does not contain a copyright notice
+
+
+module swiftpro {
+  module msg {
+    struct Angle4th {
+      double angle4th;
+    };
+  };
+};

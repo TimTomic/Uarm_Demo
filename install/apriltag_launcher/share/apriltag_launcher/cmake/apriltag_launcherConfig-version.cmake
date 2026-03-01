@@ -1,0 +1,1 @@
+/home/ros2/ros2_ws/build/apriltag_launcher/ament_cmake_core/apriltag_launcherConfig-version.cmake

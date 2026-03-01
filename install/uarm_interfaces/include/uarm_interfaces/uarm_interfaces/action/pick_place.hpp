@@ -1,0 +1,1 @@
+/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp

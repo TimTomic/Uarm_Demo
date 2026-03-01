@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "uarm_interfaces/action/PickPlace_Feedback",
+      "fields": [
+        {
+          "name": "current_state",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "uarm_interfaces/action/PickPlace_Feedback",
+      "hash_string": "RIHS01_db78cfcf63167dc3fb73b219e19027072a52387da3d9e41b3c70d5d370842ea7"
+    }
+  ]
+}

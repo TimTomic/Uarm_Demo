@@ -1,0 +1,43 @@
+[0.149s] Invoking command in '/home/ros2/ros2_ws/build/apriltag_launcher': AMENT_PREFIX_PATH=/home/ros2/ros2_ws/install/apriltag_ros:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ros2/ros2_ws/install/apriltag_ros:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ros2/ros2_ws/install/apriltag_ros/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/ros2/ros2_ws/src/apriltag_launcher -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ros2/ros2_ws/install/apriltag_launcher
+[0.365s] -- The C compiler identification is GNU 13.3.0
+[1.360s] -- The CXX compiler identification is GNU 13.3.0
+[2.320s] -- Detecting C compiler ABI info
+[2.700s] -- Detecting C compiler ABI info - done
+[2.713s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.714s] -- Detecting C compile features
+[2.714s] -- Detecting C compile features - done
+[2.856s] -- Detecting CXX compiler ABI info
+[3.312s] -- Detecting CXX compiler ABI info - done
+[3.325s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.325s] -- Detecting CXX compile features
+[3.326s] -- Detecting CXX compile features - done
+[3.329s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[3.527s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[3.637s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[3.805s] -- Configuring done (3.6s)
+[3.816s] -- Generating done (0.0s)
+[3.819s] -- Build files have been written to: /home/ros2/ros2_ws/build/apriltag_launcher
+[3.827s] Invoked command in '/home/ros2/ros2_ws/build/apriltag_launcher' returned '0': AMENT_PREFIX_PATH=/home/ros2/ros2_ws/install/apriltag_ros:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ros2/ros2_ws/install/apriltag_ros:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ros2/ros2_ws/install/apriltag_ros/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/ros2/ros2_ws/src/apriltag_launcher -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ros2/ros2_ws/install/apriltag_launcher
+[3.829s] Invoking command in '/home/ros2/ros2_ws/build/apriltag_launcher': AMENT_PREFIX_PATH=/home/ros2/ros2_ws/install/apriltag_ros:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ros2/ros2_ws/install/apriltag_ros:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ros2/ros2_ws/install/apriltag_ros/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/ros2/ros2_ws/build/apriltag_launcher -- -j12 -l12
+[3.892s] Invoked command in '/home/ros2/ros2_ws/build/apriltag_launcher' returned '0': AMENT_PREFIX_PATH=/home/ros2/ros2_ws/install/apriltag_ros:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ros2/ros2_ws/install/apriltag_ros:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ros2/ros2_ws/install/apriltag_ros/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/ros2/ros2_ws/build/apriltag_launcher -- -j12 -l12
+[3.909s] Invoking command in '/home/ros2/ros2_ws/build/apriltag_launcher': AMENT_PREFIX_PATH=/home/ros2/ros2_ws/install/apriltag_ros:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ros2/ros2_ws/install/apriltag_ros:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ros2/ros2_ws/install/apriltag_ros/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/ros2/ros2_ws/build/apriltag_launcher
+[3.920s] -- Install configuration: ""
+[3.920s] -- Execute custom install script
+[3.924s] -- Symlinking: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/launch/apriltag_usb_cam.launch.py
+[3.940s] -- Symlinking: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/config/tags_36h11.yaml
+[3.957s] -- Symlinking: /home/ros2/ros2_ws/install/apriltag_launcher/share/ament_index/resource_index/package_run_dependencies/apriltag_launcher
+[3.974s] -- Symlinking: /home/ros2/ros2_ws/install/apriltag_launcher/share/ament_index/resource_index/parent_prefix_path/apriltag_launcher
+[3.989s] -- Symlinking: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/environment/ament_prefix_path.sh
+[4.004s] -- Symlinking: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/environment/ament_prefix_path.dsv
+[4.019s] -- Symlinking: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/environment/path.sh
+[4.033s] -- Symlinking: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/environment/path.dsv
+[4.048s] -- Symlinking: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/local_setup.bash
+[4.064s] -- Symlinking: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/local_setup.sh
+[4.081s] -- Symlinking: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/local_setup.zsh
+[4.095s] -- Symlinking: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/local_setup.dsv
+[4.110s] -- Symlinking: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/package.dsv
+[4.126s] -- Symlinking: /home/ros2/ros2_ws/install/apriltag_launcher/share/ament_index/resource_index/packages/apriltag_launcher
+[4.143s] -- Symlinking: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/cmake/apriltag_launcherConfig.cmake
+[4.159s] -- Symlinking: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/cmake/apriltag_launcherConfig-version.cmake
+[4.174s] -- Symlinking: /home/ros2/ros2_ws/install/apriltag_launcher/share/apriltag_launcher/package.xml
+[4.191s] Invoked command in '/home/ros2/ros2_ws/build/apriltag_launcher' returned '0': AMENT_PREFIX_PATH=/home/ros2/ros2_ws/install/apriltag_ros:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ros2/ros2_ws/install/apriltag_ros:/opt/ros/jazzy LD_LIBRARY_PATH=/home/ros2/ros2_ws/install/apriltag_ros/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/ros2/ros2_ws/build/apriltag_launcher

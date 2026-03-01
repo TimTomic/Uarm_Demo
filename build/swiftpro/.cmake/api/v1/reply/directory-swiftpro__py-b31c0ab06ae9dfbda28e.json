@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "swiftpro__py",
+		"source" : "/home/ros2/ros2_ws/build/swiftpro/swiftpro__py"
+	}
+}

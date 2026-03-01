@@ -1,0 +1,4 @@
+[console_scripts]
+action_demo_node = uarm_apriltag_demo.action_demo_node:main
+demo_node = uarm_apriltag_demo.demo_node:main
+tag_overlay_node = uarm_apriltag_demo.tag_overlay_node:main

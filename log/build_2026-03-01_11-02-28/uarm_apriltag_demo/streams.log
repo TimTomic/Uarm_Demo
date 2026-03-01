@@ -1,0 +1,17 @@
+[1.194s] Invoking command in '/home/ros2/ros2_ws/build/uarm_apriltag_demo': PYTHONPATH=/home/ros2/ros2_ws/build/uarm_apriltag_demo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ros2/ros2_ws/install/uarm_apriltag_demo/lib/python3.12/site-packages:/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages:/home/ros2/ros2_ws/build/uarm_apriltag_demo:/home/ros2/ros2_ws/install/uarm_apriltag_demo/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ros2/ros2_ws/build/uarm_apriltag_demo/build --no-deps symlink_data
+[1.630s] running develop
+[1.895s] running egg_info
+[1.919s] writing uarm_apriltag_demo.egg-info/PKG-INFO
+[1.919s] writing dependency_links to uarm_apriltag_demo.egg-info/dependency_links.txt
+[1.920s] writing entry points to uarm_apriltag_demo.egg-info/entry_points.txt
+[1.920s] writing requirements to uarm_apriltag_demo.egg-info/requires.txt
+[1.920s] writing top-level names to uarm_apriltag_demo.egg-info/top_level.txt
+[1.974s] reading manifest file 'uarm_apriltag_demo.egg-info/SOURCES.txt'
+[1.976s] writing manifest file 'uarm_apriltag_demo.egg-info/SOURCES.txt'
+[2.002s] running build_ext
+[2.003s] Creating /home/ros2/ros2_ws/install/uarm_apriltag_demo/lib/python3.12/site-packages/uarm-apriltag-demo.egg-link (link to .)
+[2.003s] Installing demo_node script to /home/ros2/ros2_ws/install/uarm_apriltag_demo/lib/uarm_apriltag_demo
+[2.004s] 
+[2.004s] Installed /home/ros2/ros2_ws/build/uarm_apriltag_demo
+[2.005s] running symlink_data
+[2.060s] Invoked command in '/home/ros2/ros2_ws/build/uarm_apriltag_demo' returned '0': PYTHONPATH=/home/ros2/ros2_ws/build/uarm_apriltag_demo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ros2/ros2_ws/install/uarm_apriltag_demo/lib/python3.12/site-packages:/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages:/home/ros2/ros2_ws/build/uarm_apriltag_demo:/home/ros2/ros2_ws/install/uarm_apriltag_demo/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ros2/ros2_ws/build/uarm_apriltag_demo/build --no-deps symlink_data

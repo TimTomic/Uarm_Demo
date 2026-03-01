@@ -1,0 +1,53 @@
+[0.000000] (-) TimerEvent: {}
+[0.000329] (-) JobUnselected: {'identifier': 'apriltag_launcher'}
+[0.000399] (-) JobUnselected: {'identifier': 'apriltag_ros'}
+[0.000482] (-) JobUnselected: {'identifier': 'swiftpro'}
+[0.000859] (uarm_apriltag_demo) JobQueued: {'identifier': 'uarm_apriltag_demo', 'dependencies': OrderedDict({'swiftpro': '/home/ros2/ros2_ws/install/swiftpro'})}
+[0.000929] (uarm_apriltag_demo) JobStarted: {'identifier': 'uarm_apriltag_demo'}
+[0.099648] (-) TimerEvent: {}
+[0.199885] (-) TimerEvent: {}
+[0.300148] (-) TimerEvent: {}
+[0.400389] (-) TimerEvent: {}
+[0.500643] (-) TimerEvent: {}
+[0.600901] (-) TimerEvent: {}
+[0.701191] (-) TimerEvent: {}
+[0.801492] (-) TimerEvent: {}
+[0.901800] (-) TimerEvent: {}
+[1.002145] (-) TimerEvent: {}
+[1.102445] (-) TimerEvent: {}
+[1.202764] (-) TimerEvent: {}
+[1.303094] (-) TimerEvent: {}
+[1.344301] (uarm_apriltag_demo) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/ros2/ros2_ws/build/uarm_apriltag_demo/build', '--no-deps', 'symlink_data'], 'cwd': '/home/ros2/ros2_ws/build/uarm_apriltag_demo', 'env': {'HOSTNAME': 'DESKTOP-LV6HOVS', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/home/ros2/ros2_ws/install/swiftpro/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ros2', 'OLDPWD': '/home/ros2/ros2_ws', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'AMENT_PREFIX_PATH': '/home/ros2/ros2_ws/install/swiftpro:/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/ros2/ros2_ws/build/uarm_apriltag_demo', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/home/ros2/ros2_ws/build/uarm_apriltag_demo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ros2/ros2_ws/install/uarm_apriltag_demo/lib/python3.12/site-packages:/home/ros2/ros2_ws/install/swiftpro/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/ros2/ros2_ws/install/swiftpro:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[1.403254] (-) TimerEvent: {}
+[1.503551] (-) TimerEvent: {}
+[1.603971] (-) TimerEvent: {}
+[1.704244] (-) TimerEvent: {}
+[1.804539] (-) TimerEvent: {}
+[1.886413] (uarm_apriltag_demo) StdoutLine: {'line': b'running develop\n'}
+[1.904694] (-) TimerEvent: {}
+[2.004985] (-) TimerEvent: {}
+[2.105283] (-) TimerEvent: {}
+[2.205640] (-) TimerEvent: {}
+[2.304644] (uarm_apriltag_demo) StdoutLine: {'line': b'running egg_info\n'}
+[2.305799] (-) TimerEvent: {}
+[2.343891] (uarm_apriltag_demo) StdoutLine: {'line': b'writing uarm_apriltag_demo.egg-info/PKG-INFO\n'}
+[2.345430] (uarm_apriltag_demo) StdoutLine: {'line': b'writing dependency_links to uarm_apriltag_demo.egg-info/dependency_links.txt\n'}
+[2.346731] (uarm_apriltag_demo) StdoutLine: {'line': b'writing entry points to uarm_apriltag_demo.egg-info/entry_points.txt\n'}
+[2.347700] (uarm_apriltag_demo) StdoutLine: {'line': b'writing requirements to uarm_apriltag_demo.egg-info/requires.txt\n'}
+[2.348346] (uarm_apriltag_demo) StdoutLine: {'line': b'writing top-level names to uarm_apriltag_demo.egg-info/top_level.txt\n'}
+[2.405983] (-) TimerEvent: {}
+[2.423214] (uarm_apriltag_demo) StdoutLine: {'line': b"reading manifest file 'uarm_apriltag_demo.egg-info/SOURCES.txt'\n"}
+[2.425372] (uarm_apriltag_demo) StdoutLine: {'line': b"writing manifest file 'uarm_apriltag_demo.egg-info/SOURCES.txt'\n"}
+[2.469748] (uarm_apriltag_demo) StdoutLine: {'line': b'running build_ext\n'}
+[2.469963] (uarm_apriltag_demo) StdoutLine: {'line': b'Creating /home/ros2/ros2_ws/install/uarm_apriltag_demo/lib/python3.12/site-packages/uarm-apriltag-demo.egg-link (link to .)\n'}
+[2.471133] (uarm_apriltag_demo) StdoutLine: {'line': b'Installing demo_node script to /home/ros2/ros2_ws/install/uarm_apriltag_demo/lib/uarm_apriltag_demo\n'}
+[2.471542] (uarm_apriltag_demo) StdoutLine: {'line': b'Installing tag_overlay_node script to /home/ros2/ros2_ws/install/uarm_apriltag_demo/lib/uarm_apriltag_demo\n'}
+[2.472169] (uarm_apriltag_demo) StdoutLine: {'line': b'\n'}
+[2.472352] (uarm_apriltag_demo) StdoutLine: {'line': b'Installed /home/ros2/ros2_ws/build/uarm_apriltag_demo\n'}
+[2.472579] (uarm_apriltag_demo) StdoutLine: {'line': b'running symlink_data\n'}
+[2.473101] (uarm_apriltag_demo) StdoutLine: {'line': b'creating /home/ros2/ros2_ws/install/uarm_apriltag_demo/share/uarm_apriltag_demo/rviz\n'}
+[2.474976] (uarm_apriltag_demo) StdoutLine: {'line': b'symbolically linking /home/ros2/ros2_ws/build/uarm_apriltag_demo/rviz/demo.rviz -> /home/ros2/ros2_ws/install/uarm_apriltag_demo/share/uarm_apriltag_demo/rviz\n'}
+[2.506208] (-) TimerEvent: {}
+[2.565845] (uarm_apriltag_demo) CommandEnded: {'returncode': 0}
+[2.592408] (uarm_apriltag_demo) JobEnded: {'identifier': 'uarm_apriltag_demo', 'rc': 0}
+[2.594149] (-) EventReactorShutdown: {}

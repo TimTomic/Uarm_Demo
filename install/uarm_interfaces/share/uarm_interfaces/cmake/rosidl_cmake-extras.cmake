@@ -1,0 +1,1 @@
+/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_cmake/rosidl_cmake-extras.cmake

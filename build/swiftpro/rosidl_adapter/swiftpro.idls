@@ -1,0 +1,5 @@
+/home/ros2/ros2_ws/build/swiftpro/rosidl_adapter/swiftpro:msg/SwiftproState.idl
+/home/ros2/ros2_ws/build/swiftpro/rosidl_adapter/swiftpro:msg/Position.idl
+/home/ros2/ros2_ws/build/swiftpro/rosidl_adapter/swiftpro:msg/Angle4th.idl
+/home/ros2/ros2_ws/build/swiftpro/rosidl_adapter/swiftpro:msg/Status.idl
+/home/ros2/ros2_ws/build/swiftpro/rosidl_adapter/swiftpro:srv/SendGcode.idl

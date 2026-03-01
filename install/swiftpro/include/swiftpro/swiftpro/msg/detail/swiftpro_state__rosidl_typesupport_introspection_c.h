@@ -1,0 +1,1 @@
+/home/ros2/ros2_ws/build/swiftpro/rosidl_typesupport_introspection_c/swiftpro/msg/detail/swiftpro_state__rosidl_typesupport_introspection_c.h

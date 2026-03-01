@@ -1,0 +1,1 @@
+/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_typesupport_introspection_c/uarm_interfaces/action/detail/pick_place__rosidl_typesupport_introspection_c.h
