@@ -321,6 +321,12 @@ ament_cmake_symlink_install_files("/home/ros2/ros2_ws/src/uarm_interfaces" FILES
 # install(FILES "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_type_description/uarm_interfaces/action/PickPlace.json" "DESTINATION" "share/uarm_interfaces/action")
 ament_cmake_symlink_install_files("/home/ros2/ros2_ws/src/uarm_interfaces" FILES "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_type_description/uarm_interfaces/action/PickPlace.json" "DESTINATION" "share/uarm_interfaces/action")
 
+# install(FILES "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_type_description/uarm_interfaces/action/PickAndPlace.json" "DESTINATION" "share/uarm_interfaces/action")
+ament_cmake_symlink_install_files("/home/ros2/ros2_ws/src/uarm_interfaces" FILES "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_type_description/uarm_interfaces/action/PickAndPlace.json" "DESTINATION" "share/uarm_interfaces/action")
+
+# install(FILES "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_type_description/uarm_interfaces/action/DriveToPose.json" "DESTINATION" "share/uarm_interfaces/action")
+ament_cmake_symlink_install_files("/home/ros2/ros2_ws/src/uarm_interfaces" FILES "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_type_description/uarm_interfaces/action/DriveToPose.json" "DESTINATION" "share/uarm_interfaces/action")
+
 # install(DIRECTORY "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_c/uarm_interfaces/" "DESTINATION" "include/uarm_interfaces/uarm_interfaces" "PATTERN" "*.h")
 ament_cmake_symlink_install_directory("/home/ros2/ros2_ws/src/uarm_interfaces" DIRECTORY "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_c/uarm_interfaces/" "DESTINATION" "include/uarm_interfaces/uarm_interfaces" "PATTERN" "*.h")
 
@@ -369,8 +375,20 @@ include("/home/ros2/ros2_ws/build/uarm_interfaces/ament_cmake_symlink_install_ta
 # install(FILES "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_adapter/uarm_interfaces/action/PickPlace.idl" "DESTINATION" "share/uarm_interfaces/action")
 ament_cmake_symlink_install_files("/home/ros2/ros2_ws/src/uarm_interfaces" FILES "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_adapter/uarm_interfaces/action/PickPlace.idl" "DESTINATION" "share/uarm_interfaces/action")
 
+# install(FILES "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_adapter/uarm_interfaces/action/PickAndPlace.idl" "DESTINATION" "share/uarm_interfaces/action")
+ament_cmake_symlink_install_files("/home/ros2/ros2_ws/src/uarm_interfaces" FILES "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_adapter/uarm_interfaces/action/PickAndPlace.idl" "DESTINATION" "share/uarm_interfaces/action")
+
+# install(FILES "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_adapter/uarm_interfaces/action/DriveToPose.idl" "DESTINATION" "share/uarm_interfaces/action")
+ament_cmake_symlink_install_files("/home/ros2/ros2_ws/src/uarm_interfaces" FILES "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_adapter/uarm_interfaces/action/DriveToPose.idl" "DESTINATION" "share/uarm_interfaces/action")
+
 # install(FILES "/home/ros2/ros2_ws/src/uarm_interfaces/action/PickPlace.action" "DESTINATION" "share/uarm_interfaces/action")
 ament_cmake_symlink_install_files("/home/ros2/ros2_ws/src/uarm_interfaces" FILES "/home/ros2/ros2_ws/src/uarm_interfaces/action/PickPlace.action" "DESTINATION" "share/uarm_interfaces/action")
+
+# install(FILES "/home/ros2/ros2_ws/src/uarm_interfaces/action/PickAndPlace.action" "DESTINATION" "share/uarm_interfaces/action")
+ament_cmake_symlink_install_files("/home/ros2/ros2_ws/src/uarm_interfaces" FILES "/home/ros2/ros2_ws/src/uarm_interfaces/action/PickAndPlace.action" "DESTINATION" "share/uarm_interfaces/action")
+
+# install(FILES "/home/ros2/ros2_ws/src/uarm_interfaces/action/DriveToPose.action" "DESTINATION" "share/uarm_interfaces/action")
+ament_cmake_symlink_install_files("/home/ros2/ros2_ws/src/uarm_interfaces" FILES "/home/ros2/ros2_ws/src/uarm_interfaces/action/DriveToPose.action" "DESTINATION" "share/uarm_interfaces/action")
 
 # install(FILES "/home/ros2/ros2_ws/build/uarm_interfaces/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/uarm_interfaces" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/ros2/ros2_ws/src/uarm_interfaces" FILES "/home/ros2/ros2_ws/build/uarm_interfaces/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/uarm_interfaces" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

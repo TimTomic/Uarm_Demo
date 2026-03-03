@@ -70,8 +70,12 @@ include /home/ros2/ros2_ws/build/uarm_interfaces/uarm_interfaces__py/CMakeFiles/
 /home/ros2/ros2_ws/build/uarm_interfaces/uarm_interfaces__py/CMakeFiles/uarm_interfaces__py: rosidl_generator_py/uarm_interfaces/_uarm_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 /home/ros2/ros2_ws/build/uarm_interfaces/uarm_interfaces__py/CMakeFiles/uarm_interfaces__py: rosidl_generator_py/uarm_interfaces/_uarm_interfaces_s.ep.rosidl_typesupport_c.c
 /home/ros2/ros2_ws/build/uarm_interfaces/uarm_interfaces__py/CMakeFiles/uarm_interfaces__py: rosidl_generator_py/uarm_interfaces/action/_pick_place.py
+/home/ros2/ros2_ws/build/uarm_interfaces/uarm_interfaces__py/CMakeFiles/uarm_interfaces__py: rosidl_generator_py/uarm_interfaces/action/_pick_and_place.py
+/home/ros2/ros2_ws/build/uarm_interfaces/uarm_interfaces__py/CMakeFiles/uarm_interfaces__py: rosidl_generator_py/uarm_interfaces/action/_drive_to_pose.py
 /home/ros2/ros2_ws/build/uarm_interfaces/uarm_interfaces__py/CMakeFiles/uarm_interfaces__py: rosidl_generator_py/uarm_interfaces/action/__init__.py
 /home/ros2/ros2_ws/build/uarm_interfaces/uarm_interfaces__py/CMakeFiles/uarm_interfaces__py: rosidl_generator_py/uarm_interfaces/action/_pick_place_s.c
+/home/ros2/ros2_ws/build/uarm_interfaces/uarm_interfaces__py/CMakeFiles/uarm_interfaces__py: rosidl_generator_py/uarm_interfaces/action/_pick_and_place_s.c
+/home/ros2/ros2_ws/build/uarm_interfaces/uarm_interfaces__py/CMakeFiles/uarm_interfaces__py: rosidl_generator_py/uarm_interfaces/action/_drive_to_pose_s.c
 
 rosidl_generator_py/uarm_interfaces/_uarm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/uarm_interfaces/_uarm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_py/__init__.py
@@ -87,6 +91,8 @@ rosidl_generator_py/uarm_interfaces/_uarm_interfaces_s.ep.rosidl_typesupport_fas
 rosidl_generator_py/uarm_interfaces/_uarm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/rosidl_generator_py/resource/_srv_pkg_typesupport_entry_point.c.em
 rosidl_generator_py/uarm_interfaces/_uarm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/uarm_interfaces/_uarm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/uarm_interfaces/action/PickPlace.idl
+rosidl_generator_py/uarm_interfaces/_uarm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/uarm_interfaces/action/PickAndPlace.idl
+rosidl_generator_py/uarm_interfaces/_uarm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/uarm_interfaces/action/DriveToPose.idl
 rosidl_generator_py/uarm_interfaces/_uarm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl
 rosidl_generator_py/uarm_interfaces/_uarm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl
 rosidl_generator_py/uarm_interfaces/_uarm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl
@@ -107,16 +113,32 @@ rosidl_generator_py/uarm_interfaces/_uarm_interfaces_s.ep.rosidl_typesupport_c.c
 rosidl_generator_py/uarm_interfaces/action/_pick_place.py: rosidl_generator_py/uarm_interfaces/_uarm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/uarm_interfaces/action/_pick_place.py
 
+rosidl_generator_py/uarm_interfaces/action/_pick_and_place.py: rosidl_generator_py/uarm_interfaces/_uarm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/uarm_interfaces/action/_pick_and_place.py
+
+rosidl_generator_py/uarm_interfaces/action/_drive_to_pose.py: rosidl_generator_py/uarm_interfaces/_uarm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/uarm_interfaces/action/_drive_to_pose.py
+
 rosidl_generator_py/uarm_interfaces/action/__init__.py: rosidl_generator_py/uarm_interfaces/_uarm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/uarm_interfaces/action/__init__.py
 
 rosidl_generator_py/uarm_interfaces/action/_pick_place_s.c: rosidl_generator_py/uarm_interfaces/_uarm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/uarm_interfaces/action/_pick_place_s.c
 
+rosidl_generator_py/uarm_interfaces/action/_pick_and_place_s.c: rosidl_generator_py/uarm_interfaces/_uarm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/uarm_interfaces/action/_pick_and_place_s.c
+
+rosidl_generator_py/uarm_interfaces/action/_drive_to_pose_s.c: rosidl_generator_py/uarm_interfaces/_uarm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/uarm_interfaces/action/_drive_to_pose_s.c
+
 uarm_interfaces__py: rosidl_generator_py/uarm_interfaces/_uarm_interfaces_s.ep.rosidl_typesupport_c.c
 uarm_interfaces__py: rosidl_generator_py/uarm_interfaces/_uarm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 uarm_interfaces__py: rosidl_generator_py/uarm_interfaces/_uarm_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 uarm_interfaces__py: rosidl_generator_py/uarm_interfaces/action/__init__.py
+uarm_interfaces__py: rosidl_generator_py/uarm_interfaces/action/_drive_to_pose.py
+uarm_interfaces__py: rosidl_generator_py/uarm_interfaces/action/_drive_to_pose_s.c
+uarm_interfaces__py: rosidl_generator_py/uarm_interfaces/action/_pick_and_place.py
+uarm_interfaces__py: rosidl_generator_py/uarm_interfaces/action/_pick_and_place_s.c
 uarm_interfaces__py: rosidl_generator_py/uarm_interfaces/action/_pick_place.py
 uarm_interfaces__py: rosidl_generator_py/uarm_interfaces/action/_pick_place_s.c
 uarm_interfaces__py: /home/ros2/ros2_ws/build/uarm_interfaces/uarm_interfaces__py/CMakeFiles/uarm_interfaces__py

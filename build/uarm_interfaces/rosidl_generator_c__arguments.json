@@ -3,10 +3,14 @@
   "output_dir": "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_c/uarm_interfaces",
   "template_dir": "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource",
   "idl_tuples": [
-    "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_adapter/uarm_interfaces:action/PickPlace.idl"
+    "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_adapter/uarm_interfaces:action/PickPlace.idl",
+    "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_adapter/uarm_interfaces:action/PickAndPlace.idl",
+    "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_adapter/uarm_interfaces:action/DriveToPose.idl"
   ],
   "ros_interface_files": [
-    "/home/ros2/ros2_ws/src/uarm_interfaces/action/PickPlace.action"
+    "/home/ros2/ros2_ws/src/uarm_interfaces/action/PickPlace.action",
+    "/home/ros2/ros2_ws/src/uarm_interfaces/action/PickAndPlace.action",
+    "/home/ros2/ros2_ws/src/uarm_interfaces/action/DriveToPose.action"
   ],
   "ros_interface_dependencies": [
     "action_msgs:/opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl",
@@ -39,6 +43,8 @@
     "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource/srv__type_support.c.em",
     "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource/srv__type_support.h.em",
     "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_adapter/uarm_interfaces/action/PickPlace.idl",
+    "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_adapter/uarm_interfaces/action/PickAndPlace.idl",
+    "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_adapter/uarm_interfaces/action/DriveToPose.idl",
     "/opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl",
     "/opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl",
     "/opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl",
@@ -49,6 +55,8 @@
     "/opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl"
   ],
   "type_description_tuples": [
-    "action/PickPlace.idl:/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_type_description/uarm_interfaces/action/PickPlace.json"
+    "action/PickPlace.idl:/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_type_description/uarm_interfaces/action/PickPlace.json",
+    "action/PickAndPlace.idl:/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_type_description/uarm_interfaces/action/PickAndPlace.json",
+    "action/DriveToPose.idl:/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_type_description/uarm_interfaces/action/DriveToPose.json"
   ]
 }

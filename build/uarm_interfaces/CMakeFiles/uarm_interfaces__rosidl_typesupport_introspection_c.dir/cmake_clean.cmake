@@ -1,8 +1,16 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/uarm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/uarm_interfaces/action/detail/drive_to_pose__type_support.c.o"
+  "CMakeFiles/uarm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/uarm_interfaces/action/detail/drive_to_pose__type_support.c.o.d"
+  "CMakeFiles/uarm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/uarm_interfaces/action/detail/pick_and_place__type_support.c.o"
+  "CMakeFiles/uarm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/uarm_interfaces/action/detail/pick_and_place__type_support.c.o.d"
   "CMakeFiles/uarm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/uarm_interfaces/action/detail/pick_place__type_support.c.o"
   "CMakeFiles/uarm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/uarm_interfaces/action/detail/pick_place__type_support.c.o.d"
   "libuarm_interfaces__rosidl_typesupport_introspection_c.pdb"
   "libuarm_interfaces__rosidl_typesupport_introspection_c.so"
+  "rosidl_typesupport_introspection_c/uarm_interfaces/action/detail/drive_to_pose__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/uarm_interfaces/action/detail/drive_to_pose__type_support.c"
+  "rosidl_typesupport_introspection_c/uarm_interfaces/action/detail/pick_and_place__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/uarm_interfaces/action/detail/pick_and_place__type_support.c"
   "rosidl_typesupport_introspection_c/uarm_interfaces/action/detail/pick_place__rosidl_typesupport_introspection_c.h"
   "rosidl_typesupport_introspection_c/uarm_interfaces/action/detail/pick_place__type_support.c"
 )

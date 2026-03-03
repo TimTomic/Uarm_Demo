@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "uarm_interfaces/action/detail/pick_place__struct.h"
-#include "uarm_interfaces/action/detail/pick_place__functions.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "uarm_interfaces/action/detail/pick_place__type_support.h"
+#include "uarm_interfaces/action/detail/pick_place__functions.h"
+#include "uarm_interfaces/action/detail/pick_place__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"

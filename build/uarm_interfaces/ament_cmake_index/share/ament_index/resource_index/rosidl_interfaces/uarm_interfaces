@@ -1,2 +1,6 @@
+action/DriveToPose.action
+action/DriveToPose.idl
+action/PickAndPlace.action
+action/PickAndPlace.idl
 action/PickPlace.action
 action/PickPlace.idl

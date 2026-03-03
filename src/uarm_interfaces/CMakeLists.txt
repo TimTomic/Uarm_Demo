@@ -12,6 +12,8 @@ find_package(action_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "action/PickPlace.action"
+  "action/PickAndPlace.action"
+  "action/DriveToPose.action"
   DEPENDENCIES action_msgs
 )
 

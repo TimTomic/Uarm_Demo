@@ -2,7 +2,9 @@
   "package_name": "uarm_interfaces",
   "output_dir": "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_type_description/uarm_interfaces",
   "idl_tuples": [
-    "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_adapter/uarm_interfaces:action/PickPlace.idl"
+    "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_adapter/uarm_interfaces:action/PickPlace.idl",
+    "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_adapter/uarm_interfaces:action/PickAndPlace.idl",
+    "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_adapter/uarm_interfaces:action/DriveToPose.idl"
   ],
   "include_paths": [
     "action_msgs:/opt/ros/jazzy/share/action_msgs",

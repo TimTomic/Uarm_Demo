@@ -71,6 +71,16 @@ CMakeFiles/uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/det
 CMakeFiles/uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/detail/pick_place__struct.hpp
 CMakeFiles/uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/detail/pick_place__traits.hpp
 CMakeFiles/uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/detail/pick_place__type_support.hpp
+CMakeFiles/uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/pick_and_place.hpp
+CMakeFiles/uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/detail/pick_and_place__builder.hpp
+CMakeFiles/uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/detail/pick_and_place__struct.hpp
+CMakeFiles/uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/detail/pick_and_place__traits.hpp
+CMakeFiles/uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/detail/pick_and_place__type_support.hpp
+CMakeFiles/uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/drive_to_pose.hpp
+CMakeFiles/uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/detail/drive_to_pose__builder.hpp
+CMakeFiles/uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/detail/drive_to_pose__struct.hpp
+CMakeFiles/uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/detail/drive_to_pose__traits.hpp
+CMakeFiles/uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/detail/drive_to_pose__type_support.hpp
 CMakeFiles/uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 
 rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp: /opt/ros/jazzy/lib/rosidl_generator_cpp/rosidl_generator_cpp
@@ -93,6 +103,8 @@ rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp: /opt/ros/jazzy/share
 rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__type_support.hpp.em
 rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp: rosidl_adapter/uarm_interfaces/action/PickPlace.idl
+rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp: rosidl_adapter/uarm_interfaces/action/PickAndPlace.idl
+rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp: rosidl_adapter/uarm_interfaces/action/DriveToPose.idl
 rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp: /opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl
 rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp: /opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl
 rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp: /opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl
@@ -116,14 +128,54 @@ rosidl_generator_cpp/uarm_interfaces/action/detail/pick_place__traits.hpp: rosid
 rosidl_generator_cpp/uarm_interfaces/action/detail/pick_place__type_support.hpp: rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/uarm_interfaces/action/detail/pick_place__type_support.hpp
 
+rosidl_generator_cpp/uarm_interfaces/action/pick_and_place.hpp: rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/uarm_interfaces/action/pick_and_place.hpp
+
+rosidl_generator_cpp/uarm_interfaces/action/detail/pick_and_place__builder.hpp: rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/uarm_interfaces/action/detail/pick_and_place__builder.hpp
+
+rosidl_generator_cpp/uarm_interfaces/action/detail/pick_and_place__struct.hpp: rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/uarm_interfaces/action/detail/pick_and_place__struct.hpp
+
+rosidl_generator_cpp/uarm_interfaces/action/detail/pick_and_place__traits.hpp: rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/uarm_interfaces/action/detail/pick_and_place__traits.hpp
+
+rosidl_generator_cpp/uarm_interfaces/action/detail/pick_and_place__type_support.hpp: rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/uarm_interfaces/action/detail/pick_and_place__type_support.hpp
+
+rosidl_generator_cpp/uarm_interfaces/action/drive_to_pose.hpp: rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/uarm_interfaces/action/drive_to_pose.hpp
+
+rosidl_generator_cpp/uarm_interfaces/action/detail/drive_to_pose__builder.hpp: rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/uarm_interfaces/action/detail/drive_to_pose__builder.hpp
+
+rosidl_generator_cpp/uarm_interfaces/action/detail/drive_to_pose__struct.hpp: rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/uarm_interfaces/action/detail/drive_to_pose__struct.hpp
+
+rosidl_generator_cpp/uarm_interfaces/action/detail/drive_to_pose__traits.hpp: rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/uarm_interfaces/action/detail/drive_to_pose__traits.hpp
+
+rosidl_generator_cpp/uarm_interfaces/action/detail/drive_to_pose__type_support.hpp: rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/uarm_interfaces/action/detail/drive_to_pose__type_support.hpp
+
 rosidl_generator_cpp/uarm_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp: rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/uarm_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 
 uarm_interfaces__cpp: CMakeFiles/uarm_interfaces__cpp
+uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/detail/drive_to_pose__builder.hpp
+uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/detail/drive_to_pose__struct.hpp
+uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/detail/drive_to_pose__traits.hpp
+uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/detail/drive_to_pose__type_support.hpp
+uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/detail/pick_and_place__builder.hpp
+uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/detail/pick_and_place__struct.hpp
+uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/detail/pick_and_place__traits.hpp
+uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/detail/pick_and_place__type_support.hpp
 uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/detail/pick_place__builder.hpp
 uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/detail/pick_place__struct.hpp
 uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/detail/pick_place__traits.hpp
 uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/detail/pick_place__type_support.hpp
+uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/drive_to_pose.hpp
+uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/pick_and_place.hpp
 uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp
 uarm_interfaces__cpp: rosidl_generator_cpp/uarm_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 uarm_interfaces__cpp: CMakeFiles/uarm_interfaces__cpp.dir/build.make

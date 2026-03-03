@@ -1,8 +1,16 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/uarm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/uarm_interfaces/action/detail/drive_to_pose__type_support_c.cpp.o"
+  "CMakeFiles/uarm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/uarm_interfaces/action/detail/drive_to_pose__type_support_c.cpp.o.d"
+  "CMakeFiles/uarm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/uarm_interfaces/action/detail/pick_and_place__type_support_c.cpp.o"
+  "CMakeFiles/uarm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/uarm_interfaces/action/detail/pick_and_place__type_support_c.cpp.o.d"
   "CMakeFiles/uarm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/uarm_interfaces/action/detail/pick_place__type_support_c.cpp.o"
   "CMakeFiles/uarm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/uarm_interfaces/action/detail/pick_place__type_support_c.cpp.o.d"
   "libuarm_interfaces__rosidl_typesupport_fastrtps_c.pdb"
   "libuarm_interfaces__rosidl_typesupport_fastrtps_c.so"
+  "rosidl_typesupport_fastrtps_c/uarm_interfaces/action/detail/drive_to_pose__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/uarm_interfaces/action/detail/drive_to_pose__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/uarm_interfaces/action/detail/pick_and_place__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/uarm_interfaces/action/detail/pick_and_place__type_support_c.cpp"
   "rosidl_typesupport_fastrtps_c/uarm_interfaces/action/detail/pick_place__rosidl_typesupport_fastrtps_c.h"
   "rosidl_typesupport_fastrtps_c/uarm_interfaces/action/detail/pick_place__type_support_c.cpp"
 )

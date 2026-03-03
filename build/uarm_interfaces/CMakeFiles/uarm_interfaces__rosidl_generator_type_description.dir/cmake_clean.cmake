@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/uarm_interfaces__rosidl_generator_type_description"
+  "rosidl_generator_type_description/uarm_interfaces/action/DriveToPose.json"
+  "rosidl_generator_type_description/uarm_interfaces/action/PickAndPlace.json"
   "rosidl_generator_type_description/uarm_interfaces/action/PickPlace.json"
 )
 

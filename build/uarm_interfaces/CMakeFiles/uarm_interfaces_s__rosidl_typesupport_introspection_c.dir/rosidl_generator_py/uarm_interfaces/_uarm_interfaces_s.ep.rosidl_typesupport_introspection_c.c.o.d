@@ -235,4 +235,10 @@ CMakeFiles/uarm_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_gene
  /opt/ros/jazzy/include/unique_identifier_msgs/unique_identifier_msgs/msg/detail/uuid__struct.h \
  /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
  /opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.h \
- /home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_c/uarm_interfaces/action/detail/pick_place__functions.h
+ /home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_c/uarm_interfaces/action/detail/pick_place__functions.h \
+ /home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_c/uarm_interfaces/action/detail/pick_and_place__type_support.h \
+ /home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_c/uarm_interfaces/action/detail/pick_and_place__struct.h \
+ /home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_c/uarm_interfaces/action/detail/pick_and_place__functions.h \
+ /home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_c/uarm_interfaces/action/detail/drive_to_pose__type_support.h \
+ /home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_c/uarm_interfaces/action/detail/drive_to_pose__struct.h \
+ /home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_c/uarm_interfaces/action/detail/drive_to_pose__functions.h

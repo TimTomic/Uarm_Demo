@@ -1,0 +1,27 @@
+/**:
+  ros__parameters:
+    # Pick and Place behavior settings
+    # Hover height above the target before descending (mm)
+    hover_z_offset: 10.0
+    
+    # Optional static ground height for inventory/drop if not relying purely on switch (mm)
+    target_z_base: 0.0
+
+    # Poses (X, Y, Z in mm)
+    poses:
+      DRIVE:
+        x: 200.0
+        y: 0.0
+        z: 150.0
+      SCAN:
+        x: 200.0
+        y: 0.0
+        z: 150.0
+      INVENTORY:
+        x: 150.0
+        y: -150.0
+        z: 50.0
+      DROP:
+        x: 150.0
+        y: 150.0
+        z: 50.0

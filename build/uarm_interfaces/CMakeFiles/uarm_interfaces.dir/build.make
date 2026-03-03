@@ -67,6 +67,8 @@ include CMakeFiles/uarm_interfaces.dir/compiler_depend.make
 include CMakeFiles/uarm_interfaces.dir/progress.make
 
 CMakeFiles/uarm_interfaces: /home/ros2/ros2_ws/src/uarm_interfaces/action/PickPlace.action
+CMakeFiles/uarm_interfaces: /home/ros2/ros2_ws/src/uarm_interfaces/action/PickAndPlace.action
+CMakeFiles/uarm_interfaces: /home/ros2/ros2_ws/src/uarm_interfaces/action/DriveToPose.action
 CMakeFiles/uarm_interfaces: /opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl
 CMakeFiles/uarm_interfaces: /opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl
 CMakeFiles/uarm_interfaces: /opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl

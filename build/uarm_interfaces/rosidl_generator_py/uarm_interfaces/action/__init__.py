@@ -1,3 +1,17 @@
+from uarm_interfaces.action._drive_to_pose import DriveToPose  # noqa: F401
+from uarm_interfaces.action._drive_to_pose import DriveToPose_GetResult_Event  # noqa: F401
+from uarm_interfaces.action._drive_to_pose import DriveToPose_GetResult_Request  # noqa: F401
+from uarm_interfaces.action._drive_to_pose import DriveToPose_GetResult_Response  # noqa: F401
+from uarm_interfaces.action._drive_to_pose import DriveToPose_SendGoal_Event  # noqa: F401
+from uarm_interfaces.action._drive_to_pose import DriveToPose_SendGoal_Request  # noqa: F401
+from uarm_interfaces.action._drive_to_pose import DriveToPose_SendGoal_Response  # noqa: F401
+from uarm_interfaces.action._pick_and_place import PickAndPlace  # noqa: F401
+from uarm_interfaces.action._pick_and_place import PickAndPlace_GetResult_Event  # noqa: F401
+from uarm_interfaces.action._pick_and_place import PickAndPlace_GetResult_Request  # noqa: F401
+from uarm_interfaces.action._pick_and_place import PickAndPlace_GetResult_Response  # noqa: F401
+from uarm_interfaces.action._pick_and_place import PickAndPlace_SendGoal_Event  # noqa: F401
+from uarm_interfaces.action._pick_and_place import PickAndPlace_SendGoal_Request  # noqa: F401
+from uarm_interfaces.action._pick_and_place import PickAndPlace_SendGoal_Response  # noqa: F401
 from uarm_interfaces.action._pick_place import PickPlace  # noqa: F401
 from uarm_interfaces.action._pick_place import PickPlace_GetResult_Event  # noqa: F401
 from uarm_interfaces.action._pick_place import PickPlace_GetResult_Request  # noqa: F401
