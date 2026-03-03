@@ -42,41 +42,59 @@ def generate_launch_description():
     tcp_pitch = str(params.get('tcp_pitch_offset', '0.0'))
     tcp_yaw = str(params.get('tcp_yaw_offset', '0.0'))
 
+    hover_z_offset = str(params.get('hover_z_offset', '0.010'))
+    target_z_base = str(params.get('target_z_base', '0.0'))
+
     # 1. Start the uArm driver
     swiftpro_launch_dir = os.path.join(get_package_share_directory('swiftpro'), 'launch')
     swiftpro_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(swiftpro_launch_dir, 'pro_control.launch.py'))
     )
 
-    # 2. Start the USB camera and AprilTag detection
-    apriltag_launch_dir = os.path.join(get_package_share_directory('apriltag_launcher'), 'launch')
-    apriltag_launch = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(os.path.join(apriltag_launch_dir, 'apriltag_usb_cam.launch.py')),
+    # 2. Start the RealSense camera
+    realsense_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(get_package_share_directory('realsense2_camera'), 'launch', 'rs_launch.py')
+        ),
         launch_arguments={
-            'camera_x_offset': cam_x,
-            'camera_y_offset': cam_y,
-            'camera_z_offset': cam_z,
-            'camera_roll_offset': cam_roll,
-            'camera_pitch_offset': cam_pitch,
-            'camera_yaw_offset': cam_yaw
+            'enable_color': 'true',
+            'enable_depth': 'false', 
+            'rgb_camera.profile': '640x480x30'
         }.items()
     )
 
-    # 3. Start the Demo State Machine
+    # 3. Start the custom AprilTag detector (from F-Fer's repo)
+    apriltag_detector = Node(
+        package='apriltag_detector',
+        executable='apriltag_detector_node',
+        name='apriltag_detector',
+        output='screen',
+        parameters=[{
+            'tag_family': 'tag36h11',
+            'tag_size': 0.032, # Hardcoded exactly to the user's previously measured 32mm tag
+            'camera_frame': 'camera_color_optical_frame',
+        }],
+        remappings=[
+            ('/camera/image_raw', '/camera/camera/color/image_raw'),
+            ('/camera/camera_info', '/camera/camera/color/camera_info')
+        ]
+    )
+
+    # 4. Camera Static Transform Publisher
+    camera_tf_node = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        name='camera_static_tf',
+        arguments=[cam_x, cam_y, cam_z, cam_yaw, cam_pitch, cam_roll, 'tcp_link', 'camera_link'] 
+    )
+
+    # 5. Start the Demo State Machine
     demo_node = Node(
         package='uarm_apriltag_demo',
         executable='demo_node',
         name='demo_node',
         output='screen',
         parameters=[demo_config_file]
-    )
-
-    # 4. Start the Image Overlay Node
-    overlay_node = Node(
-        package='uarm_apriltag_demo',
-        executable='tag_overlay_node',
-        name='tag_overlay_node',
-        output='screen'
     )
 
     # 5. Start RViz2
@@ -101,9 +119,10 @@ def generate_launch_description():
     return LaunchDescription([
         use_rviz_arg,
         swiftpro_launch,
-        apriltag_launch,
+        realsense_launch,
+        apriltag_detector,
+        camera_tf_node,
         demo_node,
-        overlay_node,
         rviz_node,
         tcp_tf_node
     ])

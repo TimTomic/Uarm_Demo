@@ -30,7 +30,7 @@ Visualization Manager:
       Enabled: true
       Name: Image
       Topic:
-        Value: /camera/image_annotated
+        Value: /apriltag/image_annotated
         Depth: 5
   Global Options:
     Background Color: 48; 48; 48

@@ -37,7 +37,7 @@
 
     # Pick and Place behavior settings
     # Hover height above the target before descending (mm)
-    hover_z_offset: 30.0
+    hover_z_offset: 10.0
     
     # Optional static ground height for inventory/drop if not relying purely on switch (mm)
     target_z_base: 0.0
