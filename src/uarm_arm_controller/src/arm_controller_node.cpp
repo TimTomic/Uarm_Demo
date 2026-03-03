@@ -32,12 +32,23 @@ public:
   using DriveToPose = uarm_interfaces::action::DriveToPose;
   using GoalHandleDriveToPose = rclcpp_action::ServerGoalHandle<DriveToPose>;
 
-  ArmControllerNode(const rclcpp::NodeOptions & options = rclcpp::NodeOptions())
+  ArmControllerNode(const rclcpp::NodeOptions & options = rclcpp::NodeOptions().allow_undeclared_parameters(true).automatically_declare_parameters_from_overrides(true))
   : Node("arm_controller_node", options)
   {
-    // Declare parameters
-    this->declare_parameter<double>("hover_z_offset", 10.0);
-    this->declare_parameter<double>("target_z_base", 0.0);
+    // Because we automatically declared parameters from overrides, 
+    // we must check if they exist before declaring default values.
+    if (!this->has_parameter("hover_z_offset")) {
+      this->declare_parameter<double>("hover_z_offset", 10.0);
+    }
+    if (!this->has_parameter("target_z_base")) {
+      this->declare_parameter<double>("target_z_base", 0.0);
+    }
+
+    // Print all parameters to see what is actually getting loaded
+    auto all_params = this->list_parameters({}, 10).names;
+    for (const auto & name : all_params) {
+      RCLCPP_INFO(this->get_logger(), "Found parameter: %s", name.c_str());
+    }
 
     // Load poses from params dynamically
     auto param_names = this->list_parameters({"poses"}, 10).names;
@@ -45,14 +56,29 @@ public:
       if (name.find(".x") != std::string::npos) {
         std::string pose_name = name.substr(6, name.find(".x") - 6);
         if (poses_.find(pose_name) == poses_.end()) {
-          this->declare_parameter<double>("poses." + pose_name + ".x", 150.0);
-          this->declare_parameter<double>("poses." + pose_name + ".y", 0.0);
-          this->declare_parameter<double>("poses." + pose_name + ".z", 50.0);
-          
+          if (!this->has_parameter("poses." + pose_name + ".x")) {
+            this->declare_parameter<double>("poses." + pose_name + ".x", 150.0);
+          }
+          if (!this->has_parameter("poses." + pose_name + ".y")) {
+            this->declare_parameter<double>("poses." + pose_name + ".y", 0.0);
+          }
+          if (!this->has_parameter("poses." + pose_name + ".z")) {
+            this->declare_parameter<double>("poses." + pose_name + ".z", 50.0);
+          }
+
+          auto get_as_double = [this](const std::string& name) -> double {
+            auto param = this->get_parameter(name);
+            if (param.get_type() == rclcpp::ParameterType::PARAMETER_INTEGER) {
+              return static_cast<double>(param.as_int());
+            } else {
+              return param.as_double();
+            }
+          };
+
           Pose p;
-          p.x = this->get_parameter("poses." + pose_name + ".x").as_double();
-          p.y = this->get_parameter("poses." + pose_name + ".y").as_double();
-          p.z = this->get_parameter("poses." + pose_name + ".z").as_double();
+          p.x = get_as_double("poses." + pose_name + ".x");
+          p.y = get_as_double("poses." + pose_name + ".y");
+          p.z = get_as_double("poses." + pose_name + ".z");
           poses_[pose_name] = p;
           RCLCPP_INFO(this->get_logger(), "Loaded pose '%s': X=%.1f, Y=%.1f, Z=%.1f", pose_name.c_str(), p.x, p.y, p.z);
         }
