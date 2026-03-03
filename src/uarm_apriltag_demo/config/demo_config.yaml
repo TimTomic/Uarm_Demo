@@ -2,18 +2,18 @@
   ros__parameters:
     # Camera to TCP Offsets (Meters)
     # Used by the static_transform_publisher
-    camera_x_offset: 0.010
-    camera_y_offset: 0.0
-    camera_z_offset: 0.050
-    camera_roll_offset: 3.14159
-    camera_pitch_offset: 0.0
-    camera_yaw_offset: -1.5708
+    camera_x_offset: 0.025
+    camera_y_offset: 0.010
+    camera_z_offset: 0.010
+    camera_roll_offset: 0.0
+    camera_pitch_offset: 1.5708
+    camera_yaw_offset: 0.0
 
     # TCP to Link8 Offsets (Meters)
     # The default physical offset of the uArm Swift Pro suction cup
-    tcp_x_offset: 0.060
+    tcp_x_offset: 0.050
     tcp_y_offset: 0.0
-    tcp_z_offset: -0.073
+    tcp_z_offset: -0.055
     tcp_roll_offset: 0.0
     tcp_pitch_offset: 0.0
     tcp_yaw_offset: 0.0

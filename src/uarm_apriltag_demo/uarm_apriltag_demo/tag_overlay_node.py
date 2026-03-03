@@ -12,7 +12,7 @@ class TagOverlayNode(Node):
         self.bridge = CvBridge()
         
         # Subscribe to raw image and detections
-        self.image_sub = message_filters.Subscriber(self, Image, '/camera/image_raw')
+        self.image_sub = message_filters.Subscriber(self, Image, '/camera/camera/color/image_raw')
         self.tag_sub = message_filters.Subscriber(self, AprilTagDetectionArray, '/detections')
         
         # Synchronize visually
@@ -24,7 +24,7 @@ class TagOverlayNode(Node):
         self.ts.registerCallback(self.sync_callback)
         
         self.image_pub = self.create_publisher(Image, '/camera/image_annotated', 10)
-        self.get_logger().info("Tag Overlay Node started. Subscribed to /camera/image_raw and /detections.")
+        self.get_logger().info("Tag Overlay Node started. Subscribed to /camera/camera/color/image_raw and /detections.")
 
     def sync_callback(self, image_msg, detections_msg):
         try:

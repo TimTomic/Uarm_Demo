@@ -1,8 +1,9 @@
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
 from launch.substitutions import LaunchConfiguration
+from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 
 def generate_launch_description():
@@ -27,23 +28,15 @@ def generate_launch_description():
     camera_pitch = LaunchConfiguration('camera_pitch_offset')
     camera_yaw = LaunchConfiguration('camera_yaw_offset')
 
-    usb_cam_node = Node(
-        package='usb_cam',
-        executable='usb_cam_node_exe',
-        name='usb_cam',
-        parameters=[
-            {'video_device': '/dev/video0'},
-            {'framerate': 30.0},
-            {'image_width': 640},
-            {'image_height': 480},
-            {'pixel_format': 'mjpeg2rgb'},
-            {'camera_frame_id': 'camera_link'},
-            {'camera_name': 'default_cam'}
-        ],
-        remappings=[
-            ('image_raw', '/camera/image_raw'),
-            ('camera_info', '/camera/camera_info')
-        ]
+    realsense_node = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(get_package_share_directory('realsense2_camera'), 'launch', 'rs_launch.py')
+        ),
+        launch_arguments={
+            'enable_color': 'true',
+            'enable_depth': 'false', # we only need RGB for the basic tag recognition right now
+            'rgb_camera.profile': '640x480x30'
+        }.items()
     )
 
     apriltag_node = Node(
@@ -52,17 +45,16 @@ def generate_launch_description():
         name='apriltag_node',
         parameters=[apriltag_config],
         remappings=[
-            ('image_rect', '/camera/image_raw'),
-            ('camera_info', '/camera/camera_info')
+            ('image_rect', '/camera/camera/color/image_raw'),
+            ('camera_info', '/camera/camera/color/camera_info')
         ]
     )
 
-    # Broadcast static transform from robot's TCP to camera_link
     tf_publisher_node = Node(
         package='tf2_ros',
         executable='static_transform_publisher',
         name='camera_static_tf',
-        arguments=[camera_x, camera_y, camera_z, camera_yaw, camera_pitch, camera_roll, 'tcp_link', 'default_cam']
+        arguments=[camera_x, camera_y, camera_z, camera_yaw, camera_pitch, camera_roll, 'tcp_link', 'camera_link'] # Realsense uses camera_link natively
     )
 
     return LaunchDescription([
@@ -72,7 +64,7 @@ def generate_launch_description():
         roll_arg,
         pitch_arg,
         yaw_arg,
-        usb_cam_node,
+        realsense_node,
         apriltag_node,
         tf_publisher_node
     ])

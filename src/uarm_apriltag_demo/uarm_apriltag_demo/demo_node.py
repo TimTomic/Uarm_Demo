@@ -175,13 +175,42 @@ class DemoNode(Node):
                 
         elif self.state == "MOVING_DROP":
             if time.time() - self.wait_time > 1.5:
-                self.move_arm(self.pose_drop.x, self.pose_drop.y, self.pose_drop.z)
-                self.state = "DROPPING"
+                # First move to the hover position above the drop point
+                self.drop_hover_z = self.pose_drop.z + self.hover_offset
+                self.move_arm(self.pose_drop.x, self.pose_drop.y, self.drop_hover_z)
+                self.state = "DROPPING_HOVER"
                 self.wait_time = time.time()
                 
-        elif self.state == "DROPPING":
-            if time.time() - self.wait_time > 3.0:
+        elif self.state == "DROPPING_HOVER":
+            if time.time() - self.wait_time > 2.0:
+                self.state = "DROPPING_DOWN"
+                self.target_z = self.drop_hover_z
+                self.get_logger().info("Moving down to drop until limit switch triggers...")
+                self.wait_time = time.time()
+                
+        elif self.state == "DROPPING_DOWN":
+            if self.limit_switch == 1:
+                # Reached the table
+                self.get_logger().info("Limit switch triggered for drop! Deactivating pump.")
                 self.set_pump(False)
+                self.state = "DROPPING_UP"
+                self.wait_time = time.time()
+            else:
+                # move down by 2mm every 0.1s
+                if time.time() - self.wait_time > 0.1:
+                    self.target_z -= 2.0
+                    if self.target_z < self.target_z_base: # safety check against config limit
+                        self.get_logger().warn(f"Z < {self.target_z_base} reached during drop, limit switch not triggered. Forcing drop.")
+                        self.set_pump(False)
+                        self.state = "RETURNING"
+                        self.wait_time = time.time()
+                    else:
+                        self.move_arm(self.pose_drop.x, self.pose_drop.y, self.target_z, silent=True)
+                        self.wait_time = time.time()
+
+        elif self.state == "DROPPING_UP":
+            if time.time() - self.wait_time > 1.0: # give pump time to release
+                self.move_arm(self.pose_drop.x, self.pose_drop.y, self.drop_hover_z)
                 self.state = "RETURNING"
                 self.wait_time = time.time()
                 
