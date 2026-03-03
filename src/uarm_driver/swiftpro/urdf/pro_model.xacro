@@ -238,17 +238,7 @@
 </joint>
 
 
-    <link name="tcp_link">
-        <collision>
-            <origin xyz="0 0 0 " rpy="0 0 0" />
-        </collision>
-    </link>
 
-    <joint name="tcp_joint" type="fixed">
-        <origin xyz="0.06 0 -0.073" rpy="0 0 0" />
-        <parent link="Link8" />
-        <child link="tcp_link" />
-    </joint>
 
 <!-- 
 <link name="Link9">

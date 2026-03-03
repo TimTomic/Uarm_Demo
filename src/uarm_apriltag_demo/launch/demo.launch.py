@@ -31,6 +31,16 @@ def generate_launch_description():
     cam_x = str(params.get('camera_x_offset', '0.010'))
     cam_y = str(params.get('camera_y_offset', '0.0'))
     cam_z = str(params.get('camera_z_offset', '0.050'))
+    cam_roll = str(params.get('camera_roll_offset', '3.14159'))
+    cam_pitch = str(params.get('camera_pitch_offset', '0.0'))
+    cam_yaw = str(params.get('camera_yaw_offset', '0.0'))
+
+    tcp_x = str(params.get('tcp_x_offset', '0.060'))
+    tcp_y = str(params.get('tcp_y_offset', '0.0'))
+    tcp_z = str(params.get('tcp_z_offset', '-0.073'))
+    tcp_roll = str(params.get('tcp_roll_offset', '0.0'))
+    tcp_pitch = str(params.get('tcp_pitch_offset', '0.0'))
+    tcp_yaw = str(params.get('tcp_yaw_offset', '0.0'))
 
     # 1. Start the uArm driver
     swiftpro_launch_dir = os.path.join(get_package_share_directory('swiftpro'), 'launch')
@@ -45,7 +55,10 @@ def generate_launch_description():
         launch_arguments={
             'camera_x_offset': cam_x,
             'camera_y_offset': cam_y,
-            'camera_z_offset': cam_z
+            'camera_z_offset': cam_z,
+            'camera_roll_offset': cam_roll,
+            'camera_pitch_offset': cam_pitch,
+            'camera_yaw_offset': cam_yaw
         }.items()
     )
 
@@ -77,11 +90,20 @@ def generate_launch_description():
         condition=IfCondition(use_rviz)
     )
 
+    # 6. TCP Static Transform Publisher
+    tcp_tf_node = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        name='tcp_static_tf',
+        arguments=[tcp_x, tcp_y, tcp_z, tcp_yaw, tcp_pitch, tcp_roll, 'Link8', 'tcp_link']
+    )
+
     return LaunchDescription([
         use_rviz_arg,
         swiftpro_launch,
         apriltag_launch,
         demo_node,
         overlay_node,
-        rviz_node
+        rviz_node,
+        tcp_tf_node
     ])

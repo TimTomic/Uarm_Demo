@@ -14,7 +14,7 @@
             debug: False        # write additional debugging images
         pose_estimation_method: "pnp"   # method for estimating the tag pose
         # optional list of tags
-        # tag:
-        #     ids: []
-        #     frames: []
-        #     sizes: []
+        tag:
+            ids: [3]
+            frames: [tag_3]
+            sizes: [0.032]

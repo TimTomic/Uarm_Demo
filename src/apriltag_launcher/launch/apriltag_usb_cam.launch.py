@@ -19,6 +19,13 @@ def generate_launch_description():
     x_arg = DeclareLaunchArgument('camera_x_offset', default_value='0.01')
     y_arg = DeclareLaunchArgument('camera_y_offset', default_value='0.0')
     z_arg = DeclareLaunchArgument('camera_z_offset', default_value='0.03')
+    roll_arg = DeclareLaunchArgument('camera_roll_offset', default_value='3.14159')
+    pitch_arg = DeclareLaunchArgument('camera_pitch_offset', default_value='0.0')
+    yaw_arg = DeclareLaunchArgument('camera_yaw_offset', default_value='0.0')
+
+    camera_roll = LaunchConfiguration('camera_roll_offset')
+    camera_pitch = LaunchConfiguration('camera_pitch_offset')
+    camera_yaw = LaunchConfiguration('camera_yaw_offset')
 
     usb_cam_node = Node(
         package='usb_cam',
@@ -55,13 +62,16 @@ def generate_launch_description():
         package='tf2_ros',
         executable='static_transform_publisher',
         name='camera_static_tf',
-        arguments=[camera_x, camera_y, camera_z, '0.0', '0.0', '0.0', 'tcp_link', 'camera_link']
+        arguments=[camera_x, camera_y, camera_z, camera_yaw, camera_pitch, camera_roll, 'tcp_link', 'default_cam']
     )
 
     return LaunchDescription([
         x_arg,
         y_arg,
         z_arg,
+        roll_arg,
+        pitch_arg,
+        yaw_arg,
         usb_cam_node,
         apriltag_node,
         tf_publisher_node

@@ -85,12 +85,12 @@ class DemoNode(Node):
         self.get_logger().info(f"Pump turned {action}")
 
     def get_tag_transform(self):
-        # Look for tag36h11:0 (you can change the ID if needed)
+        # Look for tag_3 (you can change the ID if needed)
         try:
             # We want the transform from the robot Base to the tag
             t = self.tf_buffer.lookup_transform(
                 'Base',
-                'tag36h11:0',
+                'tag_3',
                 rclpy.time.Time())
             return t
         except tf2_ros.LookupException:
@@ -111,7 +111,7 @@ class DemoNode(Node):
             
         elif self.state == "WAIT_SCAN":
             if time.time() - self.wait_time > 3.0:
-                self.get_logger().info("Scanning for AprilTag 0...")
+                self.get_logger().info("Scanning for AprilTag 3...")
                 self.state = "SCANNING"
                 
         elif self.state == "SCANNING":

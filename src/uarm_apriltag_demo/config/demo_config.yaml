@@ -5,6 +5,18 @@
     camera_x_offset: 0.010
     camera_y_offset: 0.0
     camera_z_offset: 0.050
+    camera_roll_offset: 3.14159
+    camera_pitch_offset: 0.0
+    camera_yaw_offset: -1.5708
+
+    # TCP to Link8 Offsets (Meters)
+    # The default physical offset of the uArm Swift Pro suction cup
+    tcp_x_offset: 0.060
+    tcp_y_offset: 0.0
+    tcp_z_offset: -0.073
+    tcp_roll_offset: 0.0
+    tcp_pitch_offset: 0.0
+    tcp_yaw_offset: 0.0
 
     # Poses (X, Y, Z in mm)
     pose_drive_x: 200.0
