@@ -18,9 +18,9 @@ arm_controller_node:
         y: 3.1
         z: 172.5
       INVENTORY:
-        x: 21
-        y: 200
-        z: 30
+        x: 21.0
+        y: 200.0
+        z: 30.0
       DROP:
         x: 150.0
         y: 150.0
