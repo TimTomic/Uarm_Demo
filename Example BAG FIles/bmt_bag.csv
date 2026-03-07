@@ -1,0 +1,7 @@
+Subtask-Type,Subtask-Name,Workstation-Name,Workstation-Height,Workstation-Type,Object-ID,Object-name,Container-ID
+10,Pick,WS7,5cm,1,11,F20_20_B,0
+20,Place,WS8,5cm,1,11,F20_20_B,0
+10,Pick,WS7,5cm,1,15,M20_100,0
+20,Place,WS8,5cm,1,15,M20_100,0
+10,Pick,WS7,5cm,1,16,M20,0
+20,Place,WS8,5cm,1,16,M20,0

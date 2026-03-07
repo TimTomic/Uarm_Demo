@@ -8,6 +8,8 @@ arm_controller_node:
     target_z_base: 0.0
 
     # Poses (X, Y, Z in mm)
+    # These are referenced by name via the /drive_to_pose action.
+    # Brain uses: SCAN, SCAN_LEFT, SCAN_RIGHT, DRIVE, DROP
     poses:
       DRIVE:
         x: 137.7
@@ -16,6 +18,14 @@ arm_controller_node:
       SCAN:
         x: 249.9
         y: 3.1
+        z: 172.5
+      SCAN_LEFT:
+        x: 249.9
+        y: 120.0
+        z: 172.5
+      SCAN_RIGHT:
+        x: 249.9
+        y: -120.0
         z: 172.5
       INVENTORY:
         x: 21.0

@@ -1,6 +1,0 @@
-Invoking command in '/home/ros2/ros2_ws/build/uarm_interfaces': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake /home/ros2/ros2_ws/src/uarm_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ros2/ros2_ws/install/uarm_interfaces
-Invoked command in '/home/ros2/ros2_ws/build/uarm_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake /home/ros2/ros2_ws/src/uarm_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ros2/ros2_ws/install/uarm_interfaces
-Invoking command in '/home/ros2/ros2_ws/build/uarm_interfaces': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/ros2/ros2_ws/build/uarm_interfaces -- -j12 -l12
-Invoked command in '/home/ros2/ros2_ws/build/uarm_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/ros2/ros2_ws/build/uarm_interfaces -- -j12 -l12
-Invoking command in '/home/ros2/ros2_ws/build/uarm_interfaces': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --install /home/ros2/ros2_ws/build/uarm_interfaces
-Invoked command in '/home/ros2/ros2_ws/build/uarm_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --install /home/ros2/ros2_ws/build/uarm_interfaces

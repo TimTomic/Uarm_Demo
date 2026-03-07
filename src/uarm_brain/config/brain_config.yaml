@@ -1,0 +1,57 @@
+brain_node:
+  ros__parameters:
+    # Path to the bag file (override via launch arg or action goal)
+    bag_file_path: ""
+
+    # Topic inside the bag that contains the task list
+    # Tasks are published as std_msgs/String (JSON-encoded list of task dicts)
+    bag_topic: "/task_list"
+
+    # Navigation stub: seconds to wait when "navigating" between workstations
+    # Set to 0 if you want no artificial delay
+    nav_stub_delay: 3.0
+
+    # How many times to retry a failed pick before skipping the task
+    max_retries: 2
+
+    # Seconds to wait for a tag to appear during each scan pose
+    vision_timeout: 10.0
+
+    # --- Scan Poses (X, Y, Z in mm) ---
+    # These are sent to the Arm Controller for visual search
+    pose_scan_center_x: 200.0
+    pose_scan_center_y: 0.0
+    pose_scan_center_z: 150.0
+
+    pose_scan_left_x: 200.0
+    pose_scan_left_y: 120.0
+    pose_scan_left_z: 150.0
+
+    pose_scan_right_x: 200.0
+    pose_scan_right_y: -120.0
+    pose_scan_right_z: 150.0
+
+    # Drive / safe-travel pose (mm)
+    pose_drive_x: 200.0
+    pose_drive_y: 0.0
+    pose_drive_z: 150.0
+
+    # --- Inventory Slots (X, Y, Z in mm) ---
+    # Three physical boxes on the robot.  Arm places/fetches objects here.
+    inventory_slot_0_x: 150.0
+    inventory_slot_0_y: -120.0
+    inventory_slot_0_z: 0.0
+
+    inventory_slot_1_x: 150.0
+    inventory_slot_1_y: -170.0
+    inventory_slot_1_z: 0.0
+
+    inventory_slot_2_x: 150.0
+    inventory_slot_2_y: -220.0
+    inventory_slot_2_z: 0.0
+
+    # Hover height above slot/tag before descending (mm)
+    hover_z_offset: 30.0
+
+    # Enable dry-run mode: logs actions but does NOT call the arm action server
+    dry_run: false

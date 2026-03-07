@@ -1,0 +1,89 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{a4paper, left=25mm, right=25mm, top=25mm, bottom=25mm}
+
+\title{Software-Architektur und Statusbericht\\ uArm Pick \& Place System (Stand Köln)}
+\author{uArm Robot Team}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Systemüberblick: Was kann der Roboter?}
+Das aktuelle ROS 2 (Jazzy) System befähigt den uArm-Roboter, autonome Pick-and-Place-Aufgaben basierend auf Aufgabenlisten (ROS Bag-Dateien) durchzuführen. Der Roboter kann Zielobjekte über AprilTags visuell lokalisieren. Dazu passt er automatisch seine Kameraposen an, um in breiteren Radien nach fehlenden Objekten zu suchen (Scan-Strategien). Er ist in der Lage, Gegenstände greifen und bis zu drei Objekte gleichzeitig in seinem physischen Inventar mitzuführen, bevor er sie an Zielstationen gebündelt wieder ablegt. Das gesamte System läuft vollständig isoliert in einer ausfallsicheren Multi-Container-Docker-Umgebung.
+
+\section{Software-Architektur}
+Die Architektur basiert auf einer modularen Multi-Container Docker-Compose-Struktur. Jeder funktionale Block läuft in einem eigenen Container und kommuniziert ausschließlich über ROS 2 Topics und Actions miteinander (via Host-Netzwerk). Fällt eine Hardware- oder Software-Komponente aus, startet Docker diese automatisch neu. Das übergeordnete "Brain" verfügt über Warteschleifen, sodass es bei einem Systemausfall (z.B. Kamerakabel getrennt) in einen sicheren Wartezustand übergeht, bis die Verbindung wieder verfügbar ist.
+
+\subsection{Aktive Nodes und Container}
+\begin{itemize}
+    \item \textbf{Vision Container:} Beinhaltet den \texttt{usb\_cam} Node und den \texttt{apriltag\_ros} Node. Zuständig für die Kamerabilderfassung und die Erkennung der IDs sowie der 3D-Posen bezogen zum TCPfen.
+    \item \textbf{Manipulator Container:} Beinhaltet den uArm-C++-Controller (\texttt{arm\_controller\_node}) und den seriellen Treiber (\texttt{pro\_control}). Übersetzt Koordinaten in physische Arm- und Pumpen-Bewegungen und handhabt die Limit-Switches.
+    \item \textbf{Brain Container:} Das "Gehirn", bestehend aus:
+    \begin{itemize}
+        \item \textbf{TaskPlanner Node:} Liest \texttt{.bag}-Dateien (ROS1 und ROS2), bündelt Aufträge (Greedy-Algorithmus nach Workstation-Nähe) und optimiert Routen unter strikter Einhaltung des 3-Slot-Inventarlimits.
+        \item \textbf{TaskManager Node:} Die zentrale State-Machine. Kommandiert autonom Navigation, Arm und Vision basierend auf der berechneten Queue.
+    \end{itemize}
+    \item \textbf{Navigation Container (Nav2 - in Arbeit):} Ist für die mobile Basis zuständig, erstellt SLAM-Karten und navigiert den Roboter autonom zu den globalen Wegpunkten (\texttt{WS01}, \texttt{WS02} etc.).
+    \item \textbf{Operator Monitoring Container (Laptop):} Ein separates Remote-System. Bietet RViz2 zur 3D-Visualisierung (Map, Kamera-Overlay, TF-Tree) und konvertiert Gamepad-Eingaben (z.B. PS5-Controller über \texttt{joy\_node}) in direkte Fahrbefehle zur einfachen Streckenaufnahme.
+\end{itemize}
+
+\section{Wichtige Action Server und Topics}
+\subsection{Action Server}
+\begin{itemize}
+    \item \textbf{\texttt{/pick\_and\_place}} (Type: \texttt{PickAndPlace}): Erwartet exakte \texttt{[x, y, z]}-Werte für Pick und Place. Wird vom Arm-Controller gehostet und vom Brain gerufen.
+    \item \textbf{\texttt{/drive\_to\_pose}} (Type: \texttt{DriveToPose}): Fährt vorkonfigurierte Posen (z.B. \texttt{SCAN}, \texttt{DROP}) per Text-Flag an.
+    \item \textbf{\texttt{/brain/load\_bag}} (Type: \texttt{LoadBag}): Lädt zur Laufzeit eine neue Aufgabenliste aus einem übergebenen Dateipfad.
+\end{itemize}
+
+\subsection{Essenzielle Topics}
+\begin{itemize}
+    \item \textbf{\texttt{/tf}} und \textbf{\texttt{/tf\_static}}: Koordinatentransformationen (essenziell für den Versatz von Arm, Kamera und AprilTag).
+    \item \textbf{\texttt{/detections\_topic}}: Rohe Array-Daten aller vom Vision-System erkannten AprilTags.
+    \item \textbf{\texttt{/tag\_detections\_image}}: Kamerabild inklusive visuellem AprilTag-Overlay für den Operator-Laptop.
+    \item \textbf{\texttt{/cmd\_vel}}: Geschwindigkeits- und Fahrbefehle für das Chassis (aus dem Nav2-Plugin oder PS-Controller).
+    \item \textbf{\texttt{/brain/status}} \& \textbf{\texttt{/brain/inventory}}: Live-Strings, über welche das Brain seinen State (z.B. "SCANNING", "WAITING") und die Inventarbelegung meldet.
+\end{itemize}
+
+\section{Bedienungsanleitung: Systemstart und Configs}
+
+\subsection{System (Roboter) einschalten}
+Das Robotersystem wird auf dem Raspberry Pi vollautomatisch über Docker Compose hochgefahren:
+\begin{enumerate}
+    \item Terminal öffnen und in den Ordner wechseln: \texttt{cd docker}
+    \item System unsichtbar im Hintergrund wecken: \texttt{docker compose up -d}
+    \item (Optional) Live-Logs des Brains ansehen: \texttt{docker compose logs -f brain}
+\end{enumerate}
+
+Soll der Roboter manuell via PS5-Controller überwacht und gefahren werden, wird auf dem \textbf{Operator-Laptop} folgendes in der Powershell/Terminal unter WSL ausgeführt:
+\begin{enumerate}
+    \item Den Controller per USB oder Bluetooth mit dem Laptop koppeln.
+    \item Prüfen, ob die Systemumgebungsvariable \texttt{ROS\_DOMAIN\_ID} identisch zum Pi ist (beide im selben WLAN!).
+    \item Im docker-Ordner des Repos ausführen: \texttt{docker compose -f operator-compose.yml up}
+\end{enumerate}
+
+\subsection{Wichtige Config.yaml Dateien zum Einstellen}
+Vor einem Wettbewerb oder nach Hardwareumbauten müssen diese Parameter verifiziert werden:
+\begin{itemize}
+    \item \textbf{\texttt{config/poses.yaml} (im \texttt{uarm\_arm\_controller})}: Definiert die realen \texttt{[x, y, z]} Offsets der benannten Posen. Hier muss \texttt{SCAN}, \texttt{SCAN\_LEFT}, \texttt{SCAN\_RIGHT} und der Standardablageort \texttt{DROP} konfiguriert werden. Nutze zur Einrichtung das Skript \texttt{teach\_position.py}.
+    \item \textbf{\texttt{config/brain\_config.yaml} (im \texttt{uarm\_brain})}: Legt die extrem wichtigen Millimeter-Koordinaten der 3 Inventar-Slots fest (\texttt{inventory\_slot\_0\_x} etc.). Stimmen diese nicht, verfehlt der Roboter seinen Stauraum. Auch lassen sich hier Vision-Timeouts justieren.
+    \item \textbf{\texttt{config/object\_tags.yaml} (im \texttt{uarm\_brain})}: Mappt Textbausteine des Auftrages (z.B. \texttt{F20\_20\_B}) konkret auf die numerische AprilTag-ID (z.B. 11), die physisch aufgedruckt wurde.
+\end{itemize}
+
+\section{To-Dos und Ziele für den nächsten Wettbewerb}
+Folgende Integrationsschritte und Erweiterungen sind auf der Road-Map bis zum Contest zwingend vorzubereiten:
+\begin{itemize}
+    \item \textbf{Lokalisierung, Mappen \& Navigation abschließen}: Das noch fehlende Nav2-Modul muss final verdrahtet werden, damit der Roboter über LiDAR SLAM-Karten erzeugt. Die Wegpunkte (\texttt{WS01}, \texttt{WS02} etc.) müssen physisch in das Mapping übertragen werden.
+    \item \textbf{Inventar präzise teachen}: Die 3 Ablagefächer auf dem Chassis müssen stabil angeschraubt und in der \texttt{brain\_config.yaml} mit \texttt{teach\_position.py} millimetergenau abgenommen werden, um Kollisionen zu verhindern.
+    \item \textbf{Dynamisches Entladen integrieren}: Das Brain bedient sich beim Ablegen derzeit noch der Fallback-Pose "DROP". Sobald Nav2 die Koordinatensysteme der Workstation-Oberflächen bereitstellt, muss das Place-Kommando auf den \texttt{tf\_buffer} der Station lauschen.
+    \item \textbf{Lego Duplo Erkennung einbinden (Optional Task)}: Sollten Zielobjekte existieren, die keine AprilTags fassen können (bspw. Legosteine), muss eine Color- oder Deep-Learning Pipe (wie YOLO) neben dem Tag-Detektor etabliert und in die State-Machine gelinkt werden.
+    \item \textbf{Komplexerer Task Planner}: Der aktuelle \textit{Greedy-Nearest-Neighbor} Scheduler ist funktional, jedoch eventuell nicht zeiteffizient genug. Ein Algorithmus zur Lösung des Traveling Salesperson Problems (TSP) oder Priority-Queueing könnte die Fahrwege weiter minimieren.
+    \item \textbf{Hardware LED Status Monitor}: Die Implementierung einer physischen LED-Lichtleiste auf dem Deckel des Roboters. Ein abonnierender Micro-ROS ESP32 könnte auf dem Topic \texttt{/brain/status} lauschen und das System weithin sichtbar codieren (Blau=Scanning, Grün=Driving, Gelb=Picking, Blinkend Rot=Hardware-Fehler).
+\end{itemize}
+
+\end{document}

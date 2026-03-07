@@ -1,0 +1,3 @@
+[submodule "src/ros2_apriltag_test"]
+	path = src/ros2_apriltag_test
+	url = git@github.com:TimTomic/ros2_apriltag_test.git

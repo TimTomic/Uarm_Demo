@@ -1,5 +1,0 @@
-gmake[2]: *** [CMakeFiles/conversion.dir/build.make:76: CMakeFiles/conversion.dir/src/conversion.cpp.o] Interrupt
-gmake[2]: *** [CMakeFiles/apriltag_node.dir/build.make:76: CMakeFiles/apriltag_node.dir/rclcpp_components/node_main_apriltag_node.cpp.o] Interrupt
-gmake[1]: *** [CMakeFiles/Makefile2:171: CMakeFiles/conversion.dir/all] Interrupt
-gmake[1]: *** [CMakeFiles/Makefile2:251: CMakeFiles/apriltag_node.dir/all] Interrupt
-gmake: *** [Makefile:146: all] Interrupt

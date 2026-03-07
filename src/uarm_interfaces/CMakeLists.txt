@@ -14,6 +14,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "action/PickPlace.action"
   "action/PickAndPlace.action"
   "action/DriveToPose.action"
+  "action/LoadBag.action"
   DEPENDENCIES action_msgs
 )
 

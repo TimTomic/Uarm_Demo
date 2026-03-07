@@ -1,2 +1,0 @@
-Invoking command in '/home/ros2/ros2_ws/build/swiftpro': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/ros2/ros2_ws/build/swiftpro -- -j12 -l12
-Invoked command in '/home/ros2/ros2_ws/build/swiftpro' returned '2': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/ros2/ros2_ws/build/swiftpro -- -j12 -l12

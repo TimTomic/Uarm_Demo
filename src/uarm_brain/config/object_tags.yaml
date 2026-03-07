@@ -1,0 +1,24 @@
+# Maps object names (from bag file) to their AprilTag IDs (printed on the objects).
+# AprilTag family: tag36h11
+# The tag ID corresponds directly to the Object-ID from the task bag.
+object_tag_map:
+  # Basic Set
+  F20_20_B:    11
+  F20_20_G:    12
+  S40_40_B:    13
+  S40_40_G:    14
+  M20_100:     15
+  M20:         16
+  M30:         17
+
+  # Advanced Set
+  Tag_03:      3
+  Axis2:       20
+  Bearing2:    21
+  Housing:     22
+  Motor2:      23
+  Spacer:      24
+  Screwdriver: 25
+  Wrench:      26
+  Drill:       27
+  AllenKey:    28

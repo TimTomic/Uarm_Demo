@@ -1,0 +1,10 @@
+# Goal: Path to the .bag file to load
+string bag_path
+---
+# Result
+bool success
+string message
+int32 task_count
+---
+# Feedback
+string status

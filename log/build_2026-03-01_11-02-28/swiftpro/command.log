@@ -1,4 +1,0 @@
-Invoking command in '/home/ros2/ros2_ws/build/swiftpro': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros2/ros2_ws/install/uarm_apriltag_demo:/opt/ros/jazzy /usr/bin/cmake --build /home/ros2/ros2_ws/build/swiftpro -- -j12 -l12
-Invoked command in '/home/ros2/ros2_ws/build/swiftpro' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros2/ros2_ws/install/uarm_apriltag_demo:/opt/ros/jazzy /usr/bin/cmake --build /home/ros2/ros2_ws/build/swiftpro -- -j12 -l12
-Invoking command in '/home/ros2/ros2_ws/build/swiftpro': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros2/ros2_ws/install/uarm_apriltag_demo:/opt/ros/jazzy /usr/bin/cmake --install /home/ros2/ros2_ws/build/swiftpro
-Invoked command in '/home/ros2/ros2_ws/build/swiftpro' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros2/ros2_ws/install/uarm_apriltag_demo:/opt/ros/jazzy /usr/bin/cmake --install /home/ros2/ros2_ws/build/swiftpro

@@ -1,0 +1,89 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{a4paper, left=25mm, right=25mm, top=25mm, bottom=25mm}
+
+\title{Software Architecture and Status Report\\ uArm Pick \& Place System (Status: Cologne)}
+\author{uArm Robot Team}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{System Overview: Capabilities of the Robot}
+The current ROS 2 (Jazzy) system enables the uArm robot to perform autonomous pick-and-place tasks based on task lists (ROS bag files). The robot can visually locate target objects via AprilTags. To achieve this, it automatically adjusts its camera poses to search for missing objects in wider radii (scan strategies). It is capable of grasping items and carrying up to three objects simultaneously in its physical inventory before placing them together at target stations. The entire system runs fully isolated in a fail-safe multi-container Docker environment.
+
+\section{Software Architecture}
+The architecture is based on a modular multi-container Docker Compose structure. Each functional block runs in its own container and communicates exclusively with others via ROS 2 Topics and Actions (using the host network). If a hardware or software component fails, Docker automatically restarts it. The overarching "Brain" has waiting loops so that in the event of a system failure (e.g., disconnected camera cable), it enters a safe waiting state until the connection is restored.
+
+\subsection{Active Nodes and Containers}
+\begin{itemize}
+    \item \textbf{Vision Container:} Contains the \texttt{usb\_cam} node and the \texttt{apriltag\_ros} node. Responsible for camera image acquisition and the detection of IDs as well as their 3D poses relative to the TCP.
+    \item \textbf{Manipulator Container:} Contains the uArm C++ controller (\texttt{arm\_controller\_node}) and the serial driver (\texttt{pro\_control}). Translates coordinates into physical arm and pump movements and handles the limit switches.
+    \item \textbf{Brain Container:} The "brain", consisting of:
+    \begin{itemize}
+        \item \textbf{TaskPlanner Node:} Reads \texttt{.bag} files (ROS1 and ROS2), bundles tasks (Greedy algorithm based on workstation proximity) and optimizes routes while strictly adhering to the 3-slot inventory limit.
+        \item \textbf{TaskManager Node:} The central state machine. Autonomously commands navigation, arm, and vision based on the calculated queue.
+    \end{itemize}
+    \item \textbf{Navigation Container (Nav2 - Work in Progress):} Responsible for the mobile base, generates SLAM maps and navigates the robot autonomously to global waypoints (\texttt{WS01}, \texttt{WS02}, etc.).
+    \item \textbf{Operator Monitoring Container (Laptop):} A separate remote system. Provides RViz2 for 3D visualization (Map, Camera Overlay, TF Tree) and converts gamepad inputs (e.g., PS5 controller via \texttt{joy\_node}) into direct driving commands for easy path recording.
+\end{itemize}
+
+\section{Important Action Servers and Topics}
+\subsection{Action Servers}
+\begin{itemize}
+    \item \textbf{\texttt{/pick\_and\_place}} (Type: \texttt{PickAndPlace}): Expects exact \texttt{[x, y, z]} values for pick and place. Hosted by the arm controller and called by the brain.
+    \item \textbf{\texttt{/drive\_to\_pose}} (Type: \texttt{DriveToPose}): Drives to pre-configured poses (e.g., \texttt{SCAN}, \texttt{DROP}) via text flags.
+    \item \textbf{\texttt{/brain/load\_bag}} (Type: \texttt{LoadBag}): Loads a new task list at runtime from a provided file path.
+\end{itemize}
+
+\subsection{Essential Topics}
+\begin{itemize}
+    \item \textbf{\texttt{/tf}} and \textbf{\texttt{/tf\_static}}: Coordinate transformations (essential for the offset between arm, camera, and AprilTag).
+    \item \textbf{\texttt{/detections\_topic}}: Raw array data of all AprilTags detected by the vision system.
+    \item \textbf{\texttt{/tag\_detections\_image}}: Camera image including visual AprilTag overlays for the operator laptop.
+    \item \textbf{\texttt{/cmd\_vel}}: Velocity and driving commands for the chassis (from the Nav2 plugin or PS controller).
+    \item \textbf{\texttt{/brain/status}} \& \textbf{\texttt{/brain/inventory}}: Live strings through which the brain reports its state (e.g., "SCANNING", "WAITING") and the inventory occupancy.
+\end{itemize}
+
+\section{Operation Manual: System Startup and Configs}
+
+\subsection{Turning on the System (Robot)}
+The robot system boots fully automatically on the Raspberry Pi via Docker Compose:
+\begin{enumerate}
+    \item Open a terminal and navigate to the directory: \texttt{cd docker}
+    \item Wake the system invisibly in the background: \texttt{docker compose up -d}
+    \item (Optional) View the brain's live logs: \texttt{docker compose logs -f brain}
+\end{enumerate}
+
+To manually monitor and drive the robot via a PS5 controller, execution on the \textbf{Operator Laptop} is done in PowerShell/Terminal under WSL as follows:
+\begin{enumerate}
+    \item Pair the controller via USB or Bluetooth with the laptop.
+    \item Ensure that the system environment variable \texttt{ROS\_DOMAIN\_ID} matches the Pi (both must be on the same WiFi!).
+    \item In the repo's docker folder, run: \texttt{docker compose -f operator-compose.yml up}
+\end{enumerate}
+
+\subsection{Important Config.yaml Files to Adjust}
+Before a competition or after hardware modifications, these parameters must be verified:
+\begin{itemize}
+    \item \textbf{\texttt{config/poses.yaml} (in \texttt{uarm\_arm\_controller})}: Defines the real \texttt{[x, y, z]} offsets of the named poses. \texttt{SCAN}, \texttt{SCAN\_LEFT}, \texttt{SCAN\_RIGHT}, and the default drop location \texttt{DROP} must be configured here. Use the script \texttt{teach\_position.py} for setup.
+    \item \textbf{\texttt{config/brain\_config.yaml} (in \texttt{uarm\_brain})}: Sets the extremely important millimeter coordinates of the 3 inventory slots (\texttt{inventory\_slot\_0\_x}, etc.). If these are incorrect, the robot will miss its storage space. Vision timeouts can also be adjusted here.
+    \item \textbf{\texttt{config/object\_tags.yaml} (in \texttt{uarm\_brain})}: Maps text blocks of the task (e.g., \texttt{F20\_20\_B}) directly to the numerical AprilTag ID (e.g., 11) that is physically printed on the object.
+\end{itemize}
+
+\section{To-Dos and Goals for the Next Competition}
+The following integration steps and extensions must be prepared on the roadmap before the contest:
+\begin{itemize}
+    \item \textbf{Complete Localization, Mapping \& Navigation}: The missing Nav2 module must be finally wired so that the robot can generate SLAM maps via LiDAR. The waypoints (\texttt{WS01}, \texttt{WS02}, etc.) must be physically transferred into the mapping.
+    \item \textbf{Teach Inventory Precisely}: The 3 storage compartments on the chassis must be securely screwed in and precisely calibrated in \texttt{brain\_config.yaml} using \texttt{teach\_position.py} to millimeter accuracy to prevent collisions.
+    \item \textbf{Integrate Dynamic Unloading}: Currently, the brain still uses the fallback pose "DROP" for placing objects. Once Nav2 provides the coordinate systems of the workstation surfaces, the place command must listen to the station's \texttt{tf\_buffer}.
+    \item \textbf{Integrate Lego Duplo Detection (Optional Task)}: If target objects exist that cannot hold AprilTags (e.g., Lego bricks), a color or deep learning pipeline (like YOLO) must be established alongside the tag detector and linked into the state machine.
+    \item \textbf{More Complex Task Planner}: The current \textit{Greedy-Nearest-Neighbor} scheduler is functional but may not be time-efficient enough. An algorithm to solve the Traveling Salesperson Problem (TSP) or priority queuing could further minimize travel paths.
+    \item \textbf{Hardware LED Status Monitor}: Implementing a physical LED light strip on the robot's lid. A subscribing micro-ROS ESP32 could listen to the \texttt{/brain/status} topic and visibly encode the system state from afar (Blue=Scanning, Green=Driving, Yellow=Picking, Flashing Red=Hardware Error).
+\end{itemize}
+
+\end{document}
