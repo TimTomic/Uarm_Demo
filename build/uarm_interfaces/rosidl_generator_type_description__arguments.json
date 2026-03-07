@@ -4,7 +4,8 @@
   "idl_tuples": [
     "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_adapter/uarm_interfaces:action/PickPlace.idl",
     "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_adapter/uarm_interfaces:action/PickAndPlace.idl",
-    "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_adapter/uarm_interfaces:action/DriveToPose.idl"
+    "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_adapter/uarm_interfaces:action/DriveToPose.idl",
+    "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_adapter/uarm_interfaces:action/LoadBag.idl"
   ],
   "include_paths": [
     "action_msgs:/opt/ros/jazzy/share/action_msgs",

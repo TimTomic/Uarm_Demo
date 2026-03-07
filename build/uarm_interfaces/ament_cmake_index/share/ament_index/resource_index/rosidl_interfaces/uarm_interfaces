@@ -1,5 +1,7 @@
 action/DriveToPose.action
 action/DriveToPose.idl
+action/LoadBag.action
+action/LoadBag.idl
 action/PickAndPlace.action
 action/PickAndPlace.idl
 action/PickPlace.action

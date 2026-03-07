@@ -78,6 +78,7 @@ rosidl_typesupport_c/uarm_interfaces/action/pick_place__type_support.cpp: /opt/r
 rosidl_typesupport_c/uarm_interfaces/action/pick_place__type_support.cpp: rosidl_adapter/uarm_interfaces/action/PickPlace.idl
 rosidl_typesupport_c/uarm_interfaces/action/pick_place__type_support.cpp: rosidl_adapter/uarm_interfaces/action/PickAndPlace.idl
 rosidl_typesupport_c/uarm_interfaces/action/pick_place__type_support.cpp: rosidl_adapter/uarm_interfaces/action/DriveToPose.idl
+rosidl_typesupport_c/uarm_interfaces/action/pick_place__type_support.cpp: rosidl_adapter/uarm_interfaces/action/LoadBag.idl
 rosidl_typesupport_c/uarm_interfaces/action/pick_place__type_support.cpp: /opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl
 rosidl_typesupport_c/uarm_interfaces/action/pick_place__type_support.cpp: /opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl
 rosidl_typesupport_c/uarm_interfaces/action/pick_place__type_support.cpp: /opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl
@@ -94,6 +95,9 @@ rosidl_typesupport_c/uarm_interfaces/action/pick_and_place__type_support.cpp: ro
 
 rosidl_typesupport_c/uarm_interfaces/action/drive_to_pose__type_support.cpp: rosidl_typesupport_c/uarm_interfaces/action/pick_place__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/uarm_interfaces/action/drive_to_pose__type_support.cpp
+
+rosidl_typesupport_c/uarm_interfaces/action/load_bag__type_support.cpp: rosidl_typesupport_c/uarm_interfaces/action/pick_place__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/uarm_interfaces/action/load_bag__type_support.cpp
 
 CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_interfaces/action/pick_place__type_support.cpp.o: CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_interfaces/action/pick_place__type_support.cpp.o: rosidl_typesupport_c/uarm_interfaces/action/pick_place__type_support.cpp
@@ -137,11 +141,26 @@ CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_i
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_interfaces/action/drive_to_pose__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ros2/ros2_ws/build/uarm_interfaces/rosidl_typesupport_c/uarm_interfaces/action/drive_to_pose__type_support.cpp -o CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_interfaces/action/drive_to_pose__type_support.cpp.s
 
+CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_interfaces/action/load_bag__type_support.cpp.o: CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/flags.make
+CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_interfaces/action/load_bag__type_support.cpp.o: rosidl_typesupport_c/uarm_interfaces/action/load_bag__type_support.cpp
+CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_interfaces/action/load_bag__type_support.cpp.o: CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ros2/ros2_ws/build/uarm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_interfaces/action/load_bag__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_interfaces/action/load_bag__type_support.cpp.o -MF CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_interfaces/action/load_bag__type_support.cpp.o.d -o CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_interfaces/action/load_bag__type_support.cpp.o -c /home/ros2/ros2_ws/build/uarm_interfaces/rosidl_typesupport_c/uarm_interfaces/action/load_bag__type_support.cpp
+
+CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_interfaces/action/load_bag__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_interfaces/action/load_bag__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ros2/ros2_ws/build/uarm_interfaces/rosidl_typesupport_c/uarm_interfaces/action/load_bag__type_support.cpp > CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_interfaces/action/load_bag__type_support.cpp.i
+
+CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_interfaces/action/load_bag__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_interfaces/action/load_bag__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ros2/ros2_ws/build/uarm_interfaces/rosidl_typesupport_c/uarm_interfaces/action/load_bag__type_support.cpp -o CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_interfaces/action/load_bag__type_support.cpp.s
+
 # Object files for target uarm_interfaces__rosidl_typesupport_c
 uarm_interfaces__rosidl_typesupport_c_OBJECTS = \
 "CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_interfaces/action/pick_place__type_support.cpp.o" \
 "CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_interfaces/action/pick_and_place__type_support.cpp.o" \
-"CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_interfaces/action/drive_to_pose__type_support.cpp.o"
+"CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_interfaces/action/drive_to_pose__type_support.cpp.o" \
+"CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_interfaces/action/load_bag__type_support.cpp.o"
 
 # External object files for target uarm_interfaces__rosidl_typesupport_c
 uarm_interfaces__rosidl_typesupport_c_EXTERNAL_OBJECTS =
@@ -149,6 +168,7 @@ uarm_interfaces__rosidl_typesupport_c_EXTERNAL_OBJECTS =
 libuarm_interfaces__rosidl_typesupport_c.so: CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_interfaces/action/pick_place__type_support.cpp.o
 libuarm_interfaces__rosidl_typesupport_c.so: CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_interfaces/action/pick_and_place__type_support.cpp.o
 libuarm_interfaces__rosidl_typesupport_c.so: CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_interfaces/action/drive_to_pose__type_support.cpp.o
+libuarm_interfaces__rosidl_typesupport_c.so: CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/uarm_interfaces/action/load_bag__type_support.cpp.o
 libuarm_interfaces__rosidl_typesupport_c.so: CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/build.make
 libuarm_interfaces__rosidl_typesupport_c.so: libuarm_interfaces__rosidl_generator_c.so
 libuarm_interfaces__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/libaction_msgs__rosidl_typesupport_c.so
@@ -163,7 +183,7 @@ libuarm_interfaces__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/libbuiltin_inter
 libuarm_interfaces__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/librosidl_runtime_c.so
 libuarm_interfaces__rosidl_typesupport_c.so: /opt/ros/jazzy/lib/librcutils.so
 libuarm_interfaces__rosidl_typesupport_c.so: CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ros2/ros2_ws/build/uarm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library libuarm_interfaces__rosidl_typesupport_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ros2/ros2_ws/build/uarm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library libuarm_interfaces__rosidl_typesupport_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -175,6 +195,7 @@ CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/clean:
 .PHONY : CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/clean
 
 CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/uarm_interfaces/action/drive_to_pose__type_support.cpp
+CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/uarm_interfaces/action/load_bag__type_support.cpp
 CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/uarm_interfaces/action/pick_and_place__type_support.cpp
 CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/uarm_interfaces/action/pick_place__type_support.cpp
 	cd /home/ros2/ros2_ws/build/uarm_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ros2/ros2_ws/src/uarm_interfaces /home/ros2/ros2_ws/src/uarm_interfaces /home/ros2/ros2_ws/build/uarm_interfaces /home/ros2/ros2_ws/build/uarm_interfaces /home/ros2/ros2_ws/build/uarm_interfaces/CMakeFiles/uarm_interfaces__rosidl_typesupport_c.dir/DependInfo.cmake "--color=$(COLOR)"

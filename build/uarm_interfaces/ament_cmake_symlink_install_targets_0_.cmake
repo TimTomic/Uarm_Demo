@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_py/uarm_interfaces/uarm_interfaces_s__rosidl_typesupport_fastrtps_c.so" "TARGETS" "uarm_interfaces_s__rosidl_typesupport_fastrtps_c" "DESTINATION" "lib/python3.12/site-packages/uarm_interfaces")

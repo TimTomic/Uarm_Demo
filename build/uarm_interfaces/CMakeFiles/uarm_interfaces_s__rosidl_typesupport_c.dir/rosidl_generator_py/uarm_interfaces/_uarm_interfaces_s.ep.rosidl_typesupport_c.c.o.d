@@ -241,4 +241,7 @@ CMakeFiles/uarm_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/uarm_
  /home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_c/uarm_interfaces/action/detail/pick_and_place__functions.h \
  /home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_c/uarm_interfaces/action/detail/drive_to_pose__type_support.h \
  /home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_c/uarm_interfaces/action/detail/drive_to_pose__struct.h \
- /home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_c/uarm_interfaces/action/detail/drive_to_pose__functions.h
+ /home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_c/uarm_interfaces/action/detail/drive_to_pose__functions.h \
+ /home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_c/uarm_interfaces/action/detail/load_bag__type_support.h \
+ /home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_c/uarm_interfaces/action/detail/load_bag__struct.h \
+ /home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_c/uarm_interfaces/action/detail/load_bag__functions.h

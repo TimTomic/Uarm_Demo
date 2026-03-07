@@ -69,12 +69,14 @@ include CMakeFiles/uarm_interfaces__rosidl_generator_type_description.dir/progre
 CMakeFiles/uarm_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/uarm_interfaces/action/PickPlace.json
 CMakeFiles/uarm_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/uarm_interfaces/action/PickAndPlace.json
 CMakeFiles/uarm_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/uarm_interfaces/action/DriveToPose.json
+CMakeFiles/uarm_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/uarm_interfaces/action/LoadBag.json
 
 rosidl_generator_type_description/uarm_interfaces/action/PickPlace.json: /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description
 rosidl_generator_type_description/uarm_interfaces/action/PickPlace.json: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_type_description/__init__.py
 rosidl_generator_type_description/uarm_interfaces/action/PickPlace.json: rosidl_adapter/uarm_interfaces/action/PickPlace.idl
 rosidl_generator_type_description/uarm_interfaces/action/PickPlace.json: rosidl_adapter/uarm_interfaces/action/PickAndPlace.idl
 rosidl_generator_type_description/uarm_interfaces/action/PickPlace.json: rosidl_adapter/uarm_interfaces/action/DriveToPose.idl
+rosidl_generator_type_description/uarm_interfaces/action/PickPlace.json: rosidl_adapter/uarm_interfaces/action/LoadBag.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ros2/ros2_ws/build/uarm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating type hashes for ROS interfaces"
 	/usr/bin/python3 /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description --generator-arguments-file /home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_type_description__arguments.json
 
@@ -84,8 +86,12 @@ rosidl_generator_type_description/uarm_interfaces/action/PickAndPlace.json: rosi
 rosidl_generator_type_description/uarm_interfaces/action/DriveToPose.json: rosidl_generator_type_description/uarm_interfaces/action/PickPlace.json
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_type_description/uarm_interfaces/action/DriveToPose.json
 
+rosidl_generator_type_description/uarm_interfaces/action/LoadBag.json: rosidl_generator_type_description/uarm_interfaces/action/PickPlace.json
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_type_description/uarm_interfaces/action/LoadBag.json
+
 uarm_interfaces__rosidl_generator_type_description: CMakeFiles/uarm_interfaces__rosidl_generator_type_description
 uarm_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/uarm_interfaces/action/DriveToPose.json
+uarm_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/uarm_interfaces/action/LoadBag.json
 uarm_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/uarm_interfaces/action/PickAndPlace.json
 uarm_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/uarm_interfaces/action/PickPlace.json
 uarm_interfaces__rosidl_generator_type_description: CMakeFiles/uarm_interfaces__rosidl_generator_type_description.dir/build.make

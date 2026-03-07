@@ -5,6 +5,13 @@ from uarm_interfaces.action._drive_to_pose import DriveToPose_GetResult_Response
 from uarm_interfaces.action._drive_to_pose import DriveToPose_SendGoal_Event  # noqa: F401
 from uarm_interfaces.action._drive_to_pose import DriveToPose_SendGoal_Request  # noqa: F401
 from uarm_interfaces.action._drive_to_pose import DriveToPose_SendGoal_Response  # noqa: F401
+from uarm_interfaces.action._load_bag import LoadBag  # noqa: F401
+from uarm_interfaces.action._load_bag import LoadBag_GetResult_Event  # noqa: F401
+from uarm_interfaces.action._load_bag import LoadBag_GetResult_Request  # noqa: F401
+from uarm_interfaces.action._load_bag import LoadBag_GetResult_Response  # noqa: F401
+from uarm_interfaces.action._load_bag import LoadBag_SendGoal_Event  # noqa: F401
+from uarm_interfaces.action._load_bag import LoadBag_SendGoal_Request  # noqa: F401
+from uarm_interfaces.action._load_bag import LoadBag_SendGoal_Response  # noqa: F401
 from uarm_interfaces.action._pick_and_place import PickAndPlace  # noqa: F401
 from uarm_interfaces.action._pick_and_place import PickAndPlace_GetResult_Event  # noqa: F401
 from uarm_interfaces.action._pick_and_place import PickAndPlace_GetResult_Request  # noqa: F401

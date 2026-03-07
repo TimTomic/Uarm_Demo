@@ -1,25 +1,85 @@
 version: '3.8'
 
+x-ros-base: &ros-base
+  build:
+    context: .
+    dockerfile: Dockerfile
+    args:
+      # PUID/PGID can be overwritten in .env if host user is not 1000
+      USER_UID: 1000
+      USER_GID: 1000
+  network_mode: host
+  privileged: true
+  volumes:
+    - /dev:/dev
+    # Map the workspace to the container's user home
+    - ../:/home/ros2/ros2_ws
+  environment:
+    - DISPLAY=$DISPLAY
+    - QT_X11_NO_MITSHM=1
+    # Ensure standard ROS variables are passed
+    - ROS_DOMAIN_ID=${ROS_DOMAIN_ID:-0}
+  restart: unless-stopped
+  # Required to keep container running if bash/CLI is requested
+  stdin_open: true
+  tty: true
+
 services:
-  ros2_jazzy_pi:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      args:
-        # PUID/PGID can be overwritten in .env if host user is not 1000
-        USER_UID: 1000
-        USER_GID: 1000
-    container_name: uarm_demo_container
-    network_mode: host
-    privileged: true
-    # Mapping devices directly
-    volumes:
-      - /dev:/dev
-      # Map the workspace to the container's user home
-      - ../:/home/ros2/ros2_ws
+  # ---------------------------------------------------------
+  # 1. Vision Container: USB Camera & AprilTag Detection
+  # ---------------------------------------------------------
+  vision:
+    <<: *ros-base
+    container_name: uarm_vision
+    ports:
+      - "8080:8080"
+    command: >
+      bash -c "source /home/ros2/ros2_ws/install/setup.bash && ros2 launch apriltag_detector realsense_wsl.launch.py"
+
+  # ---------------------------------------------------------
+  # 2. Manipulator Container: SwiftPro Driver & Arm Controller
+  # ---------------------------------------------------------
+  manipulator:
+    <<: *ros-base
+    container_name: uarm_manipulator
+    command: >
+      bash -c "source /home/ros2/ros2_ws/install/setup.bash && ros2 launch uarm_arm_controller arm_controller.launch.py"
+
+  # ---------------------------------------------------------
+  # 3. Brain Container: Task Planner and Task Manager
+  # ---------------------------------------------------------
+  brain:
+    <<: *ros-base
+    container_name: uarm_brain
+    # Wait a few seconds to let vision & manipulator initialize first (optional but good practice)
+    command: >
+      bash -c "sleep 3 && source /home/ros2/ros2_ws/install/setup.bash && ros2 launch uarm_brain brain_standalone.launch.py"
+    # Ensure it only restarts if something really crashes
+    restart: unless-stopped
+
+  # ---------------------------------------------------------
+  # 4. Navigation Container (Placeholder for Future)
+  # ---------------------------------------------------------
+  nav:
+    <<: *ros-base
+    container_name: uarm_nav
+    command: >
+      bash -c "echo 'Navigation container running placeholder...' && tail -f /dev/null"
+
+  # ---------------------------------------------------------
+  # 5. Monitoring Container: RViz2 (Manual start only)
+  # ---------------------------------------------------------
+  monitoring:
+    <<: *ros-base
+    container_name: uarm_monitoring
+    # RViz2 requires display and X11 forwarding
     environment:
-      - DISPLAY=$DISPLAY
+      - DISPLAY=host.docker.internal:0
       - QT_X11_NO_MITSHM=1
-    stdin_open: true # Equivalent to -i
-    tty: true        # Equivalent to -t
-    command: bash
+      - ROS_DOMAIN_ID=${ROS_DOMAIN_ID:-0}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ../:/home/ros2/ros2_ws
+    command: >
+      bash -c "source /home/ros2/ros2_ws/install/setup.bash && rviz2 -d /home/ros2/ros2_ws/src/uarm_brain/rviz/operator.rviz"
+    restart: "no" # Only start manually

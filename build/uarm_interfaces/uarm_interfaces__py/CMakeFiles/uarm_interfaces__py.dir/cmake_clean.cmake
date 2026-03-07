@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_py/uarm_interfaces/action/__init__.py"
   "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_py/uarm_interfaces/action/_drive_to_pose.py"
   "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_py/uarm_interfaces/action/_drive_to_pose_s.c"
+  "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_py/uarm_interfaces/action/_load_bag.py"
+  "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_py/uarm_interfaces/action/_load_bag_s.c"
   "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_py/uarm_interfaces/action/_pick_and_place.py"
   "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_py/uarm_interfaces/action/_pick_and_place_s.c"
   "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_py/uarm_interfaces/action/_pick_place.py"

@@ -16,6 +16,10 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/detail/drive_to_pose__struct.hpp" "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp"
   "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/detail/drive_to_pose__traits.hpp" "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp"
   "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/detail/drive_to_pose__type_support.hpp" "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp"
+  "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/detail/load_bag__builder.hpp" "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp"
+  "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/detail/load_bag__struct.hpp" "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp"
+  "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/detail/load_bag__traits.hpp" "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp"
+  "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/detail/load_bag__type_support.hpp" "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp"
   "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/detail/pick_and_place__builder.hpp" "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp"
   "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/detail/pick_and_place__struct.hpp" "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp"
   "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/detail/pick_and_place__traits.hpp" "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp"
@@ -25,6 +29,7 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/detail/pick_place__traits.hpp" "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp"
   "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/detail/pick_place__type_support.hpp" "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp"
   "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/drive_to_pose.hpp" "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp"
+  "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/load_bag.hpp" "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp"
   "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/pick_and_place.hpp" "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp"
   "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp" "/home/ros2/ros2_ws/build/uarm_interfaces/rosidl_generator_cpp/uarm_interfaces/action/pick_place.hpp"
   )

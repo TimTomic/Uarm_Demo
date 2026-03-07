@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/uarm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/uarm_interfaces/action/detail/drive_to_pose__type_support.cpp.o"
   "CMakeFiles/uarm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/uarm_interfaces/action/detail/drive_to_pose__type_support.cpp.o.d"
+  "CMakeFiles/uarm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/uarm_interfaces/action/detail/load_bag__type_support.cpp.o"
+  "CMakeFiles/uarm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/uarm_interfaces/action/detail/load_bag__type_support.cpp.o.d"
   "CMakeFiles/uarm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/uarm_interfaces/action/detail/pick_and_place__type_support.cpp.o"
   "CMakeFiles/uarm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/uarm_interfaces/action/detail/pick_and_place__type_support.cpp.o.d"
   "CMakeFiles/uarm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/uarm_interfaces/action/detail/pick_place__type_support.cpp.o"
@@ -9,6 +11,8 @@ file(REMOVE_RECURSE
   "libuarm_interfaces__rosidl_typesupport_introspection_cpp.so"
   "rosidl_typesupport_introspection_cpp/uarm_interfaces/action/detail/drive_to_pose__rosidl_typesupport_introspection_cpp.hpp"
   "rosidl_typesupport_introspection_cpp/uarm_interfaces/action/detail/drive_to_pose__type_support.cpp"
+  "rosidl_typesupport_introspection_cpp/uarm_interfaces/action/detail/load_bag__rosidl_typesupport_introspection_cpp.hpp"
+  "rosidl_typesupport_introspection_cpp/uarm_interfaces/action/detail/load_bag__type_support.cpp"
   "rosidl_typesupport_introspection_cpp/uarm_interfaces/action/detail/pick_and_place__rosidl_typesupport_introspection_cpp.hpp"
   "rosidl_typesupport_introspection_cpp/uarm_interfaces/action/detail/pick_and_place__type_support.cpp"
   "rosidl_typesupport_introspection_cpp/uarm_interfaces/action/detail/pick_place__rosidl_typesupport_introspection_cpp.hpp"

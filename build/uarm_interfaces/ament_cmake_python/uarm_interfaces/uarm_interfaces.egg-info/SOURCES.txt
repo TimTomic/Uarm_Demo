@@ -4,5 +4,3 @@ uarm_interfaces.egg-info/PKG-INFO
 uarm_interfaces.egg-info/SOURCES.txt
 uarm_interfaces.egg-info/dependency_links.txt
 uarm_interfaces.egg-info/top_level.txt
-uarm_interfaces/action/__init__.py
-uarm_interfaces/action/_pick_place.py

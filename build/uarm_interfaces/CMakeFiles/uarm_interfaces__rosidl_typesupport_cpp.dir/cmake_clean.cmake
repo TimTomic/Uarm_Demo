@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/uarm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/uarm_interfaces/action/drive_to_pose__type_support.cpp.o"
   "CMakeFiles/uarm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/uarm_interfaces/action/drive_to_pose__type_support.cpp.o.d"
+  "CMakeFiles/uarm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/uarm_interfaces/action/load_bag__type_support.cpp.o"
+  "CMakeFiles/uarm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/uarm_interfaces/action/load_bag__type_support.cpp.o.d"
   "CMakeFiles/uarm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/uarm_interfaces/action/pick_and_place__type_support.cpp.o"
   "CMakeFiles/uarm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/uarm_interfaces/action/pick_and_place__type_support.cpp.o.d"
   "CMakeFiles/uarm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/uarm_interfaces/action/pick_place__type_support.cpp.o"
@@ -8,6 +10,7 @@ file(REMOVE_RECURSE
   "libuarm_interfaces__rosidl_typesupport_cpp.pdb"
   "libuarm_interfaces__rosidl_typesupport_cpp.so"
   "rosidl_typesupport_cpp/uarm_interfaces/action/drive_to_pose__type_support.cpp"
+  "rosidl_typesupport_cpp/uarm_interfaces/action/load_bag__type_support.cpp"
   "rosidl_typesupport_cpp/uarm_interfaces/action/pick_and_place__type_support.cpp"
   "rosidl_typesupport_cpp/uarm_interfaces/action/pick_place__type_support.cpp"
 )
