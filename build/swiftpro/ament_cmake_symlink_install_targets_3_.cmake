@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/ros2/ros2_ws/build/swiftpro/swiftpro_write_node" "/home/ros2/ros2_ws/build/swiftpro/swiftpro_read_node" "/home/ros2/ros2_ws/build/swiftpro/swiftpro_rviz_node" "TARGETS" "swiftpro_write_node" "swiftpro_read_node" "swiftpro_rviz_node" "DESTINATION" "lib/swiftpro")

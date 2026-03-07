@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
-#include "swiftpro/srv/detail/send_gcode__functions.h"
-#include "swiftpro/srv/detail/send_gcode__type_support.h"
 #include "swiftpro/srv/detail/send_gcode__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "swiftpro/srv/detail/send_gcode__type_support.h"
+#include "swiftpro/srv/detail/send_gcode__functions.h"
 
 #ifdef __cplusplus
 extern "C"

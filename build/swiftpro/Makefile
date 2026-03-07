@@ -328,17 +328,17 @@ swiftpro__rosidl_typesupport_cpp/fast:
 .PHONY : swiftpro__rosidl_typesupport_cpp/fast
 
 #=============================================================================
-# Target rules for targets named ament_cmake_python_symlink_swiftpro
+# Target rules for targets named ament_cmake_python_copy_swiftpro
 
 # Build rule for target.
-ament_cmake_python_symlink_swiftpro: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_symlink_swiftpro
-.PHONY : ament_cmake_python_symlink_swiftpro
+ament_cmake_python_copy_swiftpro: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_copy_swiftpro
+.PHONY : ament_cmake_python_copy_swiftpro
 
 # fast build rule for target.
-ament_cmake_python_symlink_swiftpro/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_swiftpro.dir/build.make CMakeFiles/ament_cmake_python_symlink_swiftpro.dir/build
-.PHONY : ament_cmake_python_symlink_swiftpro/fast
+ament_cmake_python_copy_swiftpro/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_swiftpro.dir/build.make CMakeFiles/ament_cmake_python_copy_swiftpro.dir/build
+.PHONY : ament_cmake_python_copy_swiftpro/fast
 
 #=============================================================================
 # Target rules for targets named ament_cmake_python_build_swiftpro_egg
@@ -1815,7 +1815,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... ament_cmake_python_build_swiftpro_egg"
-	@echo "... ament_cmake_python_symlink_swiftpro"
+	@echo "... ament_cmake_python_copy_swiftpro"
 	@echo "... swiftpro"
 	@echo "... swiftpro__cpp"
 	@echo "... swiftpro__py"

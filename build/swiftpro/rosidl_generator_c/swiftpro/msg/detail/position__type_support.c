@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "swiftpro/msg/detail/position__functions.h"
-#include "swiftpro/msg/detail/position__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "swiftpro/msg/detail/position__functions.h"
 #include "swiftpro/msg/detail/position__type_support.h"
+#include "swiftpro/msg/detail/position__struct.h"
 
 #ifdef __cplusplus
 extern "C"
