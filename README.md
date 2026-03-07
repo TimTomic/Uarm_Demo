@@ -1,6 +1,238 @@
-# uArm ROS 2 Pick & Place Demos (Raspberry Pi 5)
+# uArm ROS 2 Pick & Place System (Raspberry Pi 5)
 
-Diese Anleitung beschreibt, wie das komplette ROS 2 Projekt (uArm Treiber + AprilTag Kamera + State Machine / Action Server) auf einem **Raspberry Pi 5** innerhalb eines Docker-Containers gestartet wird.
+Diese Anleitung beschreibt das komplette ROS 2 Projekt:
+**uArm Treiber + AprilTag Kamera + Arm Controller + Brain (Task Planner & Manager)** – alles auf einem Raspberry Pi 5 innerhalb eines Docker-Containers.
+
+---
+
+## Systemübersicht: Das Brain
+
+Das **Brain** (`uarm_brain`) ist die zentrale Intelligenz des Systems. Es liest `.bag`-Dateien mit Aufgabenlisten, plant die optimale Reihenfolge und steuert Arm und Kamera.
+
+### Architektur
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                     uArm Brain                          │
+│                                                         │
+│  .bag Datei ──► [TaskPlannerNode]                       │
+│                   • Liest Bag (ROS1 + ROS2)             │
+│                   • Greedy-Gruppierung nach Workstation  │
+│                   • Inventar-Limit (max. 3 Objekte)     │
+│                   • Publiziert /brain/task_queue (JSON)  │
+│                         │                               │
+│                 [TaskManagerNode]                        │
+│                   • State Machine                        │
+│                   • 3-Slot Inventar-Verwaltung          │
+│                   • Sucht Objekte per AprilTag-TF        │
+└──────────┬──────────────────────────────┬───────────────┘
+           │                              │
+           ▼                              ▼
+  /drive_to_pose                /pick_and_place
+  (DriveToPose Action)          (PickAndPlace Action)
+           │                              │
+           └──────────┬───────────────────┘
+                      ▼
+          [ArmControllerNode]  (C++, uarm_arm_controller)
+              • Steuert Arm-Positionen
+              • Limit-Switch Handling
+              • Pump an/aus
+```
+
+### Scan-Strategie
+
+Der Brain sucht jedes Zielobjekt in 3 Posen:
+1. **SCAN** (Mitte) – Standardposition
+2. **SCAN_LEFT** – links schwenken
+3. **SCAN_RIGHT** – rechts schwenken
+4. → Objekt nicht gefunden: Task **überspringen**, nächstes Objekt
+
+### Inventar
+
+Der Roboter kann bis zu **3 Objekte gleichzeitig** transportieren. Die Koordinaten der 3 Inventar-Slots sind in `brain_config.yaml` konfigurierbar (in mm, relativ zum Arm-Ursprung).
+
+---
+
+## Packages Übersicht
+
+| Package | Beschreibung |
+|---------|-------------|
+| `uarm_driver` | Treiber für den uArm Swift Pro (Serial) |
+| `apriltag_launcher` | USB-Kamera + AprilTag Erkennung |
+| `uarm_arm_controller` | **C++ Arm Controller** mit `pick_and_place` + `drive_to_pose` Actions |
+| `uarm_brain` | **Brain**: Task Planner + Task Manager |
+| `uarm_interfaces` | Action-Definitionen für alle Komponenten |
+
+---
+
+## System Starten (Multi-Container Architektur)
+
+Das System besteht nun aus **mehreren strikt voneinander getrennten Docker-Containern**, die über das ROS 2 Host-Netzwerk miteinander kommunizieren. 
+Dies ermöglicht höchste Stabilität: Falls ein Container abstürzt (z.B. Kamera-Disconnect), startet er sich durch die `restart: unless-stopped` Policy automatisch neu; das Brain wartet derweil selbstständig, bis die Action-Server wieder verfügbar sind.
+
+### 1. Image Bauen
+Wechsle in den `docker/`-Ordner und baue das gemeinsame Basis-Image:
+```bash
+cd docker
+docker compose build
+```
+
+### 2. Gesamtes System starten
+```bash
+docker compose up -d
+```
+Dies startet alle notwendigen Nodes vollautomatisch im Hintergrund:
+- `vision`: Kamera & AprilTag Erkennung
+- `manipulator`: Arm Controller & SwiftPro Treiber
+- `brain`: Task Planner & Task Manager
+- `nav`: Platzhalter für zukünftige Navigation
+
+### 3. Einzelne Container steuern
+Du kannst Container auch einzeln neustarten oder deren Logs live anschauen:
+```bash
+docker compose logs -f brain
+docker compose restart manipulator
+```
+
+### 4. Monitoring (RViz)
+Es gibt einen dedizierten Monitoring-Container (RViz2), der **nicht** automatisch mitstartet. Du kannst ihn bei Bedarf jederzeit über das `tools` Profil zuschalten:
+```bash
+docker compose --profile tools up monitoring
+```
+
+## 5. Operator-Laptop & PS5 Controller anschließen
+Das System bietet einen dedizierten **Operator Monitoring Container**, der direkt auf deinem Laptop oder Remote-PC ausgeführt werden kann. Er verbindet sich transparent mit dem Roboter (via `ROS_DOMAIN_ID`), zeigt RViz (Map, TF, Camera) an und leitet Befehle eines angeschlossenen PS5-/PS4-Controllers (`cmd_vel`) zum Roboter weiter.
+
+**Auf dem Laptop:**
+1. Repository klonen und in `docker/` wechseln
+2. PS5 Controller per USB oder Bluetooth mit dem Laptop verbinden
+3. Sicherstellen, dass die `ROS_DOMAIN_ID` auf Pi und Laptop identisch ist
+4. Starten:
+```bash
+docker compose -f operator-compose.yml up
+```
+Es öffnet sich vollautomatisch **RViz2** mit einem Live-Kamerabild (inkl. AprilTag Overlays), dem 3D-Modell des Arms (TF-Tree) und der Platzhalter-Map. Über den angeschlossenen Gamepad-Controller kannst du den Roboter dann für Mapping-Fahrten fernsteuern (`/cmd_vel`).
+
+---
+
+## Brain Überwachen & Steuern
+
+Die Live-Überwachung funktioniert entweder über einen `docker exec` in einen laufenden Container, oder nativ auf dem Pi:
+```bash
+# Aktueller Task-Status:
+ros2 topic echo /brain/status
+
+# Inventar-Zustand (welches Objekt in welchem Slot):
+ros2 topic echo /brain/inventory
+```
+
+### Aufgabe zur Laufzeit neu laden (Bag Loader)
+```bash
+ros2 action send_goal /brain/load_bag uarm_interfaces/action/LoadBag \
+  "{bag_path: '/home/ros2/ros2_ws/Example BAG Files/BTT2.bag'}"
+```
+
+---
+
+## Konfiguration
+
+### Brain Konfiguration: `uarm_brain/config/brain_config.yaml`
+
+```yaml
+brain_node:
+  ros__parameters:
+    nav_stub_delay: 3.0          # Sekunden warten beim Workstation-Wechsel (NAV-Stub)
+    vision_timeout: 10.0         # Sekunden auf Tag warten pro Scan-Pose
+    dry_run: false
+
+    # 3 Inventar-Slots (X, Y, Z in mm)
+    inventory_slot_0_x: 150.0
+    inventory_slot_0_y: -120.0
+    inventory_slot_0_z: 0.0
+    # ... slot 1, slot 2 analog
+```
+
+### Arm-Posen: `uarm_arm_controller/config/poses.yaml`
+
+Hier werden alle benannten Posen definiert. Das Brain nutzt folgende Pose-Namen:
+
+| Pose-Name | Beschreibung |
+|-----------|-------------|
+| `SCAN` | Mittlere Scan-Position |
+| `SCAN_LEFT` | Scan links (breiterer Suchbereich) |
+| `SCAN_RIGHT` | Scan rechts (breiterer Suchbereich) |
+| `DRIVE` | Fahrt-/Reiseposition |
+| `DROP` | Ablage-Zielposition für Place-Tasks |
+| `INVENTORY` | Inventar-Ablage (wird intern genutzt) |
+
+> **Tipp:** Nutze `teach_position.py` aus dem `uarm_arm_controller`-Package, um Posen einzuteachen.
+
+### AprilTag → Objekt Mapping: `uarm_brain/config/object_tags.yaml`
+
+```yaml
+object_tag_map:
+  F20_20_B:  11   # AprilTag ID = Object-ID aus dem Bag
+  M20_100:   15
+  M20:       16
+  # ... alle Objekte
+```
+
+---
+
+## BAG-Datei Format
+
+Die Brain-Bag-Datei muss auf Topic `/task_list` eine `std_msgs/String`-Nachricht mit JSON-Inhalt enthalten:
+
+```json
+[
+  {
+    "Subtask-Type": 10, "Subtask-Name": "Pick",
+    "Workstation-Name": "WS07", "Workstation-Height": "5cm",
+    "Workstation-Type": 1, "Object-ID": 11,
+    "Object-name": "F20_20_B", "Container-ID": 0
+  },
+  {
+    "Subtask-Type": 20, "Subtask-Name": "Place",
+    "Workstation-Name": "WS08", "Workstation-Height": "5cm",
+    "Workstation-Type": 1, "Object-ID": 11,
+    "Object-name": "F20_20_B", "Container-ID": 0
+  }
+]
+```
+
+**Subtask-Typen:**
+
+| Typ | Name |
+|-----|------|
+| 10 | Pick |
+| 11 | Pick_Shelf |
+| 12 | Pick_Moving |
+| 20 | Place |
+| 21 | Place_Shelf |
+| 22 | Place_Precise |
+| 23 | Place_Container |
+
+> **ROS1 Bags:** Die `rosbags` Library wird benötigt. Einmalig im Container installieren:
+> ```bash
+> pip install rosbags
+> ```
+
+---
+
+## Offline Planner-Test (ohne Hardware/ROS2)
+
+```bash
+# Alle 3 Tests müssen grün sein:
+python3 src/uarm_brain/test/dry_run_test.py --csv
+
+# Mit echter Bag-Datei (nur Planer-Logik, kein ROS nötig):
+python3 src/uarm_brain/test/dry_run_test.py \
+  --bag "/path/to/BTT2.bag" --topic "/task_list"
+```
+
+---
+
+
 
 ## 1. Vorbereitung auf dem Raspberry Pi (Host)
 
