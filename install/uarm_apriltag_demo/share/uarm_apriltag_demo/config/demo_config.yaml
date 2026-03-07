@@ -11,9 +11,9 @@
 
     # TCP to Link8 Offsets (Meters)
     # The default physical offset of the uArm Swift Pro suction cup
-    tcp_x_offset: 0.050
+    tcp_x_offset: 0.05655
     tcp_y_offset: 0.0
-    tcp_z_offset: -0.055
+    tcp_z_offset: -0.07455
     tcp_roll_offset: 0.0
     tcp_pitch_offset: 0.0
     tcp_yaw_offset: 0.0

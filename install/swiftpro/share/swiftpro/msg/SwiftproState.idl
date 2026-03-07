@@ -1,1 +1,32 @@
-/home/ros2/ros2_ws/build/swiftpro/rosidl_adapter/swiftpro/msg/SwiftproState.idl
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from swiftpro/msg/SwiftproState.msg
+// generated code does not contain a copyright notice
+
+
+module swiftpro {
+  module msg {
+    struct SwiftproState {
+      double motor_angle1;
+
+      double motor_angle2;
+
+      double motor_angle3;
+
+      double motor_angle4;
+
+      double x;
+
+      double y;
+
+      double z;
+
+      uint8 pump;
+
+      uint8 swiftpro_status;
+
+      uint8 gripper;
+
+      uint8 limit_switch;
+    };
+  };
+};

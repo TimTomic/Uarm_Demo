@@ -1,1 +1,1 @@
-/home/ros2/ros2_ws/build/swiftpro/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/swiftpro
+rclcpp;std_msgs;sensor_msgs;geometry_msgs;tf2;tf2_ros;tf2_geometry_msgs;rosidl_default_runtime

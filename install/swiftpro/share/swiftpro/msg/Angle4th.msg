@@ -1,1 +1,1 @@
-/home/ros2/ros2_ws/src/uarm_driver/swiftpro/msg/Angle4th.msg
+float64 angle4th

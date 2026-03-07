@@ -1,1 +1,20 @@
-/home/ros2/ros2_ws/src/apriltag_launcher/config/tags_36h11.yaml
+/**:
+    ros__parameters:
+        image_transport: raw    # image format
+        family: 36h11           # tag family name
+        size: 0.162             # default tag edge size in meter
+        max_hamming: 0          # maximum allowed hamming distance (corrected bits)
+        qos_profile: sensor_data    # use sensor_data profile for camera
+        detector:
+            threads: 4          # number of threads
+            decimate: 2.0       # decimate resolution for quad detection
+            blur: 0.0           # sigma of Gaussian blur for quad detection
+            refine: True        # snap to strong gradients
+            sharpening: 0.25    # sharpening of decoded images
+            debug: False        # write additional debugging images
+        pose_estimation_method: "pnp"   # method for estimating the tag pose
+        # optional list of tags
+        tag:
+            ids: [3]
+            frames: [tag_3]
+            sizes: [0.032]

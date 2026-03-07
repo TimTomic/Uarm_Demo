@@ -45,10 +45,10 @@ def generate_launch_description():
     hover_z_offset = str(params.get('hover_z_offset', '0.010'))
     target_z_base = str(params.get('target_z_base', '0.0'))
 
-    # 1. Start the uArm driver
-    swiftpro_launch_dir = os.path.join(get_package_share_directory('swiftpro'), 'launch')
-    swiftpro_launch = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(os.path.join(swiftpro_launch_dir, 'pro_control.launch.py'))
+    # 1. Start the uArm Controller (which internally starts the swiftpro driver)
+    arm_controller_launch_dir = os.path.join(get_package_share_directory('uarm_arm_controller'), 'launch')
+    arm_controller_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(os.path.join(arm_controller_launch_dir, 'arm_controller.launch.py'))
     )
 
     # 2. Start the RealSense camera
@@ -85,7 +85,11 @@ def generate_launch_description():
         package='tf2_ros',
         executable='static_transform_publisher',
         name='camera_static_tf',
-        arguments=[cam_x, cam_y, cam_z, cam_yaw, cam_pitch, cam_roll, 'tcp_link', 'camera_link'] 
+        arguments=[
+            '--x', cam_x, '--y', cam_y, '--z', cam_z, 
+            '--yaw', cam_yaw, '--pitch', cam_pitch, '--roll', cam_roll, 
+            '--frame-id', 'tcp_link', '--child-frame-id', 'camera_link'
+        ] 
     )
 
     # 5. Start the Demo State Machine
@@ -113,12 +117,16 @@ def generate_launch_description():
         package='tf2_ros',
         executable='static_transform_publisher',
         name='tcp_static_tf',
-        arguments=[tcp_x, tcp_y, tcp_z, tcp_yaw, tcp_pitch, tcp_roll, 'Link8', 'tcp_link']
+        arguments=[
+            '--x', tcp_x, '--y', tcp_y, '--z', tcp_z, 
+            '--yaw', tcp_yaw, '--pitch', tcp_pitch, '--roll', tcp_roll, 
+            '--frame-id', 'Link8', '--child-frame-id', 'tcp_link'
+        ]
     )
 
     return LaunchDescription([
         use_rviz_arg,
-        swiftpro_launch,
+        arm_controller_launch,
         realsense_launch,
         apriltag_detector,
         camera_tf_node,

@@ -1,1 +1,4 @@
-/home/ros2/ros2_ws/src/uarm_driver/swiftpro/srv/SendGcode.srv
+string command
+---
+bool success
+string message
