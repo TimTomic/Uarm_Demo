@@ -119,7 +119,13 @@ RViz öffnet sich nun mit dem vorkonfigurierten uArm-Setup (TF-Tree, Live-Kamera
 Das Brain wartet nach dem Start auf eine Aufgabenliste. Diese wird typischerweise aus einer `.bag`-Datei geladen.
 
 ### Aufgabe zur Laufzeit laden (Action Server)
-Du kannst dem laufenden Roboter jederzeit eine neue Aufgabe schicken:
+Du kannst dem laufenden Roboter jederzeit eine neue Aufgabe schicken.
+
+Das **Beispiel-Bag** für den empfohlenen Testlauf liegt **im Repository** unter  
+`Example BAG FIles/test_03_bag2/`. Durch das Volume-Mapping in der
+`docker-compose.yml` wird dieses Verzeichnis im `uarm_brain`‑Container nach  
+`/home/ros2/ros2_ws/Example BAG FIles/test_03_bag2/` gemountet – genau auf
+den Pfad, der im folgenden Befehl verwendet wird.
 
 **Beispiel: Tag 03 Test-Lauf (empfohlener Befehl)**
 ```bash
