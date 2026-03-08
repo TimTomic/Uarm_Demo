@@ -1,10 +1,1 @@
-msg/Angle4th.idl
-msg/Angle4th.msg
-msg/Position.idl
-msg/Position.msg
-msg/Status.idl
-msg/Status.msg
-msg/SwiftproState.idl
-msg/SwiftproState.msg
-srv/SendGcode.idl
-srv/SendGcode.srv
+/home/ros2/ros2_ws/build/swiftpro/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/swiftpro

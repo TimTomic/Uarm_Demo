@@ -1,0 +1,16 @@
+digraph G {
+"Base" -> "Link1"[label=" Broadcaster: default_authority\nAverage rate: 13.272\nBuffer length: 5.199\nMost recent transform: 1772961699.765772\nOldest transform: 1772961694.566983\n"];
+"odom" -> "Base"[label=" Broadcaster: default_authority\nAverage rate: 20.199\nBuffer length: 5.198\nMost recent transform: 1772961699.766009\nOldest transform: 1772961694.56768\n"];
+"Link1" -> "Link2"[label=" Broadcaster: default_authority\nAverage rate: 13.272\nBuffer length: 5.199\nMost recent transform: 1772961699.765772\nOldest transform: 1772961694.566983\n"];
+"Link2" -> "Link3"[label=" Broadcaster: default_authority\nAverage rate: 13.272\nBuffer length: 5.199\nMost recent transform: 1772961699.765772\nOldest transform: 1772961694.566983\n"];
+"Link3" -> "Link8"[label=" Broadcaster: default_authority\nAverage rate: 13.272\nBuffer length: 5.199\nMost recent transform: 1772961699.765772\nOldest transform: 1772961694.566983\n"];
+"Link8" -> "tcp_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"tcp_link" -> "camera_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"camera_link" -> "camera_color_frame"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"camera_color_frame" -> "camera_color_optical_frame"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"camera_color_optical_frame" -> "tag_3"[label=" Broadcaster: default_authority\nAverage rate: 5.151\nBuffer length: 2.718\nMost recent transform: 1772961699.498986\nOldest transform: 1772961696.781266\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1772961699.8427489"[ shape=plaintext ] ;
+}->"odom";
+}

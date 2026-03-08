@@ -221,17 +221,21 @@ class TaskManagerNode(Node):
         if self._state not in (State.IDLE, State.DONE, State.ERROR):
             self.get_logger().warn('New task_queue received but manager is busy – ignoring.')
             return
-        try:
-            self._plan = json.loads(msg.data)
-        except json.JSONDecodeError as exc:
-            self.get_logger().error(f'Invalid task_queue JSON: {exc}')
-            return
+        # --- Plan re-trigger protection ---
+        if hasattr(self, '_last_plan_data') and self._last_plan_data == msg.data:
+            # If we are done, maybe it's just a latch or re-publish of the same plan
+            if self._state == State.DONE:
+                self.get_logger().info('Ignoring identical plan message (already DONE).')
+                return
 
+        self._last_plan_data = msg.data
+        self._plan = json.loads(msg.data)
         self.get_logger().info(f'Received plan with {len(self._plan)} groups.')
-        self._state = State.LOADING
+        self._set_state(State.LOADING)
 
         if self._worker_thread and self._worker_thread.is_alive():
-            self._worker_thread.join(timeout=1.0)
+            self.get_logger().info('Joining previous worker thread...')
+            self._worker_thread.join(timeout=2.0)
 
         self._worker_thread = threading.Thread(target=self._execute_plan, daemon=True)
         self._worker_thread.start()
@@ -286,7 +290,8 @@ class TaskManagerNode(Node):
                     self.get_logger().error('Inventory full! This should not happen due to planner.')
                     break
 
-                success = self._find_and_pick(obj_name, obj_id, slot)
+                dest = delivery_map.get(obj_id, {}).get('place_ws', 'STAY')
+                success = self._find_and_pick(obj_name, obj_id, slot, dest)
                 if success:
                     picked_deliveries.append(delivery_map[obj_id])
                 else:
@@ -299,6 +304,10 @@ class TaskManagerNode(Node):
                 obj_id    = delivery['object_id']
                 place_ws  = delivery['place_ws']
 
+                if place_ws == 'STAY':
+                    self.get_logger().info(f"  Object {obj_name} is set to STAY – skipping placement.")
+                    continue
+
                 self._set_state(State.NAV_TO_PLACE)
                 self._publish_status(f"NAV -> place WS: {place_ws} (delivering {obj_name})")
                 self._nav_stub(place_ws)
@@ -307,21 +316,28 @@ class TaskManagerNode(Node):
                 self._publish_status(f"PLACING {obj_name} at {place_ws}")
                 self._do_place(obj_name, obj_id)
 
+        self.get_logger().info('Plan groups complete. Returning to DRIVE posture...')
+        self._publish_status('Returning to DRIVE')
+        self._drive_to_pose_blocking(self.POSE_DRIVE)
+
         self._set_state(State.DONE)
         self._publish_status('DONE – all tasks complete')
         self.get_logger().info('Plan execution finished.')
-        self._drive_to_pose_blocking(self.POSE_DRIVE)
+        
+        # Clear latch to allow re-trigger (e.g. from bag loop)
+        if hasattr(self, '_last_plan_data'):
+            del self._last_plan_data
 
     # ------------------------------------------------------------------
     # Find & Pick sequence
     # ------------------------------------------------------------------
 
-    def _find_and_pick(self, obj_name: str, obj_id: int, slot: InventorySlot) -> bool:
+    def _find_and_pick(self, obj_name: str, obj_id: int, slot: InventorySlot, dest: str = '') -> bool:
         """
         Try scan_center, scan_left, scan_right to find the target tag.
         Once found, call PickAndPlace with:
           pick coords  = tag XYZ from TF (mm)
-          place coords = inventory slot coords
+          place coords = inventory slot coords (or STAY flag)
         """
         scan_sequence = [
             (State.SCAN_CENTER, self.POSE_SCAN_CENTER),
@@ -344,6 +360,10 @@ class TaskManagerNode(Node):
                 self.get_logger().info(
                     f"  Found tag {obj_id} at ({tx:.1f}, {ty:.1f}, {tz:.1f}) mm"
                 )
+
+                # Pick from tag XYZ, place into inventory slot
+                self._set_state(State.PICKING)
+                self._publish_status(f"PICKING {obj_name} -> slot {slot.idx}")
 
                 # Pick from tag XYZ, place into inventory slot
                 self._set_state(State.PICKING)

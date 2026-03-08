@@ -1,3 +1,1 @@
-float64 x
-float64 y
-float64 z
+/home/ros2/ros2_ws/src/uarm_driver/swiftpro/msg/Position.msg

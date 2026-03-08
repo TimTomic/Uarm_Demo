@@ -114,6 +114,8 @@ public:
 private:
   // State variables
   uint8_t limit_switch_ = 0;
+  double current_x_ = 0.0;
+  double current_y_ = 0.0;
   double current_z_ = 150.0;
   std::map<std::string, Pose> poses_;
 
@@ -128,6 +130,8 @@ private:
   void state_callback(const swiftpro::msg::SwiftproState::SharedPtr msg)
   {
     limit_switch_ = msg->limit_switch;
+    current_x_ = msg->x;
+    current_y_ = msg->y;
     current_z_ = msg->z;
   }
 
@@ -234,6 +238,7 @@ private:
     auto feedback = std::make_shared<PickAndPlace::Feedback>();
     auto result = std::make_shared<PickAndPlace::Result>();
 
+    double safe_travel_z = 150.0;
     double hover_z_offset = this->get_parameter("hover_z_offset").as_double();
     double target_z_base = this->get_parameter("target_z_base").as_double();
     rclcpp::Rate loop_rate(10); // 10 Hz
@@ -244,82 +249,102 @@ private:
       RCLCPP_INFO(this->get_logger(), "%s", state.c_str());
     };
 
-    // 1. Move to Pick Hover
-    publish_feedback("Moving to Pick Hover");
+    auto move_safe = [&](double tx, double ty, double tz_final) {
+        // 1. Straight UP at current location
+        move_arm(current_x_, current_y_, safe_travel_z);
+        for(int i=0; i<10; i++) { loop_rate.sleep(); }
+        // 2. Across to target location at safe height
+        move_arm(tx, ty, safe_travel_z);
+        for(int i=0; i<15; i++) { loop_rate.sleep(); }
+    };
+
+    // ========== PICK SEQUENCE ==========
+    
+    // 1. Safe travel to pick location
+    publish_feedback("Safe Travel -> Pick Location");
+    move_safe(goal->pick_x, goal->pick_y, safe_travel_z);
+
+    // 2. Descend to Pick Hover
+    publish_feedback("Descending to Pick Hover");
     double pick_hover_z = goal->pick_z + hover_z_offset;
     move_arm(goal->pick_x, goal->pick_y, pick_hover_z);
-    for(int i=0; i<20; i++) { if(!rclcpp::ok() || goal_handle->is_canceling()) { cancel_goal(goal_handle, result); return; } loop_rate.sleep(); }
+    for(int i=0; i<10; i++) { if(goal_handle->is_canceling()) { cancel_goal(goal_handle, result); return; } loop_rate.sleep(); }
 
-    // 2. Descend to Pick
-    publish_feedback("Descending to Pick");
-    double current_target_z = pick_hover_z;
-    bool switch_triggered = false;
+    // 3. Descend to Pick until contact or limit
+    publish_feedback("Searching for object (Descending)");
+    double cur_z = pick_hover_z;
+    rclcpp::Rate search_rate(20); // 20 Hz for faster LS check
     while (rclcpp::ok()) {
       if (goal_handle->is_canceling()) { cancel_goal(goal_handle, result); return; }
       if (limit_switch_ == 1) {
-        switch_triggered = true;
-        break;
+          // Send current position to "stop" movement
+          move_arm(goal->pick_x, goal->pick_y, current_z_);
+          break; 
       }
-      current_target_z -= 2.0;
-      if (current_target_z < target_z_base) {
-        break;
-      }
-      move_arm(goal->pick_x, goal->pick_y, current_target_z);
-      loop_rate.sleep();
+      cur_z -= 1.0; // Slower descent for precision
+      if (cur_z < target_z_base) break;
+      move_arm(goal->pick_x, goal->pick_y, cur_z);
+      search_rate.sleep();
     }
 
-    // 3. Pump ON
+    // 4. Pump ON
     publish_feedback("Activating Pump");
     set_pump(true);
-    for(int i=0; i<10; i++) { if(!rclcpp::ok() || goal_handle->is_canceling()) { set_pump(false); cancel_goal(goal_handle, result); return; } loop_rate.sleep(); }
+    for(int i=0; i<10; i++) { loop_rate.sleep(); }
 
-    // 4. Move to Pick Hover
-    publish_feedback("Retracting to Pick Hover");
-    move_arm(goal->pick_x, goal->pick_y, pick_hover_z);
-    for(int i=0; i<15; i++) { if(!rclcpp::ok() || goal_handle->is_canceling()) { set_pump(false); cancel_goal(goal_handle, result); return; } loop_rate.sleep(); }
+    // 5. Retract
+    publish_feedback("Retracting to Safe Height");
+    move_arm(goal->pick_x, goal->pick_y, safe_travel_z);
+    for(int i=0; i<15; i++) { loop_rate.sleep(); }
 
-    // 5. Move to Place Hover
-    publish_feedback("Moving to Place Hover");
+    // ========== PLACE SEQUENCE ==========
+
+    // 6. Safe travel to place location
+    publish_feedback("Safe Travel -> Place Location");
+    move_safe(goal->place_x, goal->place_y, safe_travel_z);
+
+    // 7. Descend to Place Hover
+    publish_feedback("Descending to Place Hover");
     double place_hover_z = goal->place_z + hover_z_offset;
     move_arm(goal->place_x, goal->place_y, place_hover_z);
-    for(int i=0; i<20; i++) { if(!rclcpp::ok() || goal_handle->is_canceling()) { set_pump(false); cancel_goal(goal_handle, result); return; } loop_rate.sleep(); }
+    for(int i=0; i<10; i++) { if(goal_handle->is_canceling()) { set_pump(false); cancel_goal(goal_handle, result); return; } loop_rate.sleep(); }
 
-    // 6. Descend to Place
-    publish_feedback("Descending to Place");
-    current_target_z = place_hover_z;
-    switch_triggered = false;
+    // 8. Descend to Place
+    publish_feedback("Descending to Place (Slow)");
+    cur_z = place_hover_z;
     while (rclcpp::ok()) {
       if (goal_handle->is_canceling()) { set_pump(false); cancel_goal(goal_handle, result); return; }
       if (limit_switch_ == 1) {
-        switch_triggered = true;
-        break;
+          move_arm(goal->place_x, goal->place_y, current_z_);
+          break;
       }
-      current_target_z -= 2.0;
-      if (current_target_z < target_z_base) {
-        break;
-      }
-      move_arm(goal->place_x, goal->place_y, current_target_z);
-      loop_rate.sleep();
+      cur_z -= 0.5; // Very slow for delicate placement
+      if (cur_z < target_z_base) break;
+      move_arm(goal->place_x, goal->place_y, cur_z);
+      search_rate.sleep();
     }
 
-    // 7. Pump OFF
+    // 9. Pump OFF with confirmation
     publish_feedback("Deactivating Pump");
     set_pump(false);
-    for(int i=0; i<10; i++) { if(!rclcpp::ok() || goal_handle->is_canceling()) { cancel_goal(goal_handle, result); return; } loop_rate.sleep(); }
+    for(int i=0; i<10; i++) { loop_rate.sleep(); }
 
-    // 8. Move to Place Hover
-    publish_feedback("Retracting to Place Hover");
-    move_arm(goal->place_x, goal->place_y, place_hover_z);
-    for(int i=0; i<15; i++) { if(!rclcpp::ok() || goal_handle->is_canceling()) { cancel_goal(goal_handle, result); return; } loop_rate.sleep(); }
+    // Small move up to break any remaining seal/suction
+    publish_feedback("Breaking suction seal");
+    move_arm(goal->place_x, goal->place_y, current_z_ + 2.0);
+    for(int i=0; i<15; i++) { loop_rate.sleep(); }
+
+    // 10. Final Retract
+    publish_feedback("Final Retract");
+    move_arm(goal->place_x, goal->place_y, safe_travel_z);
+    for(int i=0; i<15; i++) { loop_rate.sleep(); }
 
     result->success = true;
-    result->message = "Pick and Place Completed";
+    result->message = "Pick and Place successful";
     goal_handle->succeed(result);
   }
 
   void cancel_goal(const std::shared_ptr<GoalHandlePickAndPlace> goal_handle, std::shared_ptr<PickAndPlace::Result> result) {
-    result->success = false;
-    result->message = "Action Canceled";
     goal_handle->canceled(result);
   }
 

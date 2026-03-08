@@ -1,8 +1,1 @@
-action/DriveToPose.action
-action/DriveToPose.idl
-action/LoadBag.action
-action/LoadBag.idl
-action/PickAndPlace.action
-action/PickAndPlace.idl
-action/PickPlace.action
-action/PickPlace.idl
+/home/ros2/ros2_ws/build/uarm_interfaces/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/uarm_interfaces

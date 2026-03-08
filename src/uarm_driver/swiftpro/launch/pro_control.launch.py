@@ -21,12 +21,23 @@ def generate_launch_description():
         with open(xacro_file, 'r') as f:
             robot_description = f.read()
 
+    from launch.actions import DeclareLaunchArgument
+    from launch.substitutions import LaunchConfiguration
+
+    port_arg = DeclareLaunchArgument(
+        'port', default_value='/dev/ttyACM1',
+        description='Serial port for the uArm'
+    )
+    port = LaunchConfiguration('port')
+
     return LaunchDescription([
+        port_arg,
         Node(
             package='swiftpro',
             executable='swiftpro_write_node',
             name='swiftpro_write_node',
             output='screen',
+            parameters=[{'port': port}]
         ),
         Node(
             package='swiftpro',

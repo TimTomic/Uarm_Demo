@@ -1,17 +1,1 @@
-// generated from rosidl_adapter/resource/srv.idl.em
-// with input from swiftpro/srv/SendGcode.srv
-// generated code does not contain a copyright notice
-
-
-module swiftpro {
-  module srv {
-    struct SendGcode_Request {
-      string command;
-    };
-    struct SendGcode_Response {
-      boolean success;
-
-      string message;
-    };
-  };
-};
+/home/ros2/ros2_ws/build/swiftpro/rosidl_adapter/swiftpro/srv/SendGcode.idl

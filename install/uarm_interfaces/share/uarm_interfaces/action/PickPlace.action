@@ -1,6 +1,1 @@
-string command
----
-bool success
-string message
----
-string current_state
+/home/ros2/ros2_ws/src/uarm_interfaces/action/PickPlace.action

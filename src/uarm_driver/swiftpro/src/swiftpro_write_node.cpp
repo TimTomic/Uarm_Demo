@@ -45,7 +45,7 @@ protected:
   {
     serial.flushInput();
     serial.write(cmd);
-    return serial.readline(100, "\r\n");
+    return serial.readline(50, "\r\n");
   }
 };
 
@@ -232,13 +232,18 @@ public:
       std::string token;
       ss >> token;
       if (token == "ok") {
-        while (ss >> token) {
-          if (token[0] == 'X' || token[0] == 'B')
-            p[0] = std::stof(token.substr(1));
-          else if (token[0] == 'Y' || token[0] == 'L')
-            p[1] = std::stof(token.substr(1));
-          else if (token[0] == 'Z' || token[0] == 'R')
-            p[2] = std::stof(token.substr(1));
+        try {
+          while (ss >> token) {
+            if (token.length() <= 1) continue;
+            if (token[0] == 'X' || token[0] == 'B')
+              p[0] = std::stof(token.substr(1));
+            else if (token[0] == 'Y' || token[0] == 'L')
+              p[1] = std::stof(token.substr(1));
+            else if (token[0] == 'Z' || token[0] == 'R')
+              p[2] = std::stof(token.substr(1));
+          }
+        } catch (...) {
+          // Ignore parse errors from truncated serial data
         }
       }
 
@@ -292,13 +297,18 @@ public:
       std::string token;
       ss >> token;
       if (token == "ok") {
-        while (ss >> token) {
-          if (token[0] == 'X' || token[0] == 'B')
-            p[0] = std::stof(token.substr(1));
-          else if (token[0] == 'Y' || token[0] == 'L')
-            p[1] = std::stof(token.substr(1));
-          else if (token[0] == 'Z' || token[0] == 'R')
-            p[2] = std::stof(token.substr(1));
+        try {
+          while (ss >> token) {
+            if (token.length() <= 1) continue;
+            if (token[0] == 'X' || token[0] == 'B')
+              p[0] = std::stof(token.substr(1));
+            else if (token[0] == 'Y' || token[0] == 'L')
+              p[1] = std::stof(token.substr(1));
+            else if (token[0] == 'Z' || token[0] == 'R')
+              p[2] = std::stof(token.substr(1));
+          }
+        } catch (...) {
+          // Ignore parse errors
         }
         {
           LockGuard guard(mtx_);
@@ -333,9 +343,14 @@ public:
       std::string token;
       ss >> token;
       if (token == "ok") {
-        while (ss >> token) {
-          if (token[0] == 'V')
-            limit_switch = std::stoi(token.substr(1));
+        try {
+          while (ss >> token) {
+            if (token.length() <= 1) continue;
+            if (token[0] == 'V')
+              limit_switch = std::stoi(token.substr(1));
+          }
+        } catch (...) {
+          // Ignore
         }
         {
           LockGuard guard(mtx_);
@@ -361,7 +376,10 @@ public:
   SwiftproWriteNode() : Node("swiftpro_write_node")
   {
     // ── Serial ──
-    serial_.setPort("/dev/ttyACM0");
+    declare_parameter<std::string>("port", "/dev/ttyACM0");
+    std::string port = get_parameter("port").as_string();
+    
+    serial_.setPort(port);
     serial_.setBaudrate(115200);
     serial_.setTimeout(1000);
 
@@ -437,23 +455,39 @@ private:
   void timer_callback()
   {
     auto now = std::chrono::high_resolution_clock::now();
-    if ((now - last_query_) > 200ms) {
+    // Staggered status queries with different priorities
+    static auto last_ls = now;
+    static auto last_pos = now;
+    static auto last_joints = now;
+
+    if ((now - last_ls) > 30ms) {
       LockGuard guard(mutex_);
-      event_queue_.push_front(
-        std::make_unique<EventGetJoints>(serial_, pub_joints_, mutex_pos_, pos_, *this));
-      event_queue_.push_front(
-        std::make_unique<EventGetPosition>(serial_, mutex_pos_, pos_));
-      event_queue_.push_front(
-        std::make_unique<EventGetLimitSwitch>(serial_, mutex_pos_, pos_));
-      last_query_ = now;
+      event_queue_.push_back(std::make_unique<EventGetLimitSwitch>(serial_, mutex_pos_, pos_));
+      last_ls = now;
+    }
+    if ((now - last_pos) > 150ms) {
+      LockGuard guard(mutex_);
+      event_queue_.push_back(std::make_unique<EventGetPosition>(serial_, mutex_pos_, pos_));
+      last_pos = now;
+    }
+    if ((now - last_joints) > 450ms) {
+      LockGuard guard(mutex_);
+      event_queue_.push_back(std::make_unique<EventGetJoints>(serial_, pub_joints_, mutex_pos_, pos_, *this));
+      last_joints = now;
     }
 
+    // Process only ONE event per tick (10ms) to maintain responsiveness
+    std::unique_ptr<Event> ev;
     {
       LockGuard guard(mutex_);
-      while (!event_queue_.empty()) {
-        event_queue_.front()->action();
+      if (!event_queue_.empty()) {
+        ev = std::move(event_queue_.front());
         event_queue_.pop_front();
       }
+    }
+
+    if (ev) {
+      ev->action();
     }
 
     {

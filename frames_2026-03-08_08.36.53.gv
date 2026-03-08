@@ -1,0 +1,15 @@
+digraph G {
+"odom" -> "Base"[label=" Broadcaster: default_authority\nAverage rate: 20.196\nBuffer length: 5.1\nMost recent transform: 1772959013.489098\nOldest transform: 1772959008.389066\n"];
+"Base" -> "Link1"[label=" Broadcaster: default_authority\nAverage rate: 12.871\nBuffer length: 5.05\nMost recent transform: 1772959013.439198\nOldest transform: 1772959008.389001\n"];
+"Link1" -> "Link2"[label=" Broadcaster: default_authority\nAverage rate: 12.871\nBuffer length: 5.05\nMost recent transform: 1772959013.439198\nOldest transform: 1772959008.389001\n"];
+"Link2" -> "Link3"[label=" Broadcaster: default_authority\nAverage rate: 12.871\nBuffer length: 5.05\nMost recent transform: 1772959013.439198\nOldest transform: 1772959008.389001\n"];
+"Link3" -> "Link8"[label=" Broadcaster: default_authority\nAverage rate: 12.871\nBuffer length: 5.05\nMost recent transform: 1772959013.439198\nOldest transform: 1772959008.389001\n"];
+"tcp_link" -> "camera_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"camera_color_optical_frame" -> "tag_3"[label=" Broadcaster: default_authority\nAverage rate: 16.985\nBuffer length: 5.004\nMost recent transform: 1772959012.950774\nOldest transform: 1772959007.946368\n"];
+"camera_color_frame" -> "camera_color_optical_frame"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"camera_link" -> "camera_color_frame"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1772959013.5686643"[ shape=plaintext ] ;
+}->"tcp_link";
+}

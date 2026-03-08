@@ -73,7 +73,16 @@ class TaskPlannerNode(Node):
             cancel_callback=self._cancel_cb,
         )
 
-        self.get_logger().info('TaskPlanner ready.')
+        # Subscriber for live tasks (e.g. from bag play)
+        from uarm_brain.bag_reader import _parse_json_message
+        self._live_sub = self.create_subscription(
+            String,
+            self._bag_topic,
+            lambda msg: self._on_live_tasks(msg, _parse_json_message),
+            10
+        )
+
+        self.get_logger().info('TaskPlanner ready. Subscribed to live /task_list.')
 
         # Auto-load if bag_file_path was provided as a parameter
         if self._bag_path:
@@ -120,6 +129,22 @@ class TaskPlannerNode(Node):
             self.get_logger().error(f"LoadBag failed: {exc}")
 
         return result
+
+    def _on_live_tasks(self, msg, parse_func):
+        """Callback for live /task_list messages (e.g. from bag play)."""
+        # (Latch removed – TaskManager now handles its own state and re-triggering)
+        
+        self.get_logger().info('Received live /task_list update. Planning...')
+        raw_tasks = parse_func(msg.data, "live_topic")
+        
+        # Build transports and plan
+        transports = self._build_transports(raw_tasks)
+        ordered_groups = self._greedy_plan(transports)
+
+        # Publish
+        payload = json.dumps(ordered_groups, ensure_ascii=False)
+        self._queue_pub.publish(String(data=payload))
+        self._publish_status(f"Live Plan published: {len(transports)} transports")
 
     # ------------------------------------------------------------------
     # Core planning logic
@@ -188,6 +213,22 @@ class TaskPlannerNode(Node):
                     'container_id':       task['container_id'],
                 })
 
+        # NEW: Handle standalone Picks (objects that should be picked but not placed)
+        for oid, pick in pending_picks.items():
+            transports.append({
+                'pick_ws':            pick['workstation'],
+                'pick_type':          pick['subtask_type'],
+                'pick_ws_height':     pick['ws_height'],
+                'pick_ws_type':       pick['ws_type'],
+                'place_ws':           'STAY', # Flag for TaskManager
+                'place_type':         0,
+                'place_ws_height':    '0cm',
+                'place_ws_type':      0,
+                'object_id':          oid,
+                'object_name':        pick['object_name'],
+                'container_id':       pick['container_id'],
+            })
+
         return transports
 
     def _greedy_plan(self, transports: List[Dict]) -> List[Dict]:
@@ -230,10 +271,26 @@ class TaskPlannerNode(Node):
         inv = self._inv_slots
 
         for ws in ws_order:
-            batch = ws_buckets[ws]
-            # Split into sub-batches of inv_slots size
-            for i in range(0, len(batch), inv):
-                sub = batch[i:i + inv]
+            batch_source = ws_buckets[ws]
+            while batch_source:
+                # Build a sub-batch of up to 'inv' transports, but ONLY unique object IDs
+                sub = []
+                seen_ids = set()
+                remaining = []
+                
+                for t in batch_source:
+                    oid = t['object_id']
+                    if len(sub) < inv and oid not in seen_ids:
+                        sub.append(t)
+                        seen_ids.add(oid)
+                    else:
+                        remaining.append(t)
+                
+                batch_source = remaining
+                
+                if not sub:
+                    break
+
                 picks = [{
                     'object_id':      t['object_id'],
                     'object_name':    t['object_name'],

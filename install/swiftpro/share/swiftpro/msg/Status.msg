@@ -1,1 +1,1 @@
-uint8 status
+/home/ros2/ros2_ws/src/uarm_driver/swiftpro/msg/Status.msg

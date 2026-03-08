@@ -11,9 +11,9 @@
 
     # TCP to Link8 Offsets (Meters)
     # The default physical offset of the uArm Swift Pro suction cup
-    tcp_x_offset: 0.05655
+    tcp_x_offset: 0.01
     tcp_y_offset: 0.0
-    tcp_z_offset: -0.07455
+    tcp_z_offset: -0.02
     tcp_roll_offset: 0.0
     tcp_pitch_offset: 0.0
     tcp_yaw_offset: 0.0
@@ -37,7 +37,7 @@
 
     # Pick and Place behavior settings
     # Hover height above the target before descending (mm)
-    hover_z_offset: 10.0
+    hover_z_offset: 20.0
     
     # Optional static ground height for inventory/drop if not relying purely on switch (mm)
     target_z_base: 0.0

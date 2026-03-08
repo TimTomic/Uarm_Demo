@@ -1,12 +1,1 @@
-// generated from rosidl_adapter/resource/msg.idl.em
-// with input from swiftpro/msg/Status.msg
-// generated code does not contain a copyright notice
-
-
-module swiftpro {
-  module msg {
-    struct Status {
-      uint8 status;
-    };
-  };
-};
+/home/ros2/ros2_ws/build/swiftpro/rosidl_adapter/swiftpro/msg/Status.idl

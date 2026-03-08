@@ -1,4 +1,1 @@
-string command
----
-bool success
-string message
+/home/ros2/ros2_ws/src/uarm_driver/swiftpro/srv/SendGcode.srv
