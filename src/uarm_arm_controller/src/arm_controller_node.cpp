@@ -238,9 +238,12 @@ private:
     auto feedback = std::make_shared<PickAndPlace::Feedback>();
     auto result = std::make_shared<PickAndPlace::Result>();
 
-    double safe_travel_z = 150.0;
-    double hover_z_offset = this->get_parameter("hover_z_offset").as_double();
-    double target_z_base = this->get_parameter("target_z_base").as_double();
+    double safe_travel_z   = 150.0;
+    double hover_z_offset  = this->get_parameter("hover_z_offset").as_double();
+    double target_z_base   = this->get_parameter("target_z_base").as_double();
+    // Fine step sizes for descending while monitoring the limit switch
+    const double pick_step_mm  = 0.5;   // was 1.0 mm
+    const double place_step_mm = 0.25;  // was 0.5 mm
     rclcpp::Rate loop_rate(10); // 10 Hz
 
     auto publish_feedback = [&](const std::string& state) {
@@ -277,11 +280,11 @@ private:
     while (rclcpp::ok()) {
       if (goal_handle->is_canceling()) { cancel_goal(goal_handle, result); return; }
       if (limit_switch_ == 1) {
-          // Send current position to "stop" movement
-          move_arm(goal->pick_x, goal->pick_y, current_z_);
-          break; 
+        // Send current position to "stop" movement
+        move_arm(goal->pick_x, goal->pick_y, current_z_);
+        break;
       }
-      cur_z -= 1.0; // Slower descent for precision
+      cur_z -= pick_step_mm; // smaller steps for earlier reaction to switch
       if (cur_z < target_z_base) break;
       move_arm(goal->pick_x, goal->pick_y, cur_z);
       search_rate.sleep();
@@ -315,10 +318,10 @@ private:
     while (rclcpp::ok()) {
       if (goal_handle->is_canceling()) { set_pump(false); cancel_goal(goal_handle, result); return; }
       if (limit_switch_ == 1) {
-          move_arm(goal->place_x, goal->place_y, current_z_);
-          break;
+        move_arm(goal->place_x, goal->place_y, current_z_);
+        break;
       }
-      cur_z -= 0.5; // Very slow for delicate placement
+      cur_z -= place_step_mm; // even kleinere Schritte für sanftes Absetzen
       if (cur_z < target_z_base) break;
       move_arm(goal->place_x, goal->place_y, cur_z);
       search_rate.sleep();

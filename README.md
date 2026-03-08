@@ -121,12 +121,15 @@ Das Brain wartet nach dem Start auf eine Aufgabenliste. Diese wird typischerweis
 ### Aufgabe zur Laufzeit laden (Action Server)
 Du kannst dem laufenden Roboter jederzeit eine neue Aufgabe schicken:
 
-**Beispiel: Tag 03 Test-Lauf**
+**Beispiel: Tag 03 Test-Lauf (empfohlener Befehl)**
 ```bash
-docker exec uarm_brain bash -c "source /home/ros2/ros2_ws/install/setup.bash && \
-ros2 action send_goal /brain/load_bag uarm_interfaces/action/LoadBag \
-  \"{bag_path: '/home/ros2/ros2_ws/Example BAG FIles/test_03_bag2/'}\""
+docker exec uarm_brain bash -lc \
+  "source /opt/ros/jazzy/setup.bash && \
+   source /home/ros2/ros2_ws/install/setup.bash 2>/dev/null || true; \
+   ros2 action send_goal /brain/load_bag uarm_interfaces/action/LoadBag \"{bag_path: '/home/ros2/ros2_ws/Example BAG FIles/test_03_bag2/'}\""
 ```
+
+Falls du eine Fehlermeldung wie **`ros2: command not found`** siehst, fehlt das Sourcen von `/opt/ros/jazzy/setup.bash`. Der obige Befehl erledigt das automatisch im Container.
 
 ### Aufgabe direkt beim Start laden
 Falls du das Brain mit einer festen Aufgabe starten möchtest, ändere den Befehl in der `docker-compose.yml`:

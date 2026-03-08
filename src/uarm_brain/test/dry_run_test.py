@@ -23,8 +23,9 @@ import json
 import sys
 import os
 
-# Make sure local src is importable when running from repo root
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..', '..'))
+# Make sure local package is importable when running from repo root
+# __file__ = .../src/uarm_brain/test/dry_run_test.py  ->  ../../ = .../src/uarm_brain
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..'))
 
 # ---------------------------------------------------------------------------
 # Mini stubs so we can import the planner without a full ROS2 environment

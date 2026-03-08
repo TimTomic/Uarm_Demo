@@ -47,6 +47,17 @@ RUN usermod -aG video,dialout $USERNAME
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
+# Convenience wrapper for ROS 2 CLI inside containers
+# Allows calling e.g.:
+#   docker exec uarm_brain brain-ros2 action send_goal ...
+RUN echo '#!/bin/bash\n' \
+         'source /opt/ros/jazzy/setup.bash\n' \
+         'if [ -f /home/ros2/ros2_ws/install/setup.bash ]; then\n' \
+         '  source /home/ros2/ros2_ws/install/setup.bash\n' \
+         'fi\n' \
+         'exec ros2 "$@"\n' > /usr/local/bin/brain-ros2 && \
+    chmod +x /usr/local/bin/brain-ros2
+
 # Setup user environment
 USER $USERNAME
 WORKDIR /home/$USERNAME/ros2_ws
