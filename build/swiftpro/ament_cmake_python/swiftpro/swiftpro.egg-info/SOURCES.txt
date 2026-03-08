@@ -4,3 +4,10 @@ swiftpro.egg-info/PKG-INFO
 swiftpro.egg-info/SOURCES.txt
 swiftpro.egg-info/dependency_links.txt
 swiftpro.egg-info/top_level.txt
+swiftpro/msg/__init__.py
+swiftpro/msg/_angle4th.py
+swiftpro/msg/_position.py
+swiftpro/msg/_status.py
+swiftpro/msg/_swiftpro_state.py
+swiftpro/srv/__init__.py
+swiftpro/srv/_send_gcode.py

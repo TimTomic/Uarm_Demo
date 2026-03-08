@@ -8,7 +8,8 @@ x-ros-base: &ros-base
       # PUID/PGID can be overwritten in .env if host user is not 1000
       USER_UID: 1000
       USER_GID: 1000
-  network_mode: host
+  networks:
+    - uarm_net
   privileged: true
   volumes:
     - /dev:/dev
@@ -25,6 +26,19 @@ x-ros-base: &ros-base
   tty: true
 
 services:
+  # ---------------------------------------------------------
+  # 0. Discovery Server: Bridge ROS 2 networks
+  # ---------------------------------------------------------
+  discovery_server:
+    image: osrf/ros:jazzy-desktop
+    container_name: uarm_discovery_server
+    networks:
+      - uarm_net
+    ports:
+      - "11811:11811"
+    command: fast-discovery-server -i 0 -p 11811
+    restart: unless-stopped
+
   # ---------------------------------------------------------
   # 1. Vision Container: USB Camera & AprilTag Detection
   # ---------------------------------------------------------
@@ -83,3 +97,8 @@ services:
     command: >
       bash -c "source /home/ros2/ros2_ws/install/setup.bash && rviz2 -d /home/ros2/ros2_ws/src/uarm_brain/rviz/operator.rviz"
     restart: "no" # Only start manually
+
+networks:
+  uarm_net:
+    external: true
+    name: uarm_ros_net

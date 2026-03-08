@@ -4,9 +4,9 @@
 
 #include <string.h>
 
+#include "swiftpro/msg/detail/swiftpro_state__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "swiftpro/msg/detail/swiftpro_state__struct.h"
-#include "swiftpro/msg/detail/swiftpro_state__functions.h"
 #include "swiftpro/msg/detail/swiftpro_state__type_support.h"
 
 #ifdef __cplusplus

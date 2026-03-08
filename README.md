@@ -67,69 +67,81 @@ Der Roboter kann bis zu **3 Objekte gleichzeitig** transportieren. Die Koordinat
 
 ## System Starten (Multi-Container Architektur)
 
-Das System besteht nun aus **mehreren strikt voneinander getrennten Docker-Containern**, die über das ROS 2 Host-Netzwerk miteinander kommunizieren. 
-Dies ermöglicht höchste Stabilität: Falls ein Container abstürzt (z.B. Kamera-Disconnect), startet er sich durch die `restart: unless-stopped` Policy automatisch neu; das Brain wartet derweil selbstständig, bis die Action-Server wieder verfügbar sind.
+Das System besteht aus **mehreren strikt voneinander getrennten Docker-Containern**, die über ein eigenes ROS 2 Netzwerk (`uarm_ros_net`) miteinander kommunizieren. 
+Dies ermöglicht höchste Stabilität: Falls ein Container abstürzt (z.B. Kamera-Disconnect), startet er sich automatisch neu; das Brain wartet derweil selbstständig, bis die Action-Server wieder verfügbar sind.
 
-### 1. Image Bauen
-Wechsle in den `docker/`-Ordner und baue das gemeinsame Basis-Image:
+### 1. Netzwerk erstellen (Einmalig)
+Bevor die Container gestartet werden können, muss das Docker-Netzwerk angelegt werden:
 ```bash
-cd docker
-docker compose build
+docker network create uarm_ros_net
 ```
 
-### 2. Gesamtes System starten
+### 2. Images Bauen & Starten
+Wechsle in den `docker/`-Ordner und starte das gesamte Roboter-System:
 ```bash
+cd docker
 docker compose up -d
 ```
 Dies startet alle notwendigen Nodes vollautomatisch im Hintergrund:
-- `vision`: Kamera & AprilTag Erkennung
-- `manipulator`: Arm Controller & SwiftPro Treiber
-- `brain`: Task Planner & Task Manager
-- `nav`: Platzhalter für zukünftige Navigation
+- **vision**: Kamera & AprilTag Erkennung (inkl. Web-Viewer auf Port 8080)
+- **manipulator**: Arm Controller & SwiftPro Treiber
+- **brain**: Task Planner & Task Manager (startet ohne Initial-Task)
+- **discovery_server**: Zentrale Kommunikations-Bridge für ROS 2
+- **nav**: Platzhalter für zukünftige Navigation
 
 ### 3. Einzelne Container steuern
 Du kannst Container auch einzeln neustarten oder deren Logs live anschauen:
 ```bash
 docker compose logs -f brain
-docker compose restart manipulator
+docker compose restart vision
 ```
 
-### 4. Monitoring (RViz)
-Es gibt einen dedizierten Monitoring-Container (RViz2), der **nicht** automatisch mitstartet. Du kannst ihn bei Bedarf jederzeit über das `tools` Profil zuschalten:
+### 4. Remote Visualisierung (RViz) & Fernsteuerung
+Es gibt einen dedizierten **Operator Container**, der direkt auf deinem Laptop/PC ausgeführt wird. Er zeigt RViz an und ermöglicht die Steuerung per PS5-Controller.
+
+**Voraussetzung (WSL/Linux):** Erlaube Docker den Zugriff auf den X-Server:
 ```bash
-docker compose --profile tools up monitoring
+# Auf dem Host ausführen:
+xhost +local:docker
 ```
 
-## 5. Operator-Laptop & PS5 Controller anschließen
-Das System bietet einen dedizierten **Operator Monitoring Container**, der direkt auf deinem Laptop oder Remote-PC ausgeführt werden kann. Er verbindet sich transparent mit dem Roboter (via `ROS_DOMAIN_ID`), zeigt RViz (Map, TF, Camera) an und leitet Befehle eines angeschlossenen PS5-/PS4-Controllers (`cmd_vel`) zum Roboter weiter.
-
-**Auf dem Laptop:**
-1. Repository klonen und in `docker/` wechseln
-2. PS5 Controller per USB oder Bluetooth mit dem Laptop verbinden
-3. Sicherstellen, dass die `ROS_DOMAIN_ID` auf Pi und Laptop identisch ist
-4. Starten:
+**Starten des Operators:**
 ```bash
-docker compose -f operator-compose.yml up
+# Im docker/ Ordner deines Laptops:
+docker compose -f operator-compose.yml up -d
 ```
-Es öffnet sich vollautomatisch **RViz2** mit einem Live-Kamerabild (inkl. AprilTag Overlays), dem 3D-Modell des Arms (TF-Tree) und der Platzhalter-Map. Über den angeschlossenen Gamepad-Controller kannst du den Roboter dann für Mapping-Fahrten fernsteuern (`/cmd_vel`).
+RViz öffnet sich nun mit dem vorkonfigurierten uArm-Setup (TF-Tree, Live-Kamera, Roboter-Modell).
 
 ---
 
-## Brain Überwachen & Steuern
+## Brain & Aufgaben (BAG-Dateien)
 
-Die Live-Überwachung funktioniert entweder über einen `docker exec` in einen laufenden Container, oder nativ auf dem Pi:
+Das Brain wartet nach dem Start auf eine Aufgabenliste. Diese wird typischerweise aus einer `.bag`-Datei geladen.
+
+### Aufgabe zur Laufzeit laden (Action Server)
+Du kannst dem laufenden Roboter jederzeit eine neue Aufgabe schicken:
+
+**Beispiel: Tag 03 Test-Lauf**
 ```bash
-# Aktueller Task-Status:
-ros2 topic echo /brain/status
-
-# Inventar-Zustand (welches Objekt in welchem Slot):
-ros2 topic echo /brain/inventory
+docker exec uarm_brain bash -c "source /home/ros2/ros2_ws/install/setup.bash && \
+ros2 action send_goal /brain/load_bag uarm_interfaces/action/LoadBag \
+  \"{bag_path: '/home/ros2/ros2_ws/Example BAG FIles/test_03_bag2/'}\""
 ```
 
-### Aufgabe zur Laufzeit neu laden (Bag Loader)
+### Aufgabe direkt beim Start laden
+Falls du das Brain mit einer festen Aufgabe starten möchtest, ändere den Befehl in der `docker-compose.yml`:
+```yaml
+command: bash -c "... ros2 launch uarm_brain brain_standalone.launch.py bag_file:='/home/ros2/ros2_ws/Example BAG Files/test_03_bag2/'"
+```
+
+### Manueller Bag-Test (Status prüfen)
+Überprüfe den Fortschritt der Aufgabe auf den Status-Topics:
 ```bash
-ros2 action send_goal /brain/load_bag uarm_interfaces/action/LoadBag \
-  "{bag_path: '/home/ros2/ros2_ws/Example BAG Files/BTT2.bag'}"
+# Was plant das Brain gerade?
+docker exec uarm_brain ros2 topic echo /brain/status
+
+# Was ist im Inventar?
+docker exec uarm_brain ros2 topic echo /brain/inventory
 ```
 
 ---

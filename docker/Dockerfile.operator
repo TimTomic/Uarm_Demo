@@ -29,7 +29,7 @@ RUN if getent group $USER_GID ; then \
     && chmod 0440 /etc/sudoers.d/$USERNAME
 
 # Add user to input and video groups (for joystick/gamepad access and rendering)
-RUN usermod -aG input,video $USERNAME
+RUN groupadd -f input && usermod -aG input,video $USERNAME
 
 # Setup Entrypoint
 COPY entrypoint.sh /entrypoint.sh

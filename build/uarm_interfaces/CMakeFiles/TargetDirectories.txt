@@ -10,7 +10,7 @@
 /home/ros2/ros2_ws/build/uarm_interfaces/CMakeFiles/uarm_interfaces__rosidl_typesupport_fastrtps_cpp.dir
 /home/ros2/ros2_ws/build/uarm_interfaces/CMakeFiles/uarm_interfaces__rosidl_typesupport_introspection_cpp.dir
 /home/ros2/ros2_ws/build/uarm_interfaces/CMakeFiles/uarm_interfaces__rosidl_typesupport_cpp.dir
-/home/ros2/ros2_ws/build/uarm_interfaces/CMakeFiles/ament_cmake_python_copy_uarm_interfaces.dir
+/home/ros2/ros2_ws/build/uarm_interfaces/CMakeFiles/ament_cmake_python_symlink_uarm_interfaces.dir
 /home/ros2/ros2_ws/build/uarm_interfaces/CMakeFiles/ament_cmake_python_build_uarm_interfaces_egg.dir
 /home/ros2/ros2_ws/build/uarm_interfaces/CMakeFiles/uarm_interfaces__rosidl_generator_py.dir
 /home/ros2/ros2_ws/build/uarm_interfaces/CMakeFiles/uarm_interfaces_s__rosidl_typesupport_fastrtps_c.dir

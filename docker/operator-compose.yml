@@ -10,7 +10,8 @@ services:
         USER_UID: 1000
         USER_GID: 1000
     container_name: uarm_operator
-    network_mode: host
+    networks:
+      - uarm_net
     privileged: true
     volumes:
       # Map input devices for PS5 controller support
@@ -31,3 +32,8 @@ services:
     # Launch the operator specific launch file
     command: >
       bash -c "source /home/ros2/ros2_ws/install/setup.bash && ros2 launch uarm_brain operator_monitoring.launch.py"
+
+networks:
+  uarm_net:
+    external: true
+    name: uarm_ros_net

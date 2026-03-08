@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "swiftpro/msg/detail/angle4th__struct.h"
-#include "rosidl_typesupport_interface/macros.h"
-#include "swiftpro/msg/detail/angle4th__functions.h"
 #include "swiftpro/msg/detail/angle4th__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "swiftpro/msg/detail/angle4th__struct.h"
+#include "swiftpro/msg/detail/angle4th__functions.h"
 
 #ifdef __cplusplus
 extern "C"

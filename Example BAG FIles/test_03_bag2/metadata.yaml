@@ -4,7 +4,7 @@ rosbag2_bagfile_information:
   duration:
     nanoseconds: 0
   starting_time:
-    nanoseconds_since_epoch: 1772902347359534592
+    nanoseconds_since_epoch: 1772972329783585280
   message_count: 1
   topics_with_message_count:
     - topic_metadata:
@@ -22,7 +22,7 @@ rosbag2_bagfile_information:
   files:
     - path: test_03_bag2_0.db3
       starting_time:
-        nanoseconds_since_epoch: 1772902347359534592
+        nanoseconds_since_epoch: 1772972329783585280
       duration:
         nanoseconds: 0
       message_count: 1

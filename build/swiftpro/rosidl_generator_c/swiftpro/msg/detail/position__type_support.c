@@ -4,8 +4,8 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
 #include "swiftpro/msg/detail/position__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "swiftpro/msg/detail/position__type_support.h"
 #include "swiftpro/msg/detail/position__struct.h"
 
